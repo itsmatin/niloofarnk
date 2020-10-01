@@ -1,6 +1,6 @@
 //Sizes are chosen based on coffee cups' size!
 // short > tall > grande > venti > trenta > depth-charge
-// in addition we use -with-sugar > -with-room for extra queries!
+// in addition I use -with-sugar > -with-room for extra queries!
 
 @mixin respond($breakpoint) {
   @if $breakpoint == short {
@@ -48,8 +48,4 @@
       @content;
     }
   }
-}
-
-@mixin fade-in {
-  animation: fade-in 1s ease;
 }

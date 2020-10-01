@@ -1,11 +1,13 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 import "../stylesheets/main.scss";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <Switch>
+      <Route path="/" render={() => <Home />} />
+    </Switch>
   );
 }
 

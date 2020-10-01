@@ -6,9 +6,9 @@
   box-sizing: inherit;
 }
 
-::selection {
-  background-color: $color-primary;
-}
+// ::selection {
+//   background-color: $color-primary;
+// }
 
 body {
   box-sizing: border-box;
@@ -16,7 +16,8 @@ body {
 
 html {
   font-family: "Arima Madurai", Arial, Helvetica, sans-serif;
-  color: $color-white;
+  background-color: $black;
+  color: $white;
   //this defines what 1 rem is
   font-size: 100%;
   @include respond(depth-charge) {
@@ -37,27 +38,4 @@ html {
   // @include respond(short) {
   //   font-size:%;
   // }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  // Remove arrows from input of type number
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  // Remove arrows from input of type number
-  -moz-appearance: textfield;
-}
-
-a {
-  text-decoration: none;
-  &:active,
-  &:focus {
-    outline: none;
-  }
-}
-strong {
-  color: $color-primary;
 }
