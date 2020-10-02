@@ -28,9 +28,7 @@ const Menu = () => {
       animate="animate"
       exit="exit"
       className="menu"
-    >
-      hi
-    </motion.div>
+    ></motion.div>
   );
 };
 

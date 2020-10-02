@@ -61,7 +61,7 @@ const triangleVariants = {
   },
 };
 
-const Loading = () => {
+const Loading = ({ handleInitialLoading }) => {
   return (
     <motion.div
       variants={containerVariants}
@@ -69,6 +69,7 @@ const Loading = () => {
       initial="initial"
       exit="exit"
       className="loading"
+      onAnimationComplete={handleInitialLoading}
     >
       <motion.h1 className="loading--title" variants={nameVariants}>
         {name.map((char) => (
