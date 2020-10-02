@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion, useViewportScroll } from "framer-motion";
 
 const transition = {
@@ -24,8 +24,7 @@ const linesVariants = {
   },
 };
 
-const MenuTriangle = ({}) => {
-  const [isOpen, setIsopen] = useState(false);
+const MenuTriangle = ({ menuOpen, handleMenu }) => {
   const { scrollYProgress } = useViewportScroll();
 
   return (
@@ -33,12 +32,12 @@ const MenuTriangle = ({}) => {
       className="triangle-menu"
       variants={triangleVariants}
       transition={transition}
-      animate={isOpen ? "open" : "closed"}
+      animate={menuOpen ? "open" : "closed"}
       drag
       dragElastic={1}
       dragConstraints={{ top: 0, left: -50, right: 0, bottom: 50 }}
       whileHover={{ scale: 1.1 }}
-      onClick={() => setIsopen(!isOpen)}
+      onClick={() => handleMenu(!menuOpen)}
     >
       <svg style={{ transform: "scale(0.8)" }} width="68.327" height="61.732">
         <svg width="68.327" height="61.732">

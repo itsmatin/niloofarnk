@@ -7,24 +7,30 @@ const transition = {
 };
 
 const variants = {
-  open: {
+  initial: {
     background: "#eee",
-    height: 0,
   },
-  closed: {
+  animate: {
     background: "#202020",
+    height: "100%",
+  },
+  exit: {
+    background: "#eee",
     height: 0,
   },
 };
 
-const Menu = ({ isOpen = false }) => {
+const Menu = () => {
   return (
     <motion.div
       transition={transition}
       variants={variants}
-      animate={isOpen ? "open" : "closed"}
+      animate="animate"
+      exit="exit"
       className="menu"
-    ></motion.div>
+    >
+      hi
+    </motion.div>
   );
 };
 
