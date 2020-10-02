@@ -1,4 +1,11 @@
-@import "./variables";
-@import "./mixins";
-@import "./base";
-@import "./typography";
+@import "./general/variables";
+@import "./general/mixins";
+@import "./general/base";
+@import "./general/typography";
+
+@import "./home";
+@import "./loading";
+
+@import "./triangle";
+
+@import "./menu";

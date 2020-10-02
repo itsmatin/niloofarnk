@@ -1,0 +1,13 @@
+.triangle {
+  position: relative;
+  clip-path: polygon(0 0%, 50% 90%, 100% 0);
+  background-color: $white;
+}
+
+.triangle-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  cursor: pointer;
+}

@@ -5,10 +5,13 @@
   padding: 0;
   box-sizing: inherit;
 }
+.main {
+  position: relative;
+}
 
-// ::selection {
-//   background-color: $color-primary;
-// }
+::selection {
+  background-color: $white;
+}
 
 body {
   box-sizing: border-box;
