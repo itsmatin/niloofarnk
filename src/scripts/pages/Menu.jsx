@@ -25,7 +25,11 @@ const containerVariants = {
 
 function ListItem({ ...props }) {
   return (
-    <motion.li className="menu__list--item">
+    <motion.li
+      initial={{ borderBottom: `1px solid ${black}` }}
+      whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
+      className="menu__list--item"
+    >
       <Link to={props.id} key={props.index}>
         {`0${props.index + 1}. ${props.title}`}
       </Link>
