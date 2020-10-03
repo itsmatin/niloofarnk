@@ -22,8 +22,7 @@
   &__title {
     display: flex;
     align-items: center;
-    font-size: 13rem;
-    cursor: pointer;
+    font-size: 12rem;
 
     @supports (-webkit-text-stroke: 1px $white) {
       -webkit-text-stroke-width: 1px;

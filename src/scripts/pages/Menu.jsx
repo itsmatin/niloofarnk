@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ease, white, black } from "../utils/config";
 import database from "../utils/database";
 import { Link } from "react-router-dom";
+import AnimatedText from "../utils/AnimatedText";
 
 const { researches, designs } = database;
 
@@ -12,14 +13,19 @@ const containerVariants = {
   initial: {
     background: white,
     height: 0,
+    opacity: 0,
   },
   animate: {
     background: black,
     height: "100vh",
+    opacity: 1,
+    overflowY: "initial",
   },
   exit: {
     background: black,
     height: 0,
+    opacity: [1, 1, 0],
+    overflowY: "hidden",
   },
 };
 
@@ -58,7 +64,9 @@ const Menu = () => {
           whileHover={{ backgroundColor: "#BFD2CF", color: black }}
           className="menu__title menu__title--about"
         >
-          <Link to="/">ABOUT</Link>
+          <Link to="/">
+            <AnimatedText>ABOUT</AnimatedText>
+          </Link>
         </motion.h1>
       </div>
 
@@ -68,7 +76,9 @@ const Menu = () => {
           className="menu__title menu__title--home"
           to="/"
         >
-          <Link to="/">HOME</Link>
+          <Link to="/">
+            <AnimatedText>HOME</AnimatedText>
+          </Link>
         </motion.h1>
 
         <div className="menu__list menu__list--researches">
@@ -82,7 +92,9 @@ const Menu = () => {
             className="menu__title menu__title--contact"
             to="/contact"
           >
-            <Link to="/">CONTACT</Link>
+            <Link to="/">
+              <AnimatedText>CONTACT</AnimatedText>
+            </Link>
           </motion.h1>
         </div>
       </div>
