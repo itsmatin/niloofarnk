@@ -7,11 +7,11 @@ const Home = () => {
 
   return (
     <div className={"home"}>
-      <AnimatePresence>
-        {initialLoading && (
-          <Loading handleInitialLoading={() => setInitialLoading(false)} />
-        )}
-      </AnimatePresence>
+      {/* <AnimatePresence> */}
+      {initialLoading && (
+        <Loading handleInitialLoading={() => setInitialLoading(false)} />
+      )}
+      {/* </AnimatePresence> */}
       {!initialLoading && (
         <motion.h1
           initial={{ y: -100, opacity: 0 }}

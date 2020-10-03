@@ -42,6 +42,7 @@ const letterVariants = {
 };
 
 const containerVariants = {
+  initial: { background: "#eee" },
   animate: {
     background: ["#eee", "#202020"],
     transition,
@@ -50,6 +51,7 @@ const containerVariants = {
 
 const triangleVariants = {
   initial: {
+    scale: 4,
     background: "#eee",
     rotate: 180,
   },
