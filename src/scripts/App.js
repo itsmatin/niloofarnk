@@ -8,10 +8,10 @@ import Menu from "./pages/Menu";
 import clsx from "clsx";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   return (
-    <div className="app">
+    <div className={clsx(["app", menuOpen && "no-scroll"])}>
       <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
       <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
       <Switch>

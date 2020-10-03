@@ -4,7 +4,7 @@ import Loading from "./Loading";
 import AnimatedText from "../utils/AnimatedText";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(false);
 
   return (
     <div className={"home"}>

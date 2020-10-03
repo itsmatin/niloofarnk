@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ease } from "../config";
+import { ease } from "./config";
 
 // function random(min, max) {
 //   // min and max included

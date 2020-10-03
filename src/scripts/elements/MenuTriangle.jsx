@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, useViewportScroll } from "framer-motion";
-import { white, ease } from "../config";
+import { white, ease } from "../utils/config";
 
 const transition = {
   duration: 0.5,

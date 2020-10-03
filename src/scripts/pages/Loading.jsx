@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Triangle from "../elements/Triangle";
-import { white, ease, black } from "../config";
+import { white, ease, black } from "../utils/config";
 
 const transition = { duration: 3, ease };
 const name = [

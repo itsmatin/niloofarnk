@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ease, white, black } from "../config";
+import { ease, white, black } from "../utils/config";
+import database from "../utils/database";
+
+const { researches, designs } = database;
 
 const transition = {
   duration: 1,
@@ -10,6 +13,7 @@ const transition = {
 const variants = {
   initial: {
     background: white,
+    height: 0,
   },
   animate: {
     background: black,
@@ -28,7 +32,21 @@ const Menu = () => {
       animate="animate"
       exit="exit"
       className="menu"
-    ></motion.div>
+    >
+      <div className="menu__list menu__list--designs">
+        <h2 className="menu--subtitle">DESIGNS</h2>
+        {designs.map((item, key) => (
+          <li key={key}>{item.title}</li>
+        ))}
+      </div>
+
+      <div className="menu__list menu__list--researches ">
+        <h2 className="menu--subtitle">RESEARCHES</h2>
+        {researches.map((item, key) => (
+          <li key={key}>{item.title}</li>
+        ))}
+      </div>
+    </motion.div>
   );
 };
 
