@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, useViewportScroll } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { white, ease } from "../utils/config";
 
 const transition = {
@@ -26,17 +26,12 @@ const linesVariants = {
 };
 
 const MenuTriangle = ({ menuOpen, handleMenu }) => {
-  const { scrollYProgress } = useViewportScroll();
-
   return (
     <motion.div
       className="triangle-menu"
       variants={triangleVariants}
       transition={transition}
       animate={menuOpen ? "open" : "closed"}
-      drag
-      dragElastic={1}
-      dragConstraints={{ top: 0, left: -50, right: 0, bottom: 50 }}
       whileHover={{ scale: 1.1 }}
       onClick={() => handleMenu(!menuOpen)}
     >
@@ -51,7 +46,6 @@ const MenuTriangle = ({ menuOpen, handleMenu }) => {
           d="M15.002 15.636h38.77M25.12 31.14h18.274"
           transition={transition}
           variants={linesVariants}
-          style={{ pathLength: scrollYProgress }}
           fill="none"
           stroke={white}
           stroke-width="2"

@@ -2,26 +2,82 @@
   position: absolute;
   z-index: 99;
   width: 100%;
-  // min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-  &__list {
-    list-style: none;
-    & li {
-      padding-left: 1rem;
-      font-family: "Assistant", Georgia, "Times New Roman", Times, serif;
+  &--container {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    border-right: 1px solid $white;
+
+    &:first-child {
+      border-left: 1px solid $white;
     }
-    &--researches {
-      grid-column: 2/3;
-      grid-row: 2/4;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 13rem;
+    cursor: pointer;
+
+    @supports (-webkit-text-stroke: 1px $white) {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $white;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--about {
+      flex-grow: 1;
+      padding-left: 2rem;
+      justify-content: flex-start;
+      border-bottom: 1px solid $white;
+    }
+
+    &--home {
+      justify-content: center;
+      border-top: 1px solid;
+    }
+
+    &--contact {
+      justify-content: flex-end;
+      padding-right: 2rem;
+      opacity: 0.75;
+      font-size: 2rem;
+      border-top: 1px solid $white;
     }
   }
 
   &--subtitle {
-    font-size: 5.625rem;
-    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+    border-top: 1px solid $white;
+  }
+
+  &__list {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 1px solid $white;
+
+    &--item {
+      padding-left: 4rem;
+      margin-bottom: 0.5rem;
+      color: $white;
+      opacity: 0.25;
+      font-family: "Assistant", Georgia, "Times New Roman", Times, serif;
+      font-size: 1.75rem;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 }
