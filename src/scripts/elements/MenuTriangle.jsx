@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion, useViewportScroll } from "framer-motion";
+import { white, ease } from "../config";
 
 const transition = {
   duration: 0.5,
-  ease: [0.6, 0.1, -0.05, 0.9],
+  ease,
 };
 
 const triangleVariants = {
@@ -39,24 +40,22 @@ const MenuTriangle = ({ menuOpen, handleMenu }) => {
       whileHover={{ scale: 1.1 }}
       onClick={() => handleMenu(!menuOpen)}
     >
-      <svg style={{ transform: "scale(0.8)" }} width="68.327" height="61.732">
-        <svg width="68.327" height="61.732">
-          <motion.path
-            d="M34.164 4.13l-30.77 55.6h61.542l-30.77-55.6m0-4.13l34.164 61.732H0L34.164 0z"
-            fill="#eee"
-            transition={transition}
-            transform="matrix(-1 0 0 -1 68.327 61.732)"
-          />
-          <motion.path
-            d="M15.002 15.636h38.77M25.12 31.14h18.274"
-            transition={transition}
-            variants={linesVariants}
-            style={{ pathLength: scrollYProgress }}
-            fill="none"
-            stroke="#eee"
-            stroke-width="2"
-          />
-        </svg>
+      <svg>
+        <motion.path
+          d="M34.164 4.13l-30.77 55.6h61.542l-30.77-55.6m0-4.13l34.164 61.732H0L34.164 0z"
+          fill={white}
+          transition={transition}
+          transform="matrix(-1 0 0 -1 68.327 61.732)"
+        />
+        <motion.path
+          d="M15.002 15.636h38.77M25.12 31.14h18.274"
+          transition={transition}
+          variants={linesVariants}
+          style={{ pathLength: scrollYProgress }}
+          fill="none"
+          stroke={white}
+          stroke-width="2"
+        />
       </svg>
     </motion.div>
   );

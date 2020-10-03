@@ -15,6 +15,10 @@
   }
 }
 
+.word-wrapper {
+  white-space: nowrap;
+}
+
 ::selection {
   background-color: $white;
 }

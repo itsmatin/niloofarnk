@@ -5,9 +5,20 @@
 }
 
 .triangle-menu {
+  transform-origin: 0 0 0;
   position: fixed;
   top: 1rem;
   right: 1rem;
+  width: 4.27rem;
+  height: 3.85rem;
   z-index: 100;
   cursor: pointer;
+  & > svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8) translate(-50%, -50%);
+  }
 }

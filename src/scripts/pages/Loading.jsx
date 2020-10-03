@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Triangle from "../elements/Triangle";
+import { white, ease, black } from "../config";
 
-const transition = { duration: 3, ease: [0.6, 0.1, -0.05, 0.9] };
+const transition = { duration: 3, ease };
 const name = [
   "N",
   "I",
@@ -42,9 +43,9 @@ const letterVariants = {
 };
 
 const containerVariants = {
-  initial: { background: "#eee" },
+  initial: { background: white },
   animate: {
-    background: ["#eee", "#202020"],
+    background: [white, black],
     transition,
   },
 };
@@ -52,12 +53,12 @@ const containerVariants = {
 const triangleVariants = {
   initial: {
     scale: 4,
-    background: "#eee",
+    background: white,
     rotate: 180,
   },
   animate: {
     scale: [4, 1, 0.3],
-    background: "#202020",
+    background: black,
     rotate: 0,
     transition: { ...transition, duration: 2.5, delay: 0.3 },
   },

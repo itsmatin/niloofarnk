@@ -1,21 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { ease, white, black } from "../config";
 
 const transition = {
   duration: 1,
-  ease: [0.6, 0.1, -0.05, 0.9],
+  ease,
 };
 
 const variants = {
   initial: {
-    background: "#eee",
+    background: white,
   },
   animate: {
-    background: "#202020",
+    background: black,
     height: "100%",
   },
   exit: {
-    background: "#eee",
+    background: white,
     height: 0,
   },
 };
