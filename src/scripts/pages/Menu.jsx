@@ -20,7 +20,6 @@ const variants = {
     height: 0,
   },
 };
-
 const Menu = () => {
   return (
     <motion.div
