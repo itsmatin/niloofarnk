@@ -32,7 +32,8 @@ const containerVariants = {
 function ListItem({ ...props }) {
   return (
     <motion.li
-      initial={{ borderBottom: `1px solid ${black}` }}
+      animate={{ opacity: 0.25, transition: { delay: 1.2 } }}
+      initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
       whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
       className="menu__list--item"
     >
@@ -54,7 +55,7 @@ const Menu = () => {
       className="menu"
     >
       <div className="menu--container">
-        <div className="menu__list menu__list--designs">
+        <div className="menu__list">
           <h2 className="menu--subtitle">DESIGNS</h2>
           {designs.map((item, index) => (
             <ListItem title={item.title} id={item.id} index={index} />
@@ -65,7 +66,7 @@ const Menu = () => {
           className="menu__title menu__title--about"
         >
           <Link to="/">
-            <AnimatedText>ABOUT</AnimatedText>
+            <AnimatedText addSpace={false}>ABOUT</AnimatedText>
           </Link>
         </motion.h1>
       </div>
@@ -77,7 +78,7 @@ const Menu = () => {
           to="/"
         >
           <Link to="/">
-            <AnimatedText>HOME</AnimatedText>
+            <AnimatedText addSpace={false}>HOME</AnimatedText>
           </Link>
         </motion.h1>
 
@@ -93,7 +94,7 @@ const Menu = () => {
             to="/contact"
           >
             <Link to="/">
-              <AnimatedText>CONTACT</AnimatedText>
+              <AnimatedText addSpace={false}>CONTACT</AnimatedText>
             </Link>
           </motion.h1>
         </div>

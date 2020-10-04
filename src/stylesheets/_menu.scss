@@ -3,16 +3,28 @@
   z-index: 99;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   padding: 1rem;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  @include respond(grande) {
+    flex-flow: column nowrap;
+  }
 
   &--container {
     flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
     border-right: 1px solid $white;
+
+    @include respond(grande) {
+      border-right: none;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
 
     &:first-child {
       border-left: 1px solid $white;
@@ -22,7 +34,15 @@
   &__title {
     display: flex;
     align-items: center;
-    font-size: 12rem;
+    font-size: 11rem;
+
+    @include respond(trenta) {
+      font-size: 9rem;
+    }
+
+    @include respond(short) {
+      font-size: 8rem;
+    }
 
     @supports (-webkit-text-stroke: 1px $white) {
       -webkit-text-stroke-width: 1px;
@@ -35,11 +55,29 @@
       padding-left: 2rem;
       justify-content: flex-start;
       border-bottom: 1px solid $white;
+
+      @include respond(grande) {
+        border-bottom: none;
+      }
+
+      @include respond(short) {
+        justify-content: center;
+        padding-left: initial;
+      }
     }
 
     &--home {
       justify-content: center;
       border-top: 1px solid;
+
+      @include respond(grande) {
+        justify-content: flex-end;
+        border-top: none;
+      }
+
+      @include respond(short) {
+        justify-content: center;
+      }
     }
 
     &--contact {
@@ -64,6 +102,12 @@
     justify-content: space-between;
     list-style: none;
     border-bottom: 1px solid $white;
+
+    &--researches {
+      @include respond(grande) {
+        border-right: 1px solid $white;
+      }
+    }
 
     &--item {
       padding-left: 4rem;
