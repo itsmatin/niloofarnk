@@ -27,6 +27,7 @@ const spanVariants = {
 // Handles the deconstruction of each word and character to setup for the
 // individual character animations
 const AnimatedText = ({
+  style,
   props,
   children,
   addSpace = true,
@@ -48,7 +49,7 @@ const AnimatedText = ({
   if (addSpace) words.map((word) => word.push("\u00A0"));
 
   return words.map((word, index) => (
-    <span key={index} className="word-wrapper">
+    <span style={style} key={index} className="word-wrapper">
       {words[index].flat().map((character, index) => {
         return (
           <motion.span
@@ -59,7 +60,7 @@ const AnimatedText = ({
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             exit="exit"
-            style={{ display: "inline-block" }}
+            style={{ display: "inline-block", textDecoration: "inherit" }}
           >
             {character}
           </motion.span>

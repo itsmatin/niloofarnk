@@ -8,7 +8,6 @@
 
 .app {
   position: relative;
-  height: 100vh;
 }
 
 a {
@@ -42,8 +41,12 @@ html {
   color: $white;
   //this defines what 1 rem is
   font-size: 100%;
+
   @include respond(depth-charge) {
     font-size: 120%;
+  }
+  @include respond(depth-charge-with-sugar) {
+    font-size: 170%;
   }
   @include respond(trenta) {
     font-size: 90%;
