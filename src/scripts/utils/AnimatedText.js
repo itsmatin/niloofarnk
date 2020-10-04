@@ -7,7 +7,7 @@ import { ease } from "./config";
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
 
-const transition = { ease, duration: 1.3, delay: 0.25 };
+const defaultTransition = { ease, duration: 1.3, delay: 0.25 };
 const spanVariants = {
   hidden: {
     x: "-300%",
@@ -21,7 +21,12 @@ const spanVariants = {
 
 // Handles the deconstruction of each word and character to setup for the
 // individual character animations
-const AnimatedText = ({ props, children, addSpace = true }) => {
+const AnimatedText = ({
+  props,
+  children,
+  addSpace = true,
+  transition = {},
+}) => {
   //  Split each word of props.text into an array
   const splitWords = children.split(" ");
 
@@ -37,13 +42,14 @@ const AnimatedText = ({ props, children, addSpace = true }) => {
   if (addSpace) words.map((word) => word.push("\u00A0"));
 
   return words.map((word, index) => (
-    <span {...props} key={index} className="word-wrapper">
+    <span key={index} className="word-wrapper">
       {words[index].flat().map((character, index) => {
         return (
           <motion.span
+            {...props}
             key={index}
             variants={spanVariants}
-            transition={transition}
+            transition={{ ...defaultTransition, ...transition }}
             initial="hidden"
             animate="visible"
             style={{ display: "inline-block" }}

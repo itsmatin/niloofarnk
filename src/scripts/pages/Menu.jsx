@@ -56,7 +56,13 @@ const Menu = () => {
     >
       <div className="menu--container">
         <div className="menu__list">
-          <h2 className="menu--subtitle">DESIGNS</h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 1.2 } }}
+            className="menu--subtitle"
+          >
+            DESIGNS
+          </motion.h2>
           {designs.map((item, index) => (
             <ListItem title={item.title} id={item.id} index={index} />
           ))}
@@ -66,7 +72,9 @@ const Menu = () => {
           className="menu__title menu__title--about"
         >
           <Link to="/">
-            <AnimatedText addSpace={false}>ABOUT</AnimatedText>
+            <AnimatedText transition={{ delay: 1.2 }} addSpace={false}>
+              ABOUT
+            </AnimatedText>
           </Link>
         </motion.h1>
       </div>
@@ -78,12 +86,20 @@ const Menu = () => {
           to="/"
         >
           <Link to="/">
-            <AnimatedText addSpace={false}>HOME</AnimatedText>
+            <AnimatedText transition={{ delay: 1.2 }} addSpace={false}>
+              HOME
+            </AnimatedText>
           </Link>
         </motion.h1>
 
         <div className="menu__list menu__list--researches">
-          <h2 className="menu--subtitle">RESEARCHES</h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 1.2 } }}
+            className="menu--subtitle"
+          >
+            RESEARCHES
+          </motion.h2>
           {researches.map((item, index) => (
             <ListItem title={item.title} id={item.id} index={index} />
           ))}
@@ -94,7 +110,9 @@ const Menu = () => {
             to="/contact"
           >
             <Link to="/">
-              <AnimatedText addSpace={false}>CONTACT</AnimatedText>
+              <AnimatedText transition={{ delay: 1.2 }} addSpace={false}>
+                CONTACT
+              </AnimatedText>
             </Link>
           </motion.h1>
         </div>
