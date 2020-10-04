@@ -1,6 +1,28 @@
 .home {
-  &__title {
-    font-size: 6.875rem;
-    font-weight: 100;
+  &__header {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--title {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      font-size: 6rem;
+      font-weight: 100;
+
+      @include respond(grande) {
+        font-size: 4rem;
+      }
+    }
+
+    &--image {
+      min-height: 90vh;
+      width: auto;
+      justify-self: flex-end;
+      margin: 0 5rem;
+    }
   }
 }

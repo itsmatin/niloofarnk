@@ -24,7 +24,7 @@ const containerVariants = {
   exit: {
     background: black,
     height: 0,
-    opacity: [1, 1, 0],
+    opacity: [1, 0],
     overflowY: "hidden",
   },
 };
@@ -32,8 +32,9 @@ const containerVariants = {
 function ListItem({ ...props }) {
   return (
     <motion.li
-      animate={{ opacity: 0.25, transition: { delay: 1.2 } }}
+      animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
       initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
+      exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
       whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
       className="menu__list--item"
     >
@@ -57,8 +58,9 @@ const Menu = () => {
       <div className="menu--container">
         <div className="menu__list">
           <motion.h2
+            exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 1.2 } }}
+            animate={{ opacity: 1, transition: { delay: 0.85 } }}
             className="menu--subtitle"
           >
             DESIGNS
@@ -72,7 +74,7 @@ const Menu = () => {
           className="menu__title menu__title--about"
         >
           <Link to="/">
-            <AnimatedText transition={{ delay: 1.2 }} addSpace={false}>
+            <AnimatedText transition={{ delay: 0.85 }} addSpace={false}>
               ABOUT
             </AnimatedText>
           </Link>
@@ -86,7 +88,7 @@ const Menu = () => {
           to="/"
         >
           <Link to="/">
-            <AnimatedText transition={{ delay: 1.2 }} addSpace={false}>
+            <AnimatedText transition={{ delay: 0.85 }} addSpace={false}>
               HOME
             </AnimatedText>
           </Link>
@@ -94,8 +96,9 @@ const Menu = () => {
 
         <div className="menu__list menu__list--researches">
           <motion.h2
+            exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 1.2 } }}
+            animate={{ opacity: 1, transition: { delay: 0.85 } }}
             className="menu--subtitle"
           >
             RESEARCHES
@@ -110,7 +113,7 @@ const Menu = () => {
             to="/contact"
           >
             <Link to="/">
-              <AnimatedText transition={{ delay: 1.2 }} addSpace={false}>
+              <AnimatedText transition={{ delay: 0.85 }} addSpace={false}>
                 CONTACT
               </AnimatedText>
             </Link>

@@ -17,6 +17,11 @@ const spanVariants = {
     x: 0,
     opacity: 1,
   },
+  exit: {
+    x: "-300%",
+    opacity: 0,
+    transition: { ...defaultTransition, delay: 0 },
+  },
 };
 
 // Handles the deconstruction of each word and character to setup for the
@@ -26,6 +31,7 @@ const AnimatedText = ({
   children,
   addSpace = true,
   transition = {},
+  isVisible = true,
 }) => {
   //  Split each word of props.text into an array
   const splitWords = children.split(" ");
@@ -51,7 +57,8 @@ const AnimatedText = ({
             variants={spanVariants}
             transition={{ ...defaultTransition, ...transition }}
             initial="hidden"
-            animate="visible"
+            animate={isVisible ? "visible" : "hidden"}
+            exit="exit"
             style={{ display: "inline-block" }}
           >
             {character}

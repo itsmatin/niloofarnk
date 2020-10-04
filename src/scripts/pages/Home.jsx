@@ -1,25 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
-import AnimatedText from "../utils/AnimatedText";
+import HomeHeader from "../sections/HomeHeader";
 
 const Home = () => {
   const [initialLoading, setInitialLoading] = useState(false);
 
   return (
-    <div className={"home"}>
+    <div className="home">
       <AnimatePresence>
         {initialLoading && (
           <Loading handleInitialLoading={() => setInitialLoading(false)} />
         )}
       </AnimatePresence>
-      {!initialLoading && (
-        <h1 className="home__title">
-          <AnimatedText>
-            NILOOFAR NIKOOKAR IS A DESIGNER BASED IN LOS ANGELES CA.
-          </AnimatedText>
-        </h1>
-      )}
+
+      {!initialLoading && <HomeHeader />}
     </div>
   );
 };
