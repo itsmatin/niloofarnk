@@ -4,10 +4,9 @@ import ProgressiveImage from "react-progressive-image";
 import clsx from "clsx";
 
 const Image = ({
-  variants,
-  transition,
+  imageVariants,
+  captionVariants,
   text = false,
-
   main,
   compressed,
   props,
@@ -19,14 +18,20 @@ const Image = ({
   return (
     <div className={clsx(["image--container", containerClass])}>
       {text && (
-        <small className={clsx(["image--caption", captionClass])}>{text}</small>
+        <motion.small
+          variants={captionVariants}
+          animate="animate"
+          initial="initial"
+          className={clsx(["image--caption", captionClass])}
+        >
+          {text}
+        </motion.small>
       )}
       <ProgressiveImage placeholder={compressed} src={main}>
         {(src) => (
           <motion.img
             {...props}
-            variants={variants}
-            transition={transition}
+            variants={imageVariants}
             animate="animate"
             initial="initial"
             src={src}

@@ -7,6 +7,16 @@ import Image from "../components/Image";
 
 const transition = { delay: 1.2, ease, duration: 1 };
 
+const imageCaptionVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: { delay: 2, duration: 0.5 },
+  },
+};
+
 const imageVariants = {
   initial: {
     scaleY: 0,
@@ -15,6 +25,7 @@ const imageVariants = {
   animate: {
     scaleY: 1,
     opacity: [0, 1],
+    transition: transition,
   },
 };
 
@@ -36,8 +47,8 @@ const HomeHeader = ({ initialLoading, props }) => {
         main="main.jpg"
         alt="Niloofar Nikookar Portfolio"
         text="Spring 2020"
-        variants={imageVariants}
-        transition={transition}
+        captionVariants={imageCaptionVariants}
+        imageVariants={imageVariants}
       />
     </header>
   );

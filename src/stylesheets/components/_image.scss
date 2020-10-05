@@ -10,8 +10,9 @@
   &--caption {
     transform: rotate(-180deg);
     opacity: 0.85;
-    writing-mode: tb-rl;
     padding: 0.5rem;
     font-family: $font;
+    text-align: end;
+    writing-mode: tb-rl;
   }
 }
