@@ -16,4 +16,16 @@
     background-color: $white;
     opacity: 0.75;
   }
+
+  &--caption {
+    position: fixed;
+    top: 10%;
+    left: -1.5rem;
+    width: 5rem;
+    transform: rotate(-90deg);
+    opacity: 0.85;
+    font-size: 0.7rem;
+    font-family: "Assistant", Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+  }
 }

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";
+import ProgressBar from "../components/ProgressBar";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
 
   return (
     <div className="home">
@@ -13,7 +14,7 @@ const Home = () => {
           <Loading handleInitialLoading={() => setInitialLoading(false)} />
         )}
       </AnimatePresence>
-
+      {!initialLoading && <ProgressBar />}
       {!initialLoading && <HomeHeader />}
     </div>
   );
