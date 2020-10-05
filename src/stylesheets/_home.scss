@@ -7,13 +7,6 @@
     justify-content: center;
     align-items: flex-end;
 
-    & > div {
-      width: 100%;
-      display: flex;
-      align-items: flex-end;
-      text-align: right;
-    }
-
     &--title {
       position: absolute;
       z-index: 10;
@@ -47,7 +40,8 @@
       text-align: right;
     }
 
-    &--image {
+    &--image-container {
+      position: relative;
       width: auto;
       height: 45rem;
       transform-origin: bottom;
@@ -55,6 +49,9 @@
       margin-right: 3rem;
       margin-left: 1rem;
       padding: 2rem 0;
+    }
+    &--image {
+      height: 100%;
     }
   }
 }

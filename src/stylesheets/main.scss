@@ -3,11 +3,10 @@
 @import "./general/base";
 @import "./general/typography";
 
+@import "./components/triangle";
+@import "./components/progressBar";
+@import "./components/image";
+
 @import "./home";
 @import "./loading";
-
-@import "./triangle";
-
 @import "./menu";
-
-@import "./progressBar";

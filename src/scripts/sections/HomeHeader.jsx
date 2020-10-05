@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ProgressiveImage from "react-progressive-image";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { ease } from "../utils/config";
+import Image from "../components/Image";
 
 const transition = { delay: 1.2, ease, duration: 1 };
 
@@ -29,19 +29,16 @@ const HomeHeader = ({ initialLoading, props }) => {
         <AnimatedText>AN ARCHITECTURAL DESIGNER AND RESEARCHER</AnimatedText>
       </h1>
 
-      <ProgressiveImage placeholder="main-compressed.jpg" src="main.jpg">
-        {(src) => (
-          <motion.img
-            variants={imageVariants}
-            transition={transition}
-            animate="animate"
-            initial="initial"
-            src={src}
-            alt="Niloofar Nikookar Portfolio"
-            className="home__header--image"
-          />
-        )}
-      </ProgressiveImage>
+      <Image
+        imageClass="home__header--image"
+        containerClass="home__header--image-container"
+        compressed="main-compressed.jpg"
+        main="main.jpg"
+        alt="Niloofar Nikookar Portfolio"
+        text="Spring 2020"
+        variants={imageVariants}
+        transition={transition}
+      />
     </header>
   );
 };

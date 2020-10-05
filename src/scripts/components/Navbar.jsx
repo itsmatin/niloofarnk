@@ -1,5 +1,5 @@
 import React from "react";
-import MenuTriangle from "../elements/MenuTriangle";
+import MenuTriangle from "./MenuTriangle";
 
 const Navbar = ({ menuOpen, handleMenu }) => {
   return (

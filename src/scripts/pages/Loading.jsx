@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Triangle from "../elements/Triangle";
+import Triangle from "../components/Triangle";
 import { white, ease, black } from "../utils/config";
 
 const transition = { duration: 3, ease };

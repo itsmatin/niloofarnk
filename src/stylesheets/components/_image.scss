@@ -1,0 +1,17 @@
+.image {
+  height: 100%;
+
+  &--container {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &--caption {
+    transform: rotate(-180deg);
+    opacity: 0.85;
+    writing-mode: tb-rl;
+    padding: 0.5rem;
+    font-family: $font;
+  }
+}

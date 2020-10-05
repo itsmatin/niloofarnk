@@ -5,7 +5,7 @@ import HomeHeader from "../sections/HomeHeader";
 import ProgressBar from "../components/ProgressBar";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(false);
 
   return (
     <div className="home">
