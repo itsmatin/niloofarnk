@@ -8,8 +8,8 @@ const Cursor = () => {
   const cursorY = useMotionValue();
 
   function handleMovement(event) {
-    cursorX.set(event.clientX - 16);
-    cursorY.set(event.clientY - 16);
+    cursorX.set(event.clientX - 25);
+    cursorY.set(event.clientY - 25);
   }
 
   useEffect(() => {

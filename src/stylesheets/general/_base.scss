@@ -51,9 +51,8 @@ html {
   font-family: "Arima Madurai", Arial, Helvetica, sans-serif;
   background-color: $black;
   color: $white;
-  //this defines what 1 rem is
-  font-size: 100%;
-  // cursor: none;
+  font-size: 100%; //this defines what 1 rem is
+  cursor: none;
 
   @include respond(depth-charge) {
     font-size: 120%;
