@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
-import AnimatedText from "../utils/AnimatedText";
+import React from "react";
+import {
+  useTransform,
+  useViewportScroll,
+  motion,
+  useSpring,
+} from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import AnimatedText from "../utils/AnimatedText";
 import { ease } from "../utils/config";
 import Image from "../components/Image";
 
@@ -29,16 +34,27 @@ const imageVariants = {
   },
 };
 
-const HomeHeader = ({ initialLoading, props }) => {
-  const { ref, inView, entry } = useInView();
+const HomeHeader = ({ props }) => {
+  const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { scrollYProgress } = useViewportScroll();
+  const titleY = useTransform(scrollYProgress, [0, 0.9], [0, -200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
+  const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
 
   return (
-    <header className="home__header" {...props} ref={ref}>
-      <h1 className="home__header--title">
-        <AnimatedText>I'M NILOOFAR NIKOOKAR,</AnimatedText>
+    <motion.header
+      style={{ opacity: opacitySpring }}
+      className="home__header"
+      ref={ref}
+      {...props}
+    >
+      <motion.h1 style={{ y: titleY }} className="home__header--title">
+        <AnimatedText isVisible={inView}>I'M NILOOFAR NIKOOKAR,</AnimatedText>
         <br />
-        <AnimatedText>AN ARCHITECTURAL DESIGNER AND RESEARCHER</AnimatedText>
-      </h1>
+        <AnimatedText isVisible={inView}>
+          AN ARCHITECTURAL DESIGNER AND RESEARCHER
+        </AnimatedText>
+      </motion.h1>
 
       <Image
         imageClass="home__header--image"
@@ -49,8 +65,9 @@ const HomeHeader = ({ initialLoading, props }) => {
         text="Spring 2020"
         captionVariants={imageCaptionVariants}
         imageVariants={imageVariants}
+        isVisible={inView}
       />
-    </header>
+    </motion.header>
   );
 };
 

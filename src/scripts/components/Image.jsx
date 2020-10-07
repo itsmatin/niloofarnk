@@ -7,10 +7,12 @@ const Image = ({
   imageVariants,
   captionVariants,
   text = false,
+  isVisible = true,
   main,
   compressed,
   props,
   alt,
+  style,
   imageClass,
   captionClass,
   containerClass,
@@ -20,7 +22,7 @@ const Image = ({
       {text && (
         <motion.small
           variants={captionVariants}
-          animate="animate"
+          animate={isVisible ? "animate" : "initial"}
           initial="initial"
           className={clsx(["image--caption", captionClass])}
         >
@@ -31,8 +33,9 @@ const Image = ({
         {(src) => (
           <motion.img
             {...props}
+            style={style}
             variants={imageVariants}
-            animate="animate"
+            animate={isVisible ? "animate" : "initial"}
             initial="initial"
             src={src}
             alt={alt}

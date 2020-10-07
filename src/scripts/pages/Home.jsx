@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";
 import ProgressBar from "../components/ProgressBar";
+import HomeDesigns from "../sections/HomeDesigns";
 
 const Home = () => {
   const [initialLoading, setInitialLoading] = useState(false);
@@ -14,8 +15,13 @@ const Home = () => {
           <Loading handleInitialLoading={() => setInitialLoading(false)} />
         )}
       </AnimatePresence>
-      {!initialLoading && <ProgressBar />}
-      {!initialLoading && <HomeHeader />}
+      {!initialLoading && (
+        <>
+          <ProgressBar />
+          <HomeHeader />
+          <HomeDesigns />
+        </>
+      )}
     </div>
   );
 };
