@@ -54,6 +54,12 @@ html {
   color: $white;
   font-size: 100%; //this defines what 1 rem is
   cursor: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include respond(depth-charge) {
     font-size: 120%;
