@@ -1,4 +1,6 @@
 export const ease = [0.6, 0.1, -0.05, 0.9];
 
-export const black = "#202020";
-export const white = "#eee";
+export const black = "rgba(32,32,32,1)";
+export const white = "rgba(238,238,238,1)";
+export const pink = "rgba(229,206,220,1)";
+export const transparent = "rgba(229,206,220,0)";

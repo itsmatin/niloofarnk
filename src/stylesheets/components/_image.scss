@@ -5,6 +5,11 @@
     position: relative;
     display: flex;
     flex-flow: row nowrap;
+
+    @include respond(tall) {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
   }
 
   &--caption {
@@ -14,5 +19,12 @@
     font-family: $font;
     text-align: end;
     writing-mode: tb-rl;
+
+    @include respond(tall) {
+      transform: rotate(0);
+      text-align: initial;
+      writing-mode: initial;
+      align-self: flex-end;
+    }
   }
 }
