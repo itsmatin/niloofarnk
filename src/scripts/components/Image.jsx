@@ -5,6 +5,7 @@ import clsx from "clsx";
 
 const Image = ({
   imageVariants,
+  drag = false,
   captionVariants,
   text = false,
   isVisible = true,
@@ -33,6 +34,8 @@ const Image = ({
         {(src) => (
           <motion.img
             {...props}
+            drag={drag}
+            draggable={drag}
             style={style}
             variants={imageVariants}
             animate={isVisible ? "animate" : "initial"}

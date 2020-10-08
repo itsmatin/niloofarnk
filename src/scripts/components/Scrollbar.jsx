@@ -1,59 +1,73 @@
-import React, { useState, createRef, useEffect } from "react";
-import { motion } from "framer-motion";
-import { ease } from "../utils/config";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 
-const thumbMinHeight = 20;
+const SCROLL_BOX_MIN_HEIGHT = 20;
 
-const transition = {
-  delay: 0.1,
-};
+export default function CustomScrollDiv({ children, className, ...restProps }) {
+  const [hovering, setHovering] = useState(false);
+  const [scrollBoxHeight, setScrollBoxHeight] = useState(SCROLL_BOX_MIN_HEIGHT);
+  const [scrollBoxTop, setScrollBoxTop] = useState(0);
 
-const variants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
+  const handleMouseOver = useCallback(() => {
+    !hovering && setHovering(true);
+  }, [hovering]);
 
-const Scrollbar = ({ pageRef }) => {
-  //   const ref = createRef();
-  const [thumbHeight, setThumbHeight] = useState(thumbMinHeight);
-  const [thumbTop, setThumbTop] = useState(0);
+  const handleMouseOut = useCallback(() => {
+    !!hovering && setHovering(false);
+  }, [hovering]);
 
-  useEffect(() => {
-    const {
-      clientHeight,
-      scrollHeight,
-      scrollTop,
-      offsetHeight,
-    } = pageRef.current;
-    console.log(clientHeight, scrollHeight, scrollTop, offsetHeight);
-    const scrollThumbPercentage = clientHeight / scrollHeight;
-    const scrollThumbHeight = Math.max(
-      scrollThumbPercentage * clientHeight,
-      thumbMinHeight
-    );
-    setThumbHeight(scrollThumbHeight);
+  const handleScroll = useCallback(() => {
+    if (!scrollHostRef) {
+      return;
+    }
+    const scrollHostElement = scrollHostRef.current;
+    const { scrollTop, scrollHeight, offsetHeight } = scrollHostElement;
+
+    let newTop =
+      (parseInt(scrollTop, 10) / parseInt(scrollHeight, 10)) * offsetHeight;
+    console.log(newTop, scrollBoxHeight, scrollTop, scrollHeight, offsetHeight);
+
+    console.log(offsetHeight - scrollBoxHeight);
+    // newTop = newTop + parseInt(scrollTop, 10);
+    newTop = Math.min(newTop, offsetHeight - scrollBoxHeight);
+    setScrollBoxTop(newTop);
   }, []);
 
-  useEffect(() => {}, []);
+  const scrollHostRef = useRef();
+
+  useEffect(() => {
+    const scrollHostElement = scrollHostRef.current;
+    const { clientHeight, scrollHeight } = scrollHostElement;
+    const scrollBoxPercentage = clientHeight / scrollHeight;
+    const scrollbarHeight = Math.max(
+      scrollBoxPercentage * clientHeight,
+      SCROLL_BOX_MIN_HEIGHT
+    );
+    setScrollBoxHeight(scrollbarHeight);
+    scrollHostElement.addEventListener("scroll", handleScroll, true);
+    return function cleanup() {
+      scrollHostElement.removeEventListener("scroll", handleScroll, true);
+    };
+  }, []);
 
   return (
-    <motion.div
-      variants={variants}
-      transition={transition}
-      initial="initial"
-      whileHover={{ opacity: 1 }}
-      className="scrollbar"
+    <div
+      className={"scrollhost-container"}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
     >
-      <motion.div
-        // ref={ref}
-        style={{ height: thumbHeight, top: thumbTop }}
-      ></motion.div>
-    </motion.div>
+      <div
+        ref={scrollHostRef}
+        className={`scrollhost ${className}`}
+        {...restProps}
+      >
+        {children}
+      </div>
+      <div className={"scroll-bar"} style={{ opacity: hovering ? 1 : 0 }}>
+        <div
+          className={"scroll-thumb"}
+          style={{ height: scrollBoxHeight, top: scrollBoxTop }}
+        />
+      </div>
+    </div>
   );
-};
-
-export default Scrollbar;
+}

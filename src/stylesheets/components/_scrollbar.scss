@@ -1,10 +1,14 @@
-.scrollbar {
-  position: absolute;
-  z-index: 100;
-  right: 0;
-  top: 0;
-  opacity: 0;
+.scroll-bar {
+  width: 10px;
   height: 100%;
-  width: 0.55rem;
-  background-color: $pink;
+  right: 0;
+  top: 0px;
+  position: absolute;
+  border-radius: 7px;
+  bottom: 0px;
+  background-color: red;
+}
+.scrollhost-container {
+  position: relative;
+  height: 100%;
 }
