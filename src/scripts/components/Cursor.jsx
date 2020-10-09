@@ -13,7 +13,7 @@ const Cursor = () => {
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
   const velocity = useSpring(50, { damping: 5, bounce: 0 });
-  const scale = useTransform(velocity, [50, 1000], [1, 0.7]);
+  const scale = useTransform(velocity, [50, 1000], [1, 0.6]);
 
   function handleMouseEnter() {
     opacity.set(1);

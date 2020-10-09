@@ -1,4 +1,6 @@
 .home {
+  overflow-x: hidden;
+  overflow-y: hidden;
   &__header {
     position: relative;
     min-height: 100vh;
@@ -85,11 +87,12 @@
     }
 
     &__container {
+      z-index: 1;
       flex-grow: 1;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
-      padding: 0 2rem;
+      padding: 1rem 2rem;
 
       & :first-child {
         margin-top: 4rem;
@@ -106,10 +109,6 @@
       & :last-child {
         margin-top: 10rem;
       }
-
-      // & :nth-child(2n + 1) {
-      //   margin: 5rem 0;
-      // }
     }
 
     &--counter {
@@ -123,14 +122,26 @@
       width: auto;
       height: 23rem;
       margin: 0 2rem;
+      opacity: 1;
 
       @include respond(depth-charge) {
-        max-height: 45rem;
+        height: 30rem;
       }
     }
     &--image {
       // height: initial;
       // width: initial;
+    }
+    &--triangle {
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      height: 35rem;
+      width: 35rem;
+      transform-origin: center;
+      opacity: 0.1;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-color: $white;
     }
   }
 }

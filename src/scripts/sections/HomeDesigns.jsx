@@ -12,12 +12,8 @@ import Image from "../components/Image";
 import database from "../utils/database";
 import { ease } from "../utils/config";
 
-function getRandom(min, max) {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
 const transition = { ease, delay: 0.3 };
+
 // const imageContainerVariants = {
 //   initial: {
 //     opacity: 0.4,
@@ -33,8 +29,15 @@ const transition = { ease, delay: 0.3 };
 
 const HomeDesigns = () => {
   const { mainRef, inView } = useInView({ threshold: 0.3, triggerOnce: true });
-  const { scrollY } = useViewportScroll();
-  const y = useTransform(scrollY, [0, 0.9], [0, 100]);
+  const { scrollYProgress } = useViewportScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [1200, 200]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [30, 90]);
+  const springRotate = useSpring(rotate, {
+    bounce: 0,
+    velocity: 0.1,
+    damping: 25,
+    stiffness: 50,
+  });
 
   return (
     <motion.section ref={mainRef} className="home__designs">
@@ -44,11 +47,10 @@ const HomeDesigns = () => {
       <motion.div className="home__designs__container">
         {/* <motion.span className="home__designs--counter">01 / 04</motion.span> */}
         {database.designs.map((design) => {
-          var random = getRandom(-2, 2);
           return (
             <Image
               // containerVariants={imageContainerVariants}
-              containerStyle={{ y: y * random }}
+
               imageClass="home__designs--image"
               containerClass="home__designs--image-container"
               title={design.title}
@@ -58,6 +60,11 @@ const HomeDesigns = () => {
           );
         })}
       </motion.div>
+      <motion.div
+        transition={transition}
+        style={{ y, rotate: springRotate }}
+        className="home__designs--triangle"
+      />
     </motion.section>
   );
 };
