@@ -65,7 +65,7 @@ const HomeHeader = ({ props }) => {
         text="Spring 2020"
         captionVariants={imageCaptionVariants}
         imageVariants={imageVariants}
-        isVisible={inView}
+        viewOptions={{ triggerOnce: true }}
       />
     </motion.header>
   );

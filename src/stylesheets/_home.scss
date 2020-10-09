@@ -44,7 +44,6 @@
       justify-self: flex-end;
       margin-right: 3rem;
       margin-left: 1rem;
-      padding: 2rem 0;
 
       @include respond(tall) {
         height: 47rem;
@@ -85,12 +84,32 @@
       font-weight: 100;
     }
 
-    &--container {
+    &__container {
       flex-grow: 1;
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-items: center;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      padding: 0 2rem;
+
+      & :first-child {
+        margin-top: 4rem;
+      }
+
+      & :nth-child(3) {
+        margin-top: 7rem;
+      }
+
+      & :nth-child(4) {
+        margin-left: 5rem;
+      }
+
+      & :last-child {
+        margin-top: 10rem;
+      }
+
+      // & :nth-child(2n + 1) {
+      //   margin: 5rem 0;
+      // }
     }
 
     &--counter {
@@ -101,13 +120,17 @@
     }
 
     &--image-container {
-      height: 85vh;
-      max-height: 30rem;
-      min-height: 28rem;
-      margin: 0 8rem;
+      width: auto;
+      height: 23rem;
+      margin: 0 2rem;
+
       @include respond(depth-charge) {
-        max-height: 35rem;
+        max-height: 45rem;
       }
+    }
+    &--image {
+      // height: initial;
+      // width: initial;
     }
   }
 }

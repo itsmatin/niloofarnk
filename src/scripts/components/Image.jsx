@@ -1,30 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import ProgressiveImage from "react-progressive-image";
 import clsx from "clsx";
 
 const Image = ({
-  imageVariants,
   drag = false,
-  captionVariants,
   text = false,
-  isVisible = true,
+  title = false,
+  captionVariants,
+  imageVariants,
+  containerVariants,
+  containerStyle,
+  viewOptions = {},
   main,
   compressed,
   props,
   alt,
-  style,
+  imageStyle,
   imageClass,
   captionClass,
   containerClass,
 }) => {
+  const { ref, inView } = useInView(viewOptions);
+  useEffect(() => {
+    if (inView) console.log("inView");
+  }, [inView]);
+
   return (
-    <div className={clsx(["image--container", containerClass])}>
+    <motion.div
+      variants={containerVariants}
+      ref={ref}
+      style={containerStyle}
+      animate={inView ? "animate" : "initial"}
+      initial="initial"
+      className={clsx(["image--container", containerClass])}
+    >
       {text && (
         <motion.small
           variants={captionVariants}
-          animate={isVisible ? "animate" : "initial"}
-          initial="initial"
           className={clsx(["image--caption", captionClass])}
         >
           {text}
@@ -36,17 +50,16 @@ const Image = ({
             {...props}
             drag={drag}
             draggable={drag}
-            style={style}
+            style={imageStyle}
             variants={imageVariants}
-            animate={isVisible ? "animate" : "initial"}
-            initial="initial"
             src={src}
             alt={alt}
             className={clsx(["image", imageClass])}
           />
         )}
       </ProgressiveImage>
-    </div>
+      {title && <motion.h2 className="image--title">{title}</motion.h2>}
+    </motion.div>
   );
 };
 

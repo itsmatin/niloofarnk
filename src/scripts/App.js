@@ -15,7 +15,7 @@ function App() {
   return (
     <div ref={ref} className={clsx(["app", menuOpen && "no-scroll"])}>
       <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
-      <Scrollbar pageRef={ref} />
+      {/* <Scrollbar pageRef={ref} /> */}
       <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
       <Switch>
         <Route path="/" render={() => <Home />} />
