@@ -55,3 +55,16 @@
     }
   }
 }
+
+@mixin rotated-text(
+  $num-letters: 100,
+  $angle-span: 360deg,
+  $angle-offset: 20deg
+) {
+  $angle-per-char: $angle-span / $num-letters;
+  @for $i from 1 through $num-letters {
+    .char#{$i} {
+      transform: rotate($angle-offset + $angle-per-char * $i);
+    }
+  }
+}

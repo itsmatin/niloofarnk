@@ -8,33 +8,43 @@ const Image = ({
   drag = false,
   text = false,
   title = false,
+  viewActive = true,
+  viewOptions = {},
   captionVariants,
   imageVariants,
   containerVariants,
   containerStyle,
-  viewOptions = {},
+  onHoverStart,
+  transition,
+  onHoverEnd,
+  whileHover,
+  animate,
+  initial,
   main,
   compressed,
   props,
   alt,
+  key,
   imageStyle,
   imageClass,
   captionClass,
   containerClass,
 }) => {
   const { ref, inView } = useInView(viewOptions);
-  useEffect(() => {
-    if (inView) console.log("inView");
-  }, [inView]);
 
   return (
     <motion.div
-      variants={containerVariants}
       ref={ref}
+      transition={transition}
+      variants={containerVariants}
       style={containerStyle}
-      animate={inView ? "animate" : "initial"}
+      onHoverStart={onHoverStart}
+      onHoverEnd={onHoverEnd}
+      whileHover={whileHover}
+      animate={inView && viewActive ? animate : initial}
       initial="initial"
       className={clsx(["image--container", containerClass])}
+      key={key}
     >
       {text && (
         <motion.small
