@@ -14,8 +14,9 @@ const Image = ({
   imageVariants,
   containerVariants,
   containerStyle,
-  onHoverStart,
   transition,
+  onClick,
+  onHoverStart,
   onHoverEnd,
   whileHover,
   animate,
@@ -35,6 +36,7 @@ const Image = ({
   return (
     <motion.div
       ref={ref}
+      onClick={onClick}
       transition={transition}
       variants={containerVariants}
       style={containerStyle}
