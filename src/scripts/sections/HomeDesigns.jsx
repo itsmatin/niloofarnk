@@ -28,11 +28,7 @@ const imageContainerVariants = {
   initial: {
     opacity: 1,
   },
-  // animate: {
-  //   opacity: 1,
-  //   scale: 1,
-  //   transition: transition,
-  // },
+
   whileHover: {
     opacity: 1,
   },
@@ -59,7 +55,6 @@ const HomeDesigns = () => {
 
   useEffect(() => {
     if (!inView) setSidebarOpen(false);
-    console.log(inView);
   }, [inView]);
 
   return (
@@ -69,7 +64,12 @@ const HomeDesigns = () => {
       >
         <ProjectSidebar isVisible={sidebarOpen} />
       </ClickAwayListener>
-      <motion.section ref={ref} className="home__designs">
+      <motion.section
+        transition={transition}
+        animate={{ opacity: sidebarOpen ? 0.3 : 1 }}
+        ref={ref}
+        className="home__designs"
+      >
         <h1 className="home__designs--title">
           <AnimatedText isVisible={inView}>DESIGNS</AnimatedText>
         </h1>
@@ -83,8 +83,16 @@ const HomeDesigns = () => {
                 imageClass="home__designs--image"
                 onHoverStart={() => setHovered(index)}
                 onHoverEnd={() => setHovered(false)}
-                animate={hovered === false ? "initial" : "othersNotHover"}
-                whileHover={hovered === index ? "whileHover" : "othersNotHover"}
+                animate={
+                  hovered === false && !sidebarOpen
+                    ? "initial"
+                    : "othersNotHover"
+                }
+                whileHover={
+                  hovered === index && !sidebarOpen
+                    ? "whileHover"
+                    : "othersNotHover"
+                }
                 containerClass="home__designs--image-container"
                 title={design.title}
                 main={design.image}
@@ -98,11 +106,11 @@ const HomeDesigns = () => {
           transition={transition}
           style={{ y, scale, rotate: springRotate }}
           className="home__designs__triangle"
-          animate={{ opacity: hovered !== false ? 0.3 : 0.1 }}
+          animate={{ opacity: hovered !== false && !sidebarOpen ? 0.3 : 0.1 }}
         >
           <motion.img
             variants={circularImageVariants}
-            animate={hovered !== false ? "animate" : "initial"}
+            animate={hovered !== false && !sidebarOpen ? "animate" : "initial"}
             className="home__designs__triangle--title"
             src="no-circle.png"
             transition={{

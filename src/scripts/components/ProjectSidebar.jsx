@@ -4,6 +4,7 @@ import ClickAwayListener from "react-click-away-listener";
 import { motion } from "framer-motion";
 import Image from "./Image";
 import { ease } from "../utils/config";
+import AnimatedText from "../utils/AnimatedText";
 
 const transition = {
   ease,
@@ -30,24 +31,34 @@ const ProjectSidebar = ({ data, isVisible }) => {
       initial="initial"
       className="sidebar"
     >
-      <h1>DESIGNS</h1>
-      <h2>This is a Project, Cool One</h2>
+      <h1>
+        <AnimatedText isVisible={isVisible}>DESIGNS</AnimatedText>
+      </h1>
+      <h2>
+        <AnimatedText isVisible={isVisible}>
+          This is a Project, Cool One
+        </AnimatedText>
+      </h2>
       <Image
         containerClass="sidebar--image"
         image
         main="capture.jpg"
         compressed="capture.jpg"
       />
-      <h5 className="sidebar--subtitle">Spring 2015</h5>
+      <h5 className="sidebar--subtitle">
+        <AnimatedText isVisible={isVisible}>Spring 2015 </AnimatedText>
+      </h5>
       <p className="sidebar--text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
-        laboriosam in saepe? Consequuntur autem fugiat impedit voluptatum
-        aliquam fuga perspiciatis iste quo vitae, sequi neque porro sit tempora
-        enim fugit maxime non soluta necessitatibus commodi praesentium harum
-        natus!
+        <AnimatedText isVisible={isVisible}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
+          laboriosam in saepe? Consequuntur autem fugiat impedit voluptatum
+          aliquam fuga perspiciatis iste quo vitae, sequi neque porro sit
+          tempora enim fugit maxime non soluta necessitatibus commodi
+          praesentium harum natus!
+        </AnimatedText>
       </p>
       <Link className="sidebar--button" to="/designs/12">
-        Visit Full Project
+        <AnimatedText isVisible={isVisible}>Visit Full Project </AnimatedText>
       </Link>
     </motion.div>
   );
