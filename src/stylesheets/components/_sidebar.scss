@@ -12,12 +12,17 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 3rem;
-  padding-top: 1.5rem;
   background: $black;
   box-shadow: -1px 0px 5px $black;
   overflow-y: scroll;
   overflow-x: hidden;
-
+  @include respond(venti-with-sugar) {
+    padding: 1.5rem;
+    justify-content: space-evenly;
+  }
+  @include respond(venti) {
+    width: 55%;
+  }
   & h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -28,9 +33,17 @@
     text-transform: uppercase;
   }
   &--image {
-    height: 60%;
-    max-height: 40rem;
-    align-items: center;
+    width: 23rem;
+    justify-self: center;
+    align-self: center;
+
+    & > img {
+      height: initial;
+      width: 100%;
+    }
+    @include respond(depth-charge) {
+      max-height: 40rem;
+    }
   }
 
   &--text {
@@ -39,6 +52,6 @@
   }
 
   &--button {
-    margin: 1rem auto;
+    margin: 2rem auto;
   }
 }
