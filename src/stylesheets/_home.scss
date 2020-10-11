@@ -10,6 +10,7 @@
     align-items: flex-end;
 
     @include respond(short-with-sugar) {
+      min-height: 90vh;
       align-items: center;
     }
 
@@ -84,6 +85,9 @@
       font-size: 3.5rem;
       padding-left: 4rem;
       font-weight: 100;
+      @include respond(short) {
+        padding-left: 3rem;
+      }
     }
 
     &__container {
@@ -94,20 +98,41 @@
       justify-content: space-evenly;
       padding: 1rem 2rem;
 
+      @include respond(short-with-sugar) {
+        flex-flow: column nowrap;
+      }
+
       & :first-child {
         margin-top: 4rem;
+        @include respond(short-with-sugar) {
+          margin-top: 0rem;
+        }
       }
 
       & :nth-child(3) {
         margin-top: 7rem;
+
+        @include respond(short-with-sugar) {
+          margin-top: 0rem;
+        }
       }
 
       & :nth-child(4) {
         margin-left: 5rem;
+        @include respond(trenta) {
+          margin-left: 0rem;
+        }
       }
 
       & :last-child {
         margin-top: 10rem;
+
+        @include respond(trenta) {
+          margin-top: 1rem;
+        }
+        @include respond(short-with-sugar) {
+          margin-top: 0rem;
+        }
       }
     }
 
@@ -123,6 +148,10 @@
       height: 25rem;
       margin: 0 2rem;
       opacity: 0.7;
+
+      @include respond(trenta) {
+        margin: 0 1rem;
+      }
 
       @include respond(depth-charge) {
         height: 30rem;

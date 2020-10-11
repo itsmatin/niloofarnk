@@ -72,7 +72,6 @@ const HomeDesigns = () => {
           <AnimatedText isVisible={titleInView}>DESIGNS</AnimatedText>
         </h1>
         <motion.div className="home__designs__container">
-          {/* <motion.span className="home__designs--counter">01 / 04</motion.span> */}
           {database.designs.map((design, index) => {
             return (
               <Image
