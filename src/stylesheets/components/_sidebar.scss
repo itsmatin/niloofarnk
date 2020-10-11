@@ -16,13 +16,25 @@
   box-shadow: -1px 0px 5px $black;
   overflow-y: scroll;
   overflow-x: hidden;
+
   @include respond(venti-with-sugar) {
     padding: 1.5rem;
-    justify-content: space-evenly;
   }
+
   @include respond(venti) {
     width: 55%;
   }
+
+  @include respond(short-with-sugar) {
+    top: initial;
+    bottom: 0;
+    width: 100vw;
+    max-height: 60vh;
+    height: initial;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px -2px 5px $black;
+  }
+
   & h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
