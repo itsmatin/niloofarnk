@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ClickAwayListener from "react-click-away-listener";
 import { motion } from "framer-motion";
-import Image from "./Image";
 import { ease } from "../utils/config";
+import Image from "./Image";
 import AnimatedText from "../utils/AnimatedText";
+import LinkButton from "./LinkButton";
 
 const transition = {
   ease,
@@ -14,11 +13,9 @@ const transition = {
 const containerVariants = {
   initial: {
     x: "100%",
-    opacity: 0,
   },
   animate: {
     x: 0,
-    opacity: 1,
   },
 };
 
@@ -57,9 +54,11 @@ const ProjectSidebar = ({ data, isVisible }) => {
           praesentium harum natus!
         </AnimatedText>
       </p>
-      <Link className="sidebar--button" to="/designs/12">
-        <AnimatedText isVisible={isVisible}>Visit Full Project </AnimatedText>
-      </Link>
+      <LinkButton
+        title="Visit Full Project"
+        className="sidebar--button"
+        to="/designs/12"
+      />
     </motion.div>
   );
 };

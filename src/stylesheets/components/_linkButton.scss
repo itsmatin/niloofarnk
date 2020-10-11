@@ -1,0 +1,29 @@
+.link-button {
+  position: relative;
+  z-index: 1;
+  padding: 0 0.2rem;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: $font;
+
+  &--background {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $pink;
+  }
+
+  &--line {
+    position: absolute;
+    left: 0;
+    top: 110%;
+    z-index: 10;
+    height: 0.09rem;
+    width: 100%;
+    padding: 0 0.2rem;
+    background-color: $pink;
+  }
+}
