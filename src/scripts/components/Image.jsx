@@ -45,6 +45,7 @@ const Image = ({
       whileHover={whileHover}
       animate={inView && viewActive ? animate : initial}
       initial="initial"
+      exit="exit"
       className={clsx(["image--container", containerClass])}
       key={key}
     >

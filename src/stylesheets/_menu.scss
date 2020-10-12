@@ -95,6 +95,7 @@
   }
 
   &__list {
+    position: relative;
     flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -107,12 +108,27 @@
       border-top: none;
     }
 
-    &--researches {
+    &__researches {
+      position: relative;
       @include respond(grande) {
         border-right: 1px solid $white;
       }
     }
 
+    &--image-container {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 10000;
+      transform: translate(-50%, 0);
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      background: $black;
+    }
+    &--image {
+    }
     &--item {
       padding-left: 4rem;
       margin-bottom: 0.5rem;

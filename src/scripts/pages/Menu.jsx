@@ -1,13 +1,20 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { ease, white, black } from "../utils/config";
-import database from "../utils/database";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import database from "../utils/database";
+import { ease, white, black } from "../utils/config";
 import AnimatedText from "../utils/AnimatedText";
+import Image from "../components/Image";
 
 const { researches, designs } = database;
 
-const transition = { duration: 1, ease };
+const transition = { duration: 1, ease, delay: 0.3 };
+const imageTransition = { duration: 0.4, ease };
+const imageVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const containerVariants = {
   initial: {
@@ -29,23 +36,37 @@ const containerVariants = {
   },
 };
 
-function ListItem({ ...props }) {
-  return (
-    <motion.li
-      animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
-      initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
-      exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
-      whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
-      className="menu__list--item"
-    >
-      <Link to={props.id} key={props.index}>
-        {`0${props.index + 1}. ${props.title}`}
-      </Link>
-    </motion.li>
-  );
-}
-
 const Menu = () => {
+  const [currentResearch, setCurrentResearch] = useState(false);
+  const [currentDesign, setCurrentDesign] = useState(false);
+
+  function handleHoverStart(type, image) {
+    if (type === "design") setCurrentDesign(image);
+    else setCurrentResearch(image);
+  }
+
+  function handleHoverEnd() {
+    setCurrentDesign(false);
+    setCurrentResearch(false);
+  }
+
+  function ListItem({ type, image, ...props }) {
+    return (
+      <motion.li
+        animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
+        // initial={{ borderBottom: `1px solid ${black}` }}
+        exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
+        whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
+        onHoverStart={() => handleHoverStart(type, image)}
+        onHoverEnd={handleHoverEnd}
+        className="menu__list--item"
+      >
+        <Link to={props.id} key={props.index}>
+          {`0${props.index + 1}. ${props.title}`}
+        </Link>
+      </motion.li>
+    );
+  }
   return (
     <motion.div
       variants={containerVariants}
@@ -66,8 +87,28 @@ const Menu = () => {
             DESIGNS
           </motion.h2>
           {designs.map((item, index) => (
-            <ListItem title={item.title} id={item.id} index={index} />
+            <ListItem
+              type="design"
+              image={item.image}
+              title={item.title}
+              id={item.id}
+              index={index}
+            />
           ))}
+          <AnimatePresence>
+            {currentResearch !== false && (
+              <Image
+                containerClass="menu__list--image-container"
+                imageClass="menu__list--image"
+                containerVariants={imageVariants}
+                initial="initial"
+                animate="animate"
+                main={currentResearch}
+                compressed={currentResearch}
+                transition={imageTransition}
+              />
+            )}
+          </AnimatePresence>
         </div>
         <motion.h1
           whileHover={{ backgroundColor: "#BFD2CF", color: black }}
@@ -94,7 +135,7 @@ const Menu = () => {
           </Link>
         </motion.h1>
 
-        <div className="menu__list menu__list--researches">
+        <div className="menu__list menu__list__researches">
           <motion.h2
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
@@ -104,7 +145,13 @@ const Menu = () => {
             RESEARCHES
           </motion.h2>
           {researches.map((item, index) => (
-            <ListItem title={item.title} id={item.id} index={index} />
+            <ListItem
+              type="researches"
+              title={item.title}
+              image={item.image}
+              id={item.id}
+              index={index}
+            />
           ))}
 
           <motion.h1
@@ -118,6 +165,20 @@ const Menu = () => {
               </AnimatedText>
             </Link>
           </motion.h1>
+          <AnimatePresence>
+            {currentDesign !== false && (
+              <Image
+                containerClass="menu__list--image-container"
+                imageClass="menu__list--image"
+                containerVariants={imageVariants}
+                initial="initial"
+                animate="animate"
+                main={currentDesign}
+                compressed={currentDesign}
+                transition={imageTransition}
+              />
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </motion.div>

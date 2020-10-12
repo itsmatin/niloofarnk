@@ -4,6 +4,7 @@ import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";
 import ProgressBar from "../components/ProgressBar";
 import HomeDesigns from "../sections/HomeDesigns";
+import HomeResearches from "../sections/HomeResearches";
 
 const Home = () => {
   const [initialLoading, setInitialLoading] = useState(false);
@@ -20,6 +21,7 @@ const Home = () => {
           <ProgressBar />
           <HomeHeader />
           <HomeDesigns />
+          <HomeResearches />
         </>
       )}
     </div>

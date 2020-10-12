@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from "react";
+import React, { useState, useEffect } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import { useInView } from "react-intersection-observer";
 import {
