@@ -14,6 +14,16 @@
       align-items: center;
     }
 
+    &--arrow {
+      position: absolute;
+      left: 30%;
+      top: 20%;
+      width: 7rem;
+      height: 7rem;
+      // transform: rotate(90deg);
+      // stroke-width: 1px;
+    }
+
     &--title {
       position: absolute;
       z-index: 10;
@@ -82,9 +92,8 @@
 
     &--title {
       width: 100%;
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       padding-left: 4rem;
-      font-weight: 100;
       @include respond(short) {
         padding-left: 3rem;
       }
@@ -157,9 +166,7 @@
         height: 30rem;
       }
     }
-    &--image {
-      // border-radius: 0.1rem;
-    }
+
     &__triangle {
       position: absolute;
       z-index: 0;
@@ -189,17 +196,48 @@
     display: flex;
     flex-flow: row wrap;
     min-height: 100vh;
-    margin-top: 4rem;
 
     &--title {
       width: 100%;
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       padding-right: 6rem;
-      font-weight: 100;
       text-align: right;
+
       @include respond(short) {
         padding-right: 3rem;
       }
+    }
+
+    &--container {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      padding-right: 0;
+    }
+
+    &--image {
+      height: initial;
+      width: 100%;
+    }
+
+    &__list {
+      list-style: none;
+      align-self: flex-start;
+
+      & > li {
+        margin: 1.5rem 0;
+        padding-right: 1rem;
+      }
+    }
+
+    &--image-container {
+      width: 30rem;
+      height: auto;
+      border-right: 1px solid $white;
+      padding-right: 2rem;
     }
   }
 }

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
+import Image from "../components/Image";
 import database from "../utils/database";
 import { ease, white, black } from "../utils/config";
 
@@ -25,6 +26,10 @@ function ListItem({ ...props }) {
 }
 
 const HomeResearches = () => {
+  const [currentImage, setCurrentImage] = useState([
+    "capture.jpg",
+    "capture.jpg",
+  ]);
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
   });
@@ -33,10 +38,18 @@ const HomeResearches = () => {
       <h2 ref={titleRef} className="home__researches--title">
         <AnimatedText isVisible={titleInView}>RESEARCHES</AnimatedText>
       </h2>
-      <div className="home__researches__container">
-        {researches.map((item, index) => (
-          <ListItem title={item.title} id={item.id} index={index} />
-        ))}
+      <div className="home__researches--container">
+        <Image
+          containerClass="home__researches--image-container"
+          imageClass="home__researches--image"
+          main={currentImage[0]}
+          compressed={currentImage[1]}
+        />
+        <ul className="home__researches__list">
+          {researches.map((item, index) => (
+            <ListItem title={item.title} id={item.id} index={index} />
+          ))}
+        </ul>
       </div>
     </motion.section>
   );
