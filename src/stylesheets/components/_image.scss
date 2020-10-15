@@ -1,11 +1,13 @@
 .image {
   height: 100%;
+  border-radius: inherit;
 
   &--container {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
     padding: 2rem 0;
+    border-radius: inherit;
 
     @include respond(tall) {
       flex-flow: column nowrap;

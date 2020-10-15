@@ -9,7 +9,7 @@ import Cursor from "./components/Cursor";
 import Scrollbar from "./components/Scrollbar";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const ref = createRef();
 
   return (

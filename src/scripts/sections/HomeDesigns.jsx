@@ -27,10 +27,28 @@ const circularImageVariants = {
 const imageContainerVariants = {
   initial: {
     opacity: 1,
+    scale: 1,
+    borderRadius: "0%",
+    transition: transition,
+  },
+
+  whileHover: {
+    opacity: 1,
+    borderRadius: "50%",
+    scale: 1.2,
+    y: [0, -15],
+    transition: {
+      y: {
+        yoyo: Infinity,
+        duration: 5,
+      },
+      ...transition,
+    },
   },
 
   othersNotHover: {
     opacity: 0.1,
+    transition: transition,
   },
 };
 
@@ -43,6 +61,7 @@ const HomeDesigns = () => {
   });
   const { scrollYProgress } = useViewportScroll();
   const y = useTransform(scrollYProgress, [0, 1], [1200, 200]);
+  const containerY = useTransform(scrollYProgress, [0, 1], [0, -400]);
   const rotate = useTransform(scrollYProgress, [0, 1], [30, 90]);
   const springRotate = useSpring(rotate, {
     bounce: 0,
@@ -71,7 +90,10 @@ const HomeDesigns = () => {
         <h1 ref={titleRef} className="home__designs--title">
           <AnimatedText isVisible={titleInView}>DESIGNS</AnimatedText>
         </h1>
-        <motion.div className="home__designs__container">
+        <motion.div
+          style={{ y: containerY }}
+          className="home__designs__container"
+        >
           {database.designs.map((design, index) => {
             return (
               <Image
@@ -87,7 +109,7 @@ const HomeDesigns = () => {
                 }
                 whileHover={
                   hovered === index && !sidebarOpen
-                    ? "initial"
+                    ? "whileHover"
                     : "othersNotHover"
                 }
                 containerClass="home__designs--image-container"
@@ -99,6 +121,7 @@ const HomeDesigns = () => {
             );
           })}
         </motion.div>
+
         <motion.div
           transition={transition}
           style={{ y, rotate: springRotate }}
