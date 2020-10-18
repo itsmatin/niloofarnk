@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useSpring,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
 import Image from "../components/Image";
@@ -16,6 +21,8 @@ function ListItem({ ...props }) {
       initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
       exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
       whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
+      onHoverStart={props.onHoverStart}
+      onHoverEnd={props.onHoverEnd}
       className="menu__list--item"
     >
       <Link to={props.id} key={props.index}>
@@ -30,6 +37,8 @@ const HomeResearches = () => {
     "capture.jpg",
     "capture.jpg",
   ]);
+  const { scrollYProgress } = useViewportScroll();
+  const rectPath = useTransform(scrollYProgress, [0.87, 1], [0.2, 1]);
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
   });
@@ -47,9 +56,23 @@ const HomeResearches = () => {
         />
         <ul className="home__researches__list">
           {researches.map((item, index) => (
-            <ListItem title={item.title} id={item.id} index={index} />
+            <ListItem
+              onHoverStart={() => setCurrentImage([item.image, item.image])}
+              // onHoverEnd={() => setCurrentImage("")}
+              title={item.title}
+              id={item.id}
+              index={index}
+            />
           ))}
         </ul>
+        <svg className="home__researches--rect" width="600" height="600">
+          <motion.path
+            style={{ pathLength: rectPath }}
+            d="M 10 10 H 500 V 500 H 10 Z"
+            fill="none"
+            stroke={white}
+          />
+        </svg>
       </div>
     </motion.section>
   );

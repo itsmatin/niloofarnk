@@ -7,7 +7,7 @@ import HomeDesigns from "../sections/HomeDesigns";
 import HomeResearches from "../sections/HomeResearches";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(false);
 
   return (
     <div className="home">
