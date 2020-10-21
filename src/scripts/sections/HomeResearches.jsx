@@ -27,10 +27,20 @@ const imageVariants = {
     scaleY: 0,
     opacity: 0,
   },
+
   animate: {
     scaleY: 1,
     opacity: [0, 1],
-    transition: transition,
+    transition,
+  },
+
+  animateAgain: {
+    opacity: [0, 1],
+    transition,
+  },
+  exit: {
+    opacity: [1, 0],
+    transition,
   },
 };
 
@@ -70,9 +80,10 @@ const HomeResearches = () => {
   const [shapeRotate, cycleShapeAngle] = useCycle(0, 90, 180, 270, 360);
   const [currentYear, setCurrentYear] = useState(2017);
   const rectPath = useTransform(scrollYProgress, [0.87, 1], [0.2, 1]);
-  const listPos = useTransform(scrollYProgress, [0.6, 1], [1000, -2000]);
+  const listPos = useTransform(scrollYProgress, [0.6, 1], [100, 200]);
   const shapePos = useTransform(scrollYProgress, [0.6, 1], [100, 0]);
   const imageScale = useTransform(scrollYProgress, [0.6, 1], [0.95, 1.1]);
+  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-300, -50]);
 
   return (
     <motion.section
@@ -86,14 +97,13 @@ const HomeResearches = () => {
       </h2>
       <div className="home__researches--container">
         <Image
-          containerStyle={{ scale: imageScale, y: listPos }}
+          containerStyle={{ scale: imageScale, y: imagePos }}
           imageVariants={imageVariants}
           containerClass="home__researches__image-container"
           imageClass="home__researches__image"
           main={currentImage[0]}
           compressed={currentImage[1]}
         />
-
         <motion.ul style={{ y: listPos }} className="home__researches__list">
           {researches.map((item, index) => (
             <ListItem
@@ -116,7 +126,20 @@ const HomeResearches = () => {
         >
           {currentYear}
         </motion.div>
-        <svg className="home__researches--rect" width="600" height="600">
+        <svg className="home__researches__rect" width="600" height="600">
+          <motion.path
+            style={{ pathLength: rectPath }}
+            d="M 10 10 H 500 V 500 H 10 Z"
+            fill="none"
+            stroke={white}
+          />
+        </svg>
+
+        <svg
+          className="home__researches__rect home__researches__rect--second"
+          width="600"
+          height="600"
+        >
           <motion.path
             style={{ pathLength: rectPath }}
             d="M 10 10 H 500 V 500 H 10 Z"

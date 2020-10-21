@@ -26,12 +26,18 @@ const circularImageVariants = {
 };
 const imageContainerVariants = {
   initial: {
+    y: 200,
+    opacity: 0,
+    transition: { ...transition, delay: 0.3, duration: 0.7 },
+  },
+
+  animate: {
+    y: 0,
     opacity: 1,
     scale: 1,
     borderRadius: "0%",
-    transition: transition,
+    transition: { ...transition, delay: 0.3, duration: 0.7 },
   },
-
   whileHover: {
     opacity: 1,
     borderRadius: "50%",
@@ -102,9 +108,11 @@ const HomeDesigns = () => {
                 imageClass="home__designs--image"
                 onHoverStart={() => setHovered(index)}
                 onHoverEnd={() => setHovered(false)}
+                viewOptions={{ triggerOnce: true, threshold: 0.5 }}
+                initial="initial"
                 animate={
                   hovered === false && !sidebarOpen
-                    ? "initial"
+                    ? "animate"
                     : "othersNotHover"
                 }
                 whileHover={

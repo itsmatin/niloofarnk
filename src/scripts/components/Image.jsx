@@ -33,9 +33,12 @@ const Image = ({
 }) => {
   const { ref, inView } = useInView(viewOptions);
 
+  useEffect(() => {}, [main, compressed]);
+
   return (
     <motion.div
       ref={ref}
+      start
       onClick={onClick}
       transition={transition}
       variants={containerVariants}
