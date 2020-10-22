@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
@@ -9,12 +9,14 @@ const textVariants = {
   initial: {
     color: white,
     borderBottom: `1px solid ${white}`,
-    fontSize: "5rem",
+    scale: 1,
+    marginRight: "0rem",
   },
   animate: {
     color: black,
     borderBottom: `1px solid ${black}`,
-    fontSize: "6.5rem",
+    scale: 1.2,
+    marginRight: "3rem",
   },
 };
 
@@ -25,6 +27,8 @@ const noiseBgVariants = {
 
 const HomeEnding = () => {
   const { ref, inView } = useInView({ threshold: 0.5 });
+  const { scrollYProgress } = useViewportScroll();
+  const x = useTransform(scrollYProgress, [0.7, 1], [-200, 0]);
   const [hover, setHover] = useState(false);
 
   return (
@@ -41,20 +45,23 @@ const HomeEnding = () => {
         initial="initial"
         className="home__end--noise-bg"
       />
-      <Link className="home__end--title" to="/about">
-        <motion.span
-          transition={{ ease, delay: 0.1 }}
-          variants={textVariants}
-          initial="initial"
-          animate={hover ? "animate" : "initial"}
-          onHoverStart={() => setHover(true)}
-          onHoverEnd={() => setHover(false)}
-        >
+
+      <motion.span
+        transition={{ ease, delay: 0.1 }}
+        style={{ x }}
+        variants={textVariants}
+        initial="initial"
+        animate={hover ? "animate" : "initial"}
+        onHoverStart={() => setHover(true)}
+        onHoverEnd={() => setHover(false)}
+      >
+        <Link className="home__end--title" to="/about">
           <AnimatedText style={{ fontWeight: "inherit" }}>
             ABOUT NILOOFAR
           </AnimatedText>
-        </motion.span>
-      </Link>
+        </Link>
+      </motion.span>
+
       <motion.span className="home__end--credit">
         <AnimatedText>Designed and Developed By</AnimatedText> <br />
         <a href="https://matin.dev">
