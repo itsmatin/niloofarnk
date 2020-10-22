@@ -60,7 +60,11 @@ const AnimatedText = ({
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             exit="exit"
-            style={{ display: "inline-block", textDecoration: "inherit" }}
+            style={{
+              display: "inline-block",
+              textDecoration: "inherit",
+              transform: "inherit",
+            }}
           >
             {character}
           </motion.span>

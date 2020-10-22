@@ -62,6 +62,11 @@ const Cursor = () => {
       element.addEventListener("mouseover", handleEnterAreas);
       element.addEventListener("mouseout", handleLeaveAreas);
     });
+    document.querySelectorAll("a").forEach((element) => {
+      // Areas consist of <a> and <button> tags
+      element.addEventListener("mouseover", handleEnterAreas);
+      element.addEventListener("mouseout", handleLeaveAreas);
+    });
     return () => {
       window.removeEventListener("mousemove", handleMovement);
       document.removeEventListener("mouseenter", handleMouseEnter);

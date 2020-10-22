@@ -5,9 +5,10 @@ import HomeHeader from "../sections/HomeHeader";
 import ProgressBar from "../components/ProgressBar";
 import HomeDesigns from "../sections/HomeDesigns";
 import HomeResearches from "../sections/HomeResearches";
+import HomeEnding from "../sections/HomeEnding";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(false);
 
   return (
     <div className="home">
@@ -22,6 +23,7 @@ const Home = () => {
           <HomeHeader />
           <HomeDesigns />
           <HomeResearches />
+          <HomeEnding />
         </>
       )}
     </div>

@@ -10,7 +10,7 @@ import {
 import AnimatedText from "../utils/AnimatedText";
 import Image from "../components/Image";
 import database from "../utils/database";
-import { ease } from "../utils/config";
+import { ease, white } from "../utils/config";
 import ProjectSidebar from "../components/ProjectSidebar";
 
 const transition = { ease };
@@ -69,6 +69,7 @@ const HomeDesigns = () => {
   const y = useTransform(scrollYProgress, [0, 1], [1200, 200]);
   const containerY = useTransform(scrollYProgress, [0, 1], [0, -400]);
   const rotate = useTransform(scrollYProgress, [0, 1], [30, 90]);
+  const linePath = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
   const springRotate = useSpring(rotate, {
     bounce: 0,
     velocity: 0.1,
@@ -96,6 +97,16 @@ const HomeDesigns = () => {
         <h1 ref={titleRef} className="home__designs--title">
           <AnimatedText isVisible={titleInView}>DESIGNS</AnimatedText>
         </h1>
+        <svg>
+          <motion.path
+            transition={{ damping: 20 }}
+            style={{ pathLength: linePath, opacity: "0.5" }}
+            d="M 0,0 L 700,0 V 200,0"
+            fill={white}
+            stroke={white}
+            strokeWidth="1"
+          />
+        </svg>
         <motion.div
           style={{ y: containerY }}
           className="home__designs__container"
