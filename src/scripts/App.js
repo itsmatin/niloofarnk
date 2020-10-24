@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Menu from "./pages/Menu";
 import Cursor from "./components/Cursor";
 import Scrollbar from "./components/Scrollbar";
+import Contact from "./pages/Contact";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,8 @@ function App() {
       {/* <Scrollbar pageRef={ref} /> */}
       <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
       <Switch>
-        <Route path="/" render={() => <Home />} />
+        <Route exact path="/" render={() => <Home />} />
+        <Route path="/contact" render={() => <Contact />} />
       </Switch>
       <Cursor />
     </div>

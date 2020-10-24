@@ -19,10 +19,17 @@ const textVariants = {
     marginRight: "3rem",
   },
 };
-
+const creditVariants = {
+  initial: {
+    color: white,
+  },
+  animate: {
+    color: black,
+  },
+};
 const noiseBgVariants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1 },
+  animate: { opacity: 0.7 },
 };
 
 const HomeEnding = () => {
@@ -62,7 +69,13 @@ const HomeEnding = () => {
         </Link>
       </motion.span>
 
-      <motion.span className="home__end--credit">
+      <motion.span
+        initial="initial"
+        animate={hover ? "animate" : "initial"}
+        style={{ border: "none" }}
+        variants={creditVariants}
+        className="home__end--credit"
+      >
         <AnimatedText>Designed and Developed By</AnimatedText> <br />
         <a href="https://matin.dev">
           <AnimatedText>Matin.dev</AnimatedText>
