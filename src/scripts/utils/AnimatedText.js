@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ease } from "./config";
+import clsx from "clsx";
 
 // function random(min, max) {
 //   // min and max included
@@ -33,6 +34,8 @@ const AnimatedText = ({
   addSpace = true,
   transition = {},
   isVisible = true,
+  className,
+  onClick,
 }) => {
   //  Split each word of props.text into an array
   const splitWords = children.split(" ");
@@ -49,7 +52,13 @@ const AnimatedText = ({
   if (addSpace) words.map((word) => word.push("\u00A0"));
 
   return words.map((word, index) => (
-    <span style={style} key={index} className="word-wrapper">
+    <span
+      c
+      onClick={onClick}
+      style={style}
+      key={index}
+      className={clsx(["word-wrapper", className])}
+    >
       {words[index].flat().map((character, index) => {
         return (
           <motion.span

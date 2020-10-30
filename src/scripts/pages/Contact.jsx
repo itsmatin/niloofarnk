@@ -2,11 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
 import LinkButton from "../components/LinkButton";
-import { ease, white, black } from "../utils/config";
+import { ease } from "../utils/config";
 
+const buttonVariants = {
+  initial: { opacity: 0, transition: { delay: 0.2, ease } },
+  animate: { opacity: 1, transition: { ease } },
+};
 const footerVariants = {
   initial: {
     height: "0rem",
+    transition: { delay: 0.2, ease },
   },
   animate: {
     height: "9rem",
@@ -19,6 +24,7 @@ const rectVariants = {
     rotate: 0,
     scale: 0.5,
     marginTop: "0",
+    transition: { delay: 0.2, ease },
   },
   animate: {
     opacity: 1,
@@ -34,6 +40,7 @@ const triangleVariants = {
     rotate: 0,
     scale: 0.5,
     marginTop: "0",
+    transition: { delay: 0.2, ease },
   },
   animate: {
     opacity: 1,
@@ -44,17 +51,25 @@ const triangleVariants = {
 };
 const Contact = () => {
   return (
-    <motion.section animate="animate" initial="initial" className="contact">
+    <motion.section
+      exit="initial"
+      animate="animate"
+      initial="initial"
+      className="contact"
+    >
       <h1 className="contact__title">
         <AnimatedText>WANT TO</AnimatedText>
-        <span className="contact__title--underlined">
+        <motion.span
+          variants={buttonVariants}
+          className="contact__title--underlined"
+        >
           <AnimatedText>COLLABORATE?</AnimatedText>
-        </span>
+        </motion.span>
       </h1>
       <h1 className="contact__title contact__title--second-line">
         <AnimatedText>GO AHEAD AND CONTACT ME!</AnimatedText>
       </h1>
-      <div className="contact--button-group">
+      <motion.div variants={buttonVariants} className="contact--button-group">
         <LinkButton
           title="LinkedIn"
           className="contact--button"
@@ -65,14 +80,12 @@ const Contact = () => {
           className="contact--button"
           to="/designs/12"
         />
-      </div>
+      </motion.div>
 
       <motion.div
         transition={{ ease, delay: 0.3, duration: 0.7 }}
         variants={footerVariants}
         className="contact__footer"
-        initial="initial"
-        animate="animate"
       >
         <motion.div
           drag
@@ -84,7 +97,7 @@ const Contact = () => {
         <motion.div
           transition={{ ease, delay: 0.7, duration: 1 }}
           variants={triangleVariants}
-          className="contact__footer__shape"
+          className="contact__footer__shape contact__footer__shape--triangle"
         />
         <motion.div
           drag

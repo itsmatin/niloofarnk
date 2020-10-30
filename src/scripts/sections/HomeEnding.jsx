@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
 import { black, ease, white } from "../utils/config";
+import TransitionContext from "../contexts/TransitionContext";
 
 const textVariants = {
   initial: {
@@ -34,6 +35,8 @@ const noiseBgVariants = {
 
 const HomeEnding = () => {
   const { ref, inView } = useInView({ threshold: 0.5 });
+  const { push } = useHistory();
+  const { setTransition } = useContext(TransitionContext);
   const { scrollYProgress } = useViewportScroll();
   const x = useTransform(scrollYProgress, [0.7, 1], [-200, 0]);
   const [hover, setHover] = useState(false);
@@ -42,6 +45,8 @@ const HomeEnding = () => {
     <motion.section
       transition={{ ease }}
       animate={inView ? "animate" : "initial"}
+      initial="initial"
+      exit="initial"
       ref={ref}
       className="home__end"
     >
@@ -49,7 +54,6 @@ const HomeEnding = () => {
         transition={{ ease }}
         variants={noiseBgVariants}
         animate={hover ? "animate" : "initial"}
-        initial="initial"
         className="home__end--noise-bg"
       />
 
@@ -57,12 +61,15 @@ const HomeEnding = () => {
         transition={{ ease, delay: 0.1 }}
         style={{ x }}
         variants={textVariants}
-        initial="initial"
         animate={hover ? "animate" : "initial"}
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
       >
-        <Link className="home__end--title" to="/about">
+        <Link
+          className="home__end--title"
+          to="/contact"
+          onClick={() => setTransition(true)}
+        >
           <AnimatedText style={{ fontWeight: "inherit" }}>
             ABOUT NILOOFAR
           </AnimatedText>
@@ -70,7 +77,6 @@ const HomeEnding = () => {
       </motion.span>
 
       <motion.span
-        initial="initial"
         animate={hover ? "animate" : "initial"}
         style={{ border: "none" }}
         variants={creditVariants}

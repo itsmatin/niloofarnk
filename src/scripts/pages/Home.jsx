@@ -11,7 +11,7 @@ const Home = () => {
   const [initialLoading, setInitialLoading] = useState(false);
 
   return (
-    <div className="home">
+    <motion.div exit={{ opacity: 0 }} className="home">
       <AnimatePresence>
         {initialLoading && (
           <Loading handleInitialLoading={() => setInitialLoading(false)} />
@@ -26,7 +26,7 @@ const Home = () => {
           <HomeEnding />
         </>
       )}
-    </div>
+    </motion.div>
   );
 };
 
