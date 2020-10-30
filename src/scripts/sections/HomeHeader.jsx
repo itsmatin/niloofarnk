@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  useTransform,
-  useViewportScroll,
-  motion,
-  useSpring,
-} from "framer-motion";
+import { useTransform, useViewportScroll, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedText from "../utils/AnimatedText";
-import { ease, transparent, white } from "../utils/config";
+import { ease } from "../utils/config";
 import Image from "../components/Image";
 
-const transition = { delay: 1.2, ease, duration: 1 };
+const transition = { delay: 0.6, ease, duration: 1 };
 
 // const arrowVariants = {
 //   initial: {
@@ -33,7 +28,7 @@ const imageCaptionVariants = {
   },
   animate: {
     opacity: 1,
-    transition: { delay: 2, duration: 0.5 },
+    transition: { delay: 1.4, duration: 0.5 },
   },
 };
 

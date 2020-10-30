@@ -48,6 +48,7 @@ const containerVariants = {
     background: [white, black],
     transition,
   },
+  exit: { opacity: 0 },
 };
 
 const triangleVariants = {

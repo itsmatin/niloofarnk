@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
 import { black, ease, white } from "../utils/config";
-import TransitionContext from "../contexts/TransitionContext";
 
 const textVariants = {
   initial: {
@@ -35,8 +34,6 @@ const noiseBgVariants = {
 
 const HomeEnding = () => {
   const { ref, inView } = useInView({ threshold: 0.5 });
-  const { push } = useHistory();
-  const { setTransition } = useContext(TransitionContext);
   const { scrollYProgress } = useViewportScroll();
   const x = useTransform(scrollYProgress, [0.7, 1], [-200, 0]);
   const [hover, setHover] = useState(false);
@@ -65,11 +62,7 @@ const HomeEnding = () => {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
       >
-        <Link
-          className="home__end--title"
-          to="/contact"
-          onClick={() => setTransition(true)}
-        >
+        <Link className="home__end--title" to="/contact">
           <AnimatedText style={{ fontWeight: "inherit" }}>
             ABOUT NILOOFAR
           </AnimatedText>

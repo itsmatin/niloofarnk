@@ -1,7 +1,7 @@
-import React, { createRef, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Menu from "./pages/Menu";
@@ -12,9 +12,19 @@ import TransitionContext from "./contexts/TransitionContext";
 import Curtain from "./components/Curtain";
 
 function App() {
+  const ref = createRef();
+  const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [transition, setTransition] = useState(false);
-  const ref = createRef();
+
+  useEffect(() => {
+    history.listen((location, action) => {
+      setTransition(true);
+      setTimeout(() => {
+        setTransition(false);
+      }, 2100);
+    });
+  }, [history]);
 
   return (
     <TransitionContext.Provider value={{ transition, setTransition }}>
@@ -33,8 +43,8 @@ function App() {
           )}
         />
         <Cursor />
-        <Curtain />
       </div>
+      <Curtain />
     </TransitionContext.Provider>
   );
 }

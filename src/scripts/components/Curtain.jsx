@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import TransitionContext from "../contexts/TransitionContext";
 import { ease } from "../utils/config";
 
-const transitionOptions = { ease, duration: 2 };
+const transitionOptions = { ease, duration: 1.5 };
 const curtainVariants = {
   initial: {
     y: "100%",
