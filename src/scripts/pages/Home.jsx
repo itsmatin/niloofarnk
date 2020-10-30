@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";
@@ -8,7 +8,7 @@ import HomeResearches from "../sections/HomeResearches";
 import HomeEnding from "../sections/HomeEnding";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(false);
 
   return (
     <motion.div exit={{ opacity: 0 }} className="home">

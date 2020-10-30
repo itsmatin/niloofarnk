@@ -15,6 +15,7 @@ const ProgressBar = () => {
   const textMotion = useMotionValue(y);
   const [text, setText] = useState("Scroll Down");
   const [animate, setAnimate] = useState(true);
+
   useEffect(() => {
     function updateText(yValue) {
       if (0.2 > yValue) textMotion.set("Scroll Down");
@@ -22,6 +23,7 @@ const ProgressBar = () => {
       else if (0.7 < yValue && yValue < 0.9) textMotion.set("Projects");
       else textMotion.set("Who is Niloofar");
     }
+
     const unsubscribeY = y.onChange(updateText);
     const unSubscribeTextMotion = textMotion.onChange((value) => {
       setText(value);

@@ -2,13 +2,14 @@ import React, { createRef, useEffect, useState } from "react";
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
 import { Route, Switch, useHistory } from "react-router-dom";
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Menu from "./pages/Menu";
 import Cursor from "./components/Cursor";
 import Scrollbar from "./components/Scrollbar";
-import Contact from "./pages/Contact";
 import Curtain from "./components/Curtain";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   const ref = createRef();
@@ -19,7 +20,8 @@ function App() {
   useEffect(() => {
     history.listen(() => {
       setTransition(true);
-      setTimeout(() => setTransition(false), 1600);
+      setMenuOpen(false);
+      setTimeout(() => setTransition(false), 1000);
     });
   }, [history]);
 
@@ -34,6 +36,7 @@ function App() {
             <Switch location={location} key={location.pathname}>
               <Route exact path="/" render={() => <Home />} />
               <Route path="/contact" render={() => <Contact />} />
+              <Route path="/about" render={() => <About />} />
             </Switch>
           </AnimatePresence>
         )}

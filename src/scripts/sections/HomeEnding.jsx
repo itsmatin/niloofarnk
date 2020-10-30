@@ -14,12 +14,10 @@ const textVariants = {
   initial: {
     color: white,
     borderBottom: `1px solid ${white}`,
-    // marginRight: "0rem",
   },
   animate: {
     color: black,
     borderBottom: `1px solid ${black}`,
-    // marginRight: "3rem",
   },
 };
 const creditVariants = {
@@ -68,7 +66,7 @@ const HomeEnding = () => {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
       >
-        <Link className="home__end--title" to="/contact">
+        <Link className="home__end--title" to="/about">
           <AnimatedText style={{ fontWeight: "inherit" }}>
             ABOUT NILOOFAR
           </AnimatedText>

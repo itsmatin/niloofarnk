@@ -114,7 +114,7 @@ const Menu = () => {
           whileHover={{ backgroundColor: "#BFD2CF", color: black }}
           className="menu__title menu__title--about"
         >
-          <Link to="/">
+          <Link to="/about">
             <AnimatedText transition={{ delay: 0.85 }} addSpace={false}>
               ABOUT
             </AnimatedText>
