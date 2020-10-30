@@ -1,11 +1,16 @@
 import React from "react";
-import { useTransform, useViewportScroll, motion } from "framer-motion";
+import {
+  useTransform,
+  useViewportScroll,
+  motion,
+  useSpring,
+} from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedText from "../utils/AnimatedText";
 import { ease } from "../utils/config";
 import Image from "../components/Image";
 
-const transition = { delay: 0.6, ease, duration: 1 };
+const transition = { ease, duration: 1 };
 
 // const arrowVariants = {
 //   initial: {
@@ -28,7 +33,7 @@ const imageCaptionVariants = {
   },
   animate: {
     opacity: 1,
-    transition: { delay: 1.4, duration: 0.5 },
+    transition: { delay: 1, duration: 0.5 },
   },
 };
 
@@ -48,13 +53,13 @@ const HomeHeader = ({ props }) => {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const { scrollYProgress } = useViewportScroll();
   const titleY = useTransform(scrollYProgress, [0, 0.9], [0, -200]);
-  // const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
-  // const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
-  const svgProgress = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
+  // const svgProgress = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
   return (
     <motion.header
-      // style={{ opacity: opacitySpring }}
+      style={{ opacity: opacitySpring }}
       className="home__header"
       ref={ref}
       {...props}

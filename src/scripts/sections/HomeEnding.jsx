@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import {
+  motion,
+  useTransform,
+  useViewportScroll,
+  useSpring,
+} from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedText from "../utils/AnimatedText";
 import { useInView } from "react-intersection-observer";
@@ -9,14 +14,12 @@ const textVariants = {
   initial: {
     color: white,
     borderBottom: `1px solid ${white}`,
-    scale: 1,
-    marginRight: "0rem",
+    // marginRight: "0rem",
   },
   animate: {
     color: black,
     borderBottom: `1px solid ${black}`,
-    scale: 1.2,
-    marginRight: "3rem",
+    // marginRight: "3rem",
   },
 };
 const creditVariants = {
@@ -29,17 +32,20 @@ const creditVariants = {
 };
 const noiseBgVariants = {
   initial: { opacity: 0 },
-  animate: { opacity: 0.7 },
+  animate: { opacity: 0.9 },
 };
 
 const HomeEnding = () => {
   const { ref, inView } = useInView({ threshold: 0.5 });
   const { scrollYProgress } = useViewportScroll();
   const x = useTransform(scrollYProgress, [0.7, 1], [-200, 0]);
+  const opacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
+  const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
   const [hover, setHover] = useState(false);
 
   return (
     <motion.section
+      style={{ opacity: opacitySpring }}
       transition={{ ease }}
       animate={inView ? "animate" : "initial"}
       initial="initial"

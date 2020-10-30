@@ -53,7 +53,6 @@ const AnimatedText = ({
 
   return words.map((word, index) => (
     <span
-      c
       onClick={onClick}
       style={style}
       key={index}

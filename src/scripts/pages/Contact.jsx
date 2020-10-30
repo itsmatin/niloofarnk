@@ -52,7 +52,7 @@ const triangleVariants = {
 const Contact = () => {
   return (
     <motion.section
-      exit="initial"
+      exit={{ opacity: 0 }}
       animate="animate"
       initial="initial"
       className="contact"

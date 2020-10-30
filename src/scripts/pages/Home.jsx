@@ -8,11 +8,11 @@ import HomeResearches from "../sections/HomeResearches";
 import HomeEnding from "../sections/HomeEnding";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
 
   return (
     <motion.div exit={{ opacity: 0 }} className="home">
-      <AnimatePresence>
+      <AnimatePresence initial>
         {initialLoading && (
           <Loading handleInitialLoading={() => setInitialLoading(false)} />
         )}
