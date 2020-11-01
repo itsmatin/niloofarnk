@@ -94,8 +94,10 @@
       width: 100%;
       font-size: 9.5rem;
       padding-left: 4rem;
-      @include respond(short) {
-        padding-left: 3rem;
+
+      @include respond(short-with-sugar) {
+        padding-left: 2.5rem;
+        font-size: 6rem;
       }
     }
 
@@ -109,6 +111,7 @@
 
       @include respond(short-with-sugar) {
         flex-flow: column nowrap;
+        margin-top: -4rem;
       }
 
       & :first-child {
@@ -200,23 +203,33 @@
     &--title {
       z-index: 99;
       width: 100%;
-      font-size: 11.5rem;
+      font-size: 9.5rem;
       padding-right: 6rem;
       text-align: right;
 
+      @include respond(short-with-sugar) {
+        padding-left: 2.5rem;
+        font-size: 6rem;
+      }
+
       @include respond(short) {
-        padding-right: 3rem;
+        padding-left: 1rem;
+        font-size: 4.5rem;
       }
     }
 
     &--container {
       width: 100%;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       padding-right: 0;
+
+      @include respond(venti) {
+        flex-flow: column wrap;
+      }
     }
 
     &--shape {
@@ -244,7 +257,20 @@
       width: auto;
       flex-grow: 1;
       justify-content: center;
-      margin-left: 4rem;
+
+      @include respond(venti) {
+        margin-top: 9rem;
+        padding-bottom: 0;
+      }
+
+      @include respond(tall) {
+        width: 85%;
+        height: auto;
+        & > img {
+          width: 100%;
+          height: initial;
+        }
+      }
     }
 
     &__list {
@@ -252,9 +278,22 @@
       list-style: none;
       align-self: flex-start;
 
+      @include respond(venti) {
+        transform: initial;
+      }
+
+      @include respond(short) {
+        margin-top: -9rem;
+      }
+
       & > li {
         margin: 1.5rem 0;
         padding-right: 1rem;
+
+        @include respond(short-with-sugar) {
+          padding-left: 0.75rem;
+          padding-right: 0;
+        }
       }
     }
 
@@ -298,6 +337,10 @@
       color: $white;
       font-weight: 100;
       font-size: 5rem;
+      @include respond(short) {
+        margin: 0 0.5rem;
+        text-align: center;
+      }
     }
 
     &--credit {

@@ -60,7 +60,7 @@ const HomeEnding = () => {
 
       <motion.span
         transition={{ ease, delay: 0.1 }}
-        style={{ x }}
+        style={{ x, display: "flex" }}
         variants={textVariants}
         animate={hover ? "animate" : "initial"}
         onHoverStart={() => setHover(true)}

@@ -36,7 +36,10 @@ const AboutIntroduction = () => {
           corrupti ab ea provident officia culpa fuga quae obcaecati quo, omnis
           at repellat laborum nemo eius voluptas voluptate quasi fugiat
           cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Perspiciatis cum nemo fuga, minus voluptates sequi?
+          Perspiciatis cum nemo fuga, minus voluptates sequi? Lorem, ipsum dolor
+          sit amet consectetur adipisicing elit. Harum corrupti ab ea provident
+          officia culpa fuga quae obcaecati quo, omnis at repellat laborum nemo
+          eius voluptas voluptate quasi fugiat cupiditate.
         </p>
       </motion.div>
     </motion.section>

@@ -80,10 +80,10 @@ const HomeResearches = () => {
   const [shapeRotate, cycleShapeAngle] = useCycle(0, 90, 180, 270, 360);
   const [currentYear, setCurrentYear] = useState(2017);
   const rectPath = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
-  const listPos = useTransform(scrollYProgress, [0, 1], [100, 200]);
+  const listPos = useTransform(scrollYProgress, [0.7, 0.9], [50, 0]);
   const shapePos = useTransform(scrollYProgress, [0, 1], [100, 0]);
   const imageScale = useTransform(scrollYProgress, [0.7, 1], [0.95, 1.1]);
-  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-300, -50]);
+  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-250, 0]);
 
   return (
     <motion.section
