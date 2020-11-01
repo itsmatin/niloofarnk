@@ -6,6 +6,7 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
+import Image from "../components/Image";
 
 const AboutHeader = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -15,10 +16,15 @@ const AboutHeader = () => {
   return (
     <motion.header style={{ opacity: opacitySpring }} className="about__header">
       <motion.h1 className="about__header--title">
-        <AnimatedText>
-          "Some inspiring shit or personal statement goes right here..."
-        </AnimatedText>
+        <AnimatedText>My beard grows to my toes,</AnimatedText>
+        <br />
+        <AnimatedText>I never wears no clothes,</AnimatedText>
+        <br />
+        <AnimatedText>I wraps my hair around my bare,</AnimatedText>
+        <br />
+        <AnimatedText>and down the road i goes. . .</AnimatedText>
       </motion.h1>
+      {/* <Image main="./beard.png" /> */}
     </motion.header>
   );
 };
