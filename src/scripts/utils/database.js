@@ -43,4 +43,34 @@ export default {
       year: "2019",
     },
   ],
+  academics: [
+    {
+      id: "I",
+      title: "Penn State",
+      degree: "MSc. of Architecture",
+      year: "2019 - 2020",
+      image: "pennstate.png",
+    },
+    {
+      id: "II",
+      title: "Georgia Tech",
+      degree: "WTF of some shit",
+      year: "2014 - 2018",
+      image: "georgiatech.png",
+    },
+    {
+      id: "III",
+      title: "Carnegie Mellon",
+      degree: "MSc. of Architecture",
+      year: "2013 - 2017",
+      image: "carnegiemellon.png",
+    },
+    {
+      id: "IV",
+      title: "Azad University",
+      degree: "Bsc. of Useless Shit",
+      year: "2019 - 2020",
+      image: "georgiatech.png",
+    },
+  ],
 };

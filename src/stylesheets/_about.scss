@@ -12,7 +12,6 @@
 
   &__header {
     height: 100vh;
-    min-height: 51rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -21,6 +20,9 @@
     background-position: right;
     background-size: 45%;
 
+    @include respond(trenta) {
+      min-height: 51rem;
+    }
     @include respond(venti-with-sugar) {
       background-size: 60%;
     }
@@ -123,6 +125,74 @@
         margin-bottom: 2rem;
         font-family: $font;
       }
+    }
+  }
+
+  &__academics {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 3rem 0;
+
+    &--title {
+      width: 100%;
+      text-align: right;
+      font-size: 5rem;
+    }
+
+    &__list {
+      width: 30%;
+      list-style: none;
+      font-family: $font;
+
+      & > li {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1rem 0;
+        padding-bottom: 0.25rem;
+        font-size: 2rem;
+        border-bottom: 1px solid $grey;
+
+        & > span {
+          width: 100%;
+          margin-left: 1.5rem;
+          font-size: 1rem;
+          color: $grey;
+        }
+      }
+    }
+    &--logo-container {
+      position: absolute;
+      bottom: -11rem;
+      left: -15rem;
+      width: 30rem;
+      height: 30rem;
+      justify-content: center;
+      opacity: 0.5;
+      border-radius: 100%;
+    }
+    &--year {
+      margin-left: 2rem;
+      text-shadow: 0 0 4rem $white;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      text-align: center;
+      font-weight: 100;
+      font-size: 2.5rem;
+      color: $grey;
+      opacity: 0.5;
+    }
+  }
+
+  &__work {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5rem;
+    &--title {
+      width: 100%;
+      text-align: left;
+      font-size: 5rem;
     }
   }
 }

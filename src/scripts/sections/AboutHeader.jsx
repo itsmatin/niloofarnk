@@ -6,7 +6,6 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
-import Image from "../components/Image";
 
 const AboutHeader = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -24,7 +23,6 @@ const AboutHeader = () => {
         <br />
         <AnimatedText>and down the road i goes. . .</AnimatedText>
       </motion.h1>
-      {/* <Image main="./beard.png" /> */}
     </motion.header>
   );
 };
