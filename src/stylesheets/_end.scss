@@ -1,0 +1,42 @@
+.end {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &--noise-bg {
+    position: fixed;
+    z-index: 0;
+    top: -100%;
+    left: -50%;
+    height: 300%;
+    width: 300%;
+    background: $white;
+  }
+
+  &--title {
+    padding-bottom: 0.25rem;
+    color: $white;
+    font-weight: 100;
+    font-size: 5rem;
+    text-transform: uppercase;
+
+    @include respond(short) {
+      margin: 0 0.5rem;
+      text-align: center;
+    }
+  }
+
+  &--credit {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+    font: $font;
+    font-weight: 100;
+
+    & > a {
+      font-weight: bold;
+    }
+  }
+}

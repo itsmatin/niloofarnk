@@ -33,7 +33,7 @@ const noiseBgVariants = {
   animate: { opacity: 0.9 },
 };
 
-const HomeEnding = () => {
+const Ending = ({ title = "example", to = "/example" }) => {
   const { ref, inView } = useInView({ threshold: 0.5 });
   const { scrollYProgress } = useViewportScroll();
   const x = useTransform(scrollYProgress, [0.7, 1], [-200, 0]);
@@ -49,13 +49,13 @@ const HomeEnding = () => {
       initial="initial"
       exit="initial"
       ref={ref}
-      className="home__end"
+      className="end"
     >
       <motion.div
         transition={{ ease }}
         variants={noiseBgVariants}
         animate={hover ? "animate" : "initial"}
-        className="home__end--noise-bg"
+        className="end--noise-bg"
       />
 
       <motion.span
@@ -66,10 +66,8 @@ const HomeEnding = () => {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
       >
-        <Link className="home__end--title" to="/about">
-          <AnimatedText style={{ fontWeight: "inherit" }}>
-            ABOUT NILOOFAR
-          </AnimatedText>
+        <Link className="end--title" to={to}>
+          <AnimatedText style={{ fontWeight: "inherit" }}>{title}</AnimatedText>
         </Link>
       </motion.span>
 
@@ -77,7 +75,7 @@ const HomeEnding = () => {
         animate={hover ? "animate" : "initial"}
         style={{ border: "none" }}
         variants={creditVariants}
-        className="home__end--credit"
+        className="end--credit"
       >
         <AnimatedText>Designed and Developed By</AnimatedText> <br />
         <a href="https://matin.dev">
@@ -88,4 +86,4 @@ const HomeEnding = () => {
   );
 };
 
-export default HomeEnding;
+export default Ending;

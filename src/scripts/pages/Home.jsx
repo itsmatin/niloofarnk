@@ -5,7 +5,7 @@ import HomeHeader from "../sections/HomeHeader";
 import ProgressBar from "../components/ProgressBar";
 import HomeDesigns from "../sections/HomeDesigns";
 import HomeResearches from "../sections/HomeResearches";
-import HomeEnding from "../sections/HomeEnding";
+import Ending from "../sections/Ending";
 
 const Home = () => {
   const [initialLoading, setInitialLoading] = useState(false);
@@ -23,7 +23,7 @@ const Home = () => {
           <HomeHeader />
           <HomeDesigns />
           <HomeResearches />
-          <HomeEnding />
+          <Ending title="About Niloofar" to="/about" />
         </>
       )}
     </motion.div>

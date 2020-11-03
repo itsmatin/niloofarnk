@@ -4,7 +4,6 @@
   flex-flow: column nowrap;
   height: 100%;
   width: 100%;
-  padding: 2rem;
 
   @include respond(short-with-sugar) {
     padding: 3rem 0.75rem;
@@ -15,11 +14,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 2rem;
     background: url(./beard.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 45%;
-
     @include respond(trenta) {
       min-height: 51rem;
     }
@@ -189,10 +188,46 @@
     display: flex;
     flex-flow: row wrap;
     margin-top: 5rem;
+    padding: 2rem;
+
     &--title {
       width: 100%;
       text-align: left;
       font-size: 5rem;
+    }
+    &__boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      &__box {
+        margin: 1rem;
+        padding: 1rem;
+        &:first-child {
+          border-left: 1px solid $white;
+          border-bottom: 1px solid $white;
+        }
+        &:nth-child(2) {
+          border-top: 1px solid $white;
+        }
+        &:nth-child(3) {
+          border-right: 1px solid $white;
+        }
+        &:nth-child(4) {
+          border-top: 1px solid $white;
+          border-right: 1px solid $white;
+        }
+        & h1 {
+          text-transform: uppercase;
+        }
+        & h3 {
+          margin-left: 1rem;
+        }
+        p {
+          font-family: $font;
+          margin-left: 1rem;
+        }
+      }
     }
   }
 }
