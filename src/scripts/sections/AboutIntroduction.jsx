@@ -5,12 +5,14 @@ import { ease } from "../utils/config";
 
 const AboutIntroduction = () => {
   const { scrollYProgress } = useViewportScroll();
-  // const imageY = useTransform(scrollYProgress, [0.2, 0.6, 0.7], [-200, 0, 100]);
-  // const textY = useTransform(scrollYProgress, [0, 0.8], [-400, 0]);
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
+  const textY = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
   return (
     <motion.section className="about__introduction">
       <Image
+        containerStyle={{ y: imageY }}
         transition={{ ease }}
         containerClass="about__introduction--image"
         main="/niloofar.jpg"
@@ -19,7 +21,7 @@ const AboutIntroduction = () => {
       <motion.div className="about__introduction--triangle" />
       <motion.div
         transition={{ ease }}
-        // style={{ y: textY }}
+        style={{ y: textY }}
         className="about__introduction__text"
       >
         <h1>Hey there,</h1>

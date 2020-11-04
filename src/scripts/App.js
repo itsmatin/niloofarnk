@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Project from "./pages/Project";
 
 function App() {
   const ref = createRef();
@@ -37,6 +38,7 @@ function App() {
               <Route exact path="/" render={() => <Home />} />
               <Route path="/contact" render={() => <Contact />} />
               <Route path="/about" render={() => <About />} />
+              <Route path="/project/:name" render={() => <Project />} />
             </Switch>
           </AnimatePresence>
         )}
