@@ -64,11 +64,11 @@
     justify-content: space-evenly;
     &--title {
       width: 100%;
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: 100;
       text-align: center;
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     &--image {
       width: 12rem;
@@ -78,5 +78,32 @@
 
   &__details {
     position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+
+    &--triangle {
+      z-index: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform-origin: top;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-color: $grey;
+    }
+    &__text {
+      width: 45%;
+      padding: 0 2rem;
+
+      & > h1 {
+        font-size: 5rem;
+        font-weight: 100;
+        text-transform: uppercase;
+      }
+
+      & p {
+        font-family: $font;
+      }
+    }
   }
 }

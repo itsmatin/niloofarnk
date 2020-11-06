@@ -34,9 +34,9 @@ const Project = () => {
       </div>
 
       <div className="project__details">
-        <motion.div className="about__introduction--triangle" />
-        <motion.div className="about__introduction__text">
-          <h1>Hey there,</h1>
+        <motion.div className="project__details--triangle" />
+        <motion.div className="project__details__text">
+          <h1>More details</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
             autem tenetur quisquam accusamus vero vitae enim, modi at quo
@@ -56,10 +56,7 @@ const Project = () => {
             laborum nemo eius voluptas voluptate quasi fugiat cupiditate.
           </p>
         </motion.div>
-        <Image
-          containerClass="about__introduction--image"
-          main="/niloofar.jpg"
-        />
+        <Image containerClass="about__details --image" main="/niloofar.jpg" />
       </div>
     </div>
   );
