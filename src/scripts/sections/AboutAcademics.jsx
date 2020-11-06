@@ -35,10 +35,17 @@ const spanVariants = {
 };
 
 const AboutAcademics = () => {
+  const { scrollYProgress } = useViewportScroll();
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
   const [currentImage, setCurrentImage] = useState(academics[0].image);
   const [currentYear, setCurrentYear] = useState(academics[0].year);
-  const { scrollYProgress } = useViewportScroll();
+  const containerY = useTransform(scrollYProgress, [0, 1], [200, -300]);
+  const containerYSpring = useSpring(containerY, {
+    stiffness: 30,
+    bounce: 0,
+    damping: 20,
+  });
+
   const rotate = useTransform(
     scrollYProgress,
     [0, 0.5, 0.75, 1],
@@ -47,11 +54,18 @@ const AboutAcademics = () => {
   const rotateSpring = useSpring(rotate, { stiffness: 15, bounce: 0 });
 
   return (
-    <section className="about__academics">
-      <h1 ref={ref} className="about__academics--title">
+    <motion.section className="about__academics">
+      <motion.h1
+        style={{ x: containerYSpring }}
+        ref={ref}
+        className="about__academics--title"
+      >
         <AnimatedText isVisible={inView}>ACADEMICS</AnimatedText>
-      </h1>
-      <ul className="about__academics__list">
+      </motion.h1>
+      <motion.ul
+        style={{ y: containerYSpring }}
+        className="about__academics__list"
+      >
         {academics.map(({ id, image, title, degree, year }) => {
           return (
             <motion.li
@@ -70,7 +84,7 @@ const AboutAcademics = () => {
             </motion.li>
           );
         })}
-      </ul>
+      </motion.ul>
       <Image
         transition={{ ease }}
         containerStyle={{ rotate: rotateSpring }}
@@ -81,7 +95,7 @@ const AboutAcademics = () => {
       <motion.span className="about__academics--year">
         {currentYear}
       </motion.span>
-    </section>
+    </motion.section>
   );
 };
 

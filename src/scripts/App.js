@@ -38,7 +38,7 @@ function App() {
               <Route exact path="/" render={() => <Home />} />
               <Route path="/contact" render={() => <Contact />} />
               <Route path="/about" render={() => <About />} />
-              <Route path="/project/:name" render={() => <Project />} />
+              <Route path="/project/" render={() => <Project />} />
             </Switch>
           </AnimatePresence>
         )}

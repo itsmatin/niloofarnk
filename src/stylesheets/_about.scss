@@ -4,6 +4,7 @@
   flex-flow: column nowrap;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 
   @include respond(short-with-sugar) {
     padding: 3rem 0.75rem;
@@ -219,6 +220,7 @@
   }
 
   &__work {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     margin-top: 5rem;
@@ -233,6 +235,7 @@
       text-align: left;
       font-size: 5rem;
     }
+
     &__boxes {
       display: grid;
       grid-template-columns: 1fr 1fr;

@@ -1,6 +1,11 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  useSpring,
+} from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
 
 const AboutExperience = () => {
@@ -10,12 +15,21 @@ const AboutExperience = () => {
   const boxTwoY = useTransform(scrollYProgress, [0.7, 0.9], [-30, 0]);
   const boxThreeY = useTransform(scrollYProgress, [0.7, 0.9], [30, 0]);
   const boxFourX = useTransform(scrollYProgress, [0.7, 0.9], [30, 0]);
-
+  const titleX = useTransform(scrollYProgress, [0, 1], [-200, 300]);
+  const titleXSpring = useSpring(titleX, {
+    stiffness: 30,
+    bounce: 0,
+    damping: 20,
+  });
   return (
     <section className="about__work">
-      <h1 ref={ref} className="about__work--title">
+      <motion.h1
+        style={{ x: titleXSpring }}
+        ref={ref}
+        className="about__work--title"
+      >
         <AnimatedText isVisible={inView}>WORK EXPERIENCE</AnimatedText>
-      </h1>
+      </motion.h1>
       <div className="about__work__boxes">
         <motion.div style={{ x: boxOneX }} className="about__work__boxes__box">
           <h1>I) SOME COMPANY LTD.</h1>
