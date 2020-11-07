@@ -1,6 +1,6 @@
 import React, { createRef, useEffect, useState } from "react";
 import clsx from "clsx";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Route, Switch, useHistory } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
@@ -11,12 +11,19 @@ import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Project from "./pages/Project";
+import { black, ease, white } from "./utils/config";
+
+const bgVariants = {
+  black: { backgroundColor: black },
+  white: { backgroundColor: white },
+};
 
 function App() {
   const ref = createRef();
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [transition, setTransition] = useState(false);
+  const [bgColor, setBgColor] = useState("black");
 
   useEffect(() => {
     history.listen(() => {
@@ -27,7 +34,13 @@ function App() {
   }, [history]);
 
   return (
-    <div ref={ref} className={clsx(["app", menuOpen && "no-scroll"])}>
+    <motion.div
+      animate={bgColor}
+      variants={bgVariants}
+      transition={{ ease: ease, duration: 0.3 }}
+      ref={ref}
+      className={clsx(["app", menuOpen && "no-scroll"])}
+    >
       <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
       {/* <Scrollbar pageRef={ref} /> */}
       <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
@@ -38,14 +51,17 @@ function App() {
               <Route exact path="/" render={() => <Home />} />
               <Route path="/contact" render={() => <Contact />} />
               <Route path="/about" render={() => <About />} />
-              <Route path="/project/" render={() => <Project />} />
+              <Route
+                path="/project/"
+                render={() => <Project setBgColor={setBgColor} />}
+              />
             </Switch>
           </AnimatePresence>
         )}
       />
       <Cursor />
       <Curtain transition={transition} />
-    </div>
+    </motion.div>
   );
 }
 
