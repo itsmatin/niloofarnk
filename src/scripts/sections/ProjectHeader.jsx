@@ -46,7 +46,7 @@ const ProjectHeader = () => {
       className="project__header"
     >
       <Image
-        imageClass="home__header--image"
+        imageClass="project__header--image"
         containerClass="project__header--image-container"
         compressed="main-compressed.jpg"
         animate="animate"
