@@ -20,8 +20,8 @@ const circleVariants = {
 };
 
 const imageVariants = {
-  initial: { opacity: 0, transition: { opacity: { ease, delay: 5 } } },
-  animate: { opacity: 1, transition: { opacity: { ease, delay: 0 } } },
+  initial: { opacity: 0, transition: { opacity: { ease } } },
+  animate: { opacity: 1, transition: { opacity: { ease, delay: 0.2 } } },
 };
 
 const ProjectProcess = ({ setBgColor }) => {
@@ -75,6 +75,27 @@ const ProjectProcess = ({ setBgColor }) => {
           initial="initial"
           animate={inView ? "animate" : "initial"}
           main="./capstone/3.jpg"
+          containerClass="project__process__images--image"
+        />
+        <Image
+          containerVariants={imageVariants}
+          initial="initial"
+          animate={inView ? "animate" : "initial"}
+          main="./capstone/4.jpg"
+          containerClass="project__process__images--image"
+        />
+        <Image
+          containerVariants={imageVariants}
+          initial="initial"
+          animate={inView ? "animate" : "initial"}
+          main="./capstone/5.jpg"
+          containerClass="project__process__images--image"
+        />
+        <Image
+          containerVariants={imageVariants}
+          initial="initial"
+          animate={inView ? "animate" : "initial"}
+          main="./capstone/6.jpg"
           containerClass="project__process__images--image"
         />
       </div>
