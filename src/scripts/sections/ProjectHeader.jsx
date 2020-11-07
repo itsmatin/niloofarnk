@@ -37,12 +37,12 @@ const imageVariants = {
 const ProjectHeader = () => {
   const { scrollYProgress } = useViewportScroll();
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
 
   return (
     <motion.header
-      //   style={{ opacity: opacitySpring }}
+      style={{ opacity: opacitySpring }}
       className="project__header"
     >
       <Image

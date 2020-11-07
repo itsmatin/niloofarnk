@@ -7,30 +7,14 @@ import ProjectDetails from "../sections/ProjectDetails";
 import ProjectShowcase from "../sections/ProjectShowcase";
 import Ending from "../sections/Ending";
 import ProjectProcess from "../sections/ProjectProcess";
+import ProjectInfo from "../sections/ProjectInfo";
 
-const Project = ({ setBgColor }) => {
+const Project = ({ setBgColor, bgColor }) => {
   return (
     <div className="project">
       <ProjectHeader />
-      <div className="project__info">
-        <p className="project__info--description">
-          A super short description goes right here, almost exactly as long as
-          this sample text
-        </p>
-        <div className="project__info__box">
-          <span>Type</span>
-          <h5>Commercial</h5>
-        </div>
-        <div className="project__info__box">
-          <span>Duration</span>
-          <h5>6 Months</h5>
-        </div>
-        <div className="project__info__box">
-          <span>Type</span>
-          <h5>Commercial</h5>
-        </div>
-      </div>
-      <ProjectProcess />
+      <ProjectInfo bgColor={bgColor} />
+      <ProjectProcess setBgColor={setBgColor} />
       <ProjectDetails />
       <ProjectShowcase />
       <Ending title="02. To the next Project" />
