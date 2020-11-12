@@ -8,6 +8,7 @@ const AboutIntroduction = () => {
   const imageY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const textY = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const pathLength = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+
   return (
     <motion.section className="about__introduction">
       <Image
@@ -29,7 +30,7 @@ const AboutIntroduction = () => {
             d="M -2000 100 50 100 L 50 50 L 70 50 L 70 100 L 90 100 L 90 50 L 110 50 L 110 100 L 130 100 L 130 50 L 150 50 L 150 100 L 170 100 L 170 50 L 190 50 L 190 100 L 210 50 L 210 100 L 230 50 L 230 100 L 250 50 L 250 100 L 2000 100"
             fill={transparent}
             stroke={white}
-            strokeWidth="1"
+            strokeWidth="3"
           />
         </svg>
         <h1>Hey there,</h1>

@@ -8,7 +8,7 @@ import {
 import { useInView } from "react-intersection-observer";
 import AnimatedText from "../utils/AnimatedText";
 import Image from "../components/Image";
-import { black, ease, transparent, white } from "../utils/config";
+import { black, ease, transparent, white, grey } from "../utils/config";
 import database from "../utils/database";
 
 const { academics } = database;
@@ -27,7 +27,7 @@ const listItemVariants = {
 };
 const spanVariants = {
   initial: {
-    color: white,
+    color: grey,
   },
   animate: {
     color: black,
@@ -80,7 +80,12 @@ const AboutAcademics = () => {
               }}
             >
               {id}) {title}
-              <motion.span variants={spanVariants}>{degree}</motion.span>
+              <motion.span
+                transition={{ ease: ease, duration: 0.5 }}
+                variants={spanVariants}
+              >
+                {degree}
+              </motion.span>
             </motion.li>
           );
         })}

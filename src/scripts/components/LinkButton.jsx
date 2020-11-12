@@ -31,29 +31,45 @@ const backgroundVariants = {
   },
 };
 
-const LinkButton = ({ to, className, title }) => {
+function Content({ title }) {
   return (
-    <Link to={to} className={className}>
+    <motion.span
+      role="button"
+      className="link-button"
+      transition={transition}
+      variants={buttonVariants}
+      animate="animate"
+      initial="initial"
+      whileHover="whileHover"
+    >
+      {title}
       <motion.span
-        className="link-button"
+        className="link-button--background"
         transition={transition}
-        variants={buttonVariants}
-        animate="animate"
-        initial="initial"
-        whileHover="whileHover"
-      >
-        {title}
-        <motion.span
-          className="link-button--background"
-          transition={transition}
-          variants={backgroundVariants}
-        />
-        <motion.span
-          className="link-button--line"
-          transition={transition}
-          variants={lineVariants}
-        />
-      </motion.span>
+        variants={backgroundVariants}
+      />
+      <motion.span
+        className="link-button--line"
+        transition={transition}
+        variants={lineVariants}
+      />
+    </motion.span>
+  );
+}
+
+const LinkButton = ({ to, className, title, external = false }) => {
+  return external ? (
+    <a
+      className={className}
+      rel="noopener noreferrer"
+      target="_blank"
+      href={to}
+    >
+      <Content title={title} />
+    </a>
+  ) : (
+    <Link to={to} className={className}>
+      <Content title={title} />
     </Link>
   );
 };

@@ -6,26 +6,27 @@
   flex-flow: column wrap;
   justify-content: space-between;
   padding-top: 2rem;
+  font-style: normal;
 
   &__title {
     width: 100%;
     padding: 1.5rem;
     padding-bottom: 0;
-    font-size: 6rem;
+    font-size: 5.5rem;
     font-weight: 100;
     text-align: left;
 
     @include respond(trenta) {
-      font-size: 5.5rem;
-    }
-
-    @include respond(venti-with-sugar) {
       font-size: 5rem;
     }
 
-    @include respond(short-with-sugar) {
+    @include respond(venti-with-sugar) {
       font-size: 4rem;
       text-align: center;
+    }
+
+    @include respond(short-with-sugar) {
+      font-size: 3rem;
     }
 
     &--underlined {
@@ -43,10 +44,12 @@
         text-align: left;
       }
 
-      @include respond(short-with-sugar) {
-        font-size: 3rem;
-        font-weight: bold;
+      @include respond(venti-with-sugar) {
         text-align: center;
+      }
+      @include respond(short-with-sugar) {
+        font-weight: bold;
+
         color: $pink;
       }
     }

@@ -51,7 +51,7 @@ const triangleVariants = {
 };
 const Contact = () => {
   return (
-    <motion.section
+    <motion.address
       exit={{ opacity: 0 }}
       animate="animate"
       initial="initial"
@@ -71,14 +71,16 @@ const Contact = () => {
       </h1>
       <motion.div variants={buttonVariants} className="contact--button-group">
         <LinkButton
+          external
           title="LinkedIn"
           className="contact--button"
-          to="/designs/12"
+          to="https://www.linkedin.com/in/niloofar-nikookar-658ab9109/"
         />
         <LinkButton
+          external
           title="Email"
           className="contact--button"
-          to="/designs/12"
+          to="mailto:webmaster@example.com"
         />
       </motion.div>
 
@@ -107,7 +109,7 @@ const Contact = () => {
           className="contact__footer__shape contact__footer__shape--circle"
         />
       </motion.div>
-    </motion.section>
+    </motion.address>
   );
 };
 

@@ -122,6 +122,7 @@
     }
 
     &__text {
+      position: relative;
       z-index: 10;
       width: 45%;
       display: flex;
@@ -166,23 +167,24 @@
 
     &__list {
       z-index: 100;
-      width: 30%;
+      width: 45%;
+      max-width: 50rem;
       list-style: none;
       font-family: $font;
 
-      @include respond(venti) {
-        width: 60%;
+      @include respond(venti-with-sugar) {
+        margin-top: 4rem;
       }
-
-      @include respond(short-with-sugar) {
+      @include respond(venti) {
         width: 75%;
       }
+
       & > li {
         display: flex;
         flex-flow: column nowrap;
         margin: 1rem 0;
-        padding: 0 0.5rem;
-        padding-bottom: 0.25rem;
+        padding: 1rem;
+        // padding-bottom: 0.25rem;
         font-size: 2rem;
         border-bottom: 1px solid;
         border-radius: 0.125rem;
