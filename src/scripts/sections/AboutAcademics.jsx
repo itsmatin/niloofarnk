@@ -78,6 +78,10 @@ const AboutAcademics = () => {
                 setCurrentImage(image);
                 setCurrentYear(year);
               }}
+              onTapStart={() => {
+                setCurrentImage(image);
+                setCurrentYear(year);
+              }}
             >
               {id}) {title}
               <motion.span

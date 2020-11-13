@@ -49,6 +49,7 @@
 
       @include respond(short-with-sugar) {
         margin-top: 3rem;
+        margin-left: initial;
         font-size: 2.5rem;
         text-align: center;
       }
@@ -101,6 +102,7 @@
 
       @include respond(venti) {
         width: 85%;
+        min-width: 25rem;
       }
 
       & > img {
@@ -119,6 +121,10 @@
       transform-origin: top;
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       background-color: $white;
+      @include respond(venti) {
+        height: 20rem;
+        width: 20rem;
+      }
     }
 
     &__text {
@@ -128,22 +134,40 @@
       display: flex;
       flex-flow: column nowrap;
       margin-left: 2rem;
+
+      @include respond(venti) {
+        width: 85%;
+        margin-top: 2rem;
+      }
+
+      @include respond(short-with-sugar) {
+        margin-left: initial;
+        width: 95%;
+      }
       & > svg {
         width: 800px;
         position: absolute;
         top: -8rem;
         right: 0;
+
+        @include respond(short-with-sugar) {
+          width: 110%;
+          top: -10rem;
+        }
       }
-      @include respond(venti) {
-        width: 85%;
-        margin-top: 2rem;
-      }
+
       & > h1 {
         font-size: 3rem;
       }
+
       & > p {
         margin-bottom: 2rem;
         font-family: $font;
+
+        @include respond(short-with-sugar) {
+          margin-top: 1rem;
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -157,6 +181,10 @@
 
     @include respond(venti) {
       margin-bottom: 5rem;
+    }
+
+    @include respond(short) {
+      flex-flow: column nowrap;
     }
 
     &--title {
@@ -179,12 +207,15 @@
         width: 75%;
       }
 
+      @include respond(short) {
+        width: 100%;
+      }
+
       & > li {
         display: flex;
         flex-flow: column nowrap;
         margin: 1rem 0;
         padding: 1rem;
-        // padding-bottom: 0.25rem;
         font-size: 2rem;
         border-bottom: 1px solid;
         border-radius: 0.125rem;
@@ -223,6 +254,17 @@
       font-size: 2.5rem;
       color: $grey;
       opacity: 0.5;
+
+      @include respond(short) {
+        margin-left: initial;
+        margin-right: 0.25rem;
+        writing-mode: initial;
+        text-orientation: initial;
+        text-align: right;
+        opacity: 0.8;
+        color: $white;
+        font-weight: bold;
+      }
     }
   }
 

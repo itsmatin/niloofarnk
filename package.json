@@ -18,6 +18,7 @@
     "react-progressive-image": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-use": "^15.3.4",
     "source-map-explorer": "^2.5.0"
   },
   "scripts": {

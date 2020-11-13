@@ -5,8 +5,8 @@ import Image from "../components/Image";
 
 const ProjectShowcase = () => {
   const { scrollYProgress } = useViewportScroll();
-  const imageScale = useTransform(scrollYProgress, [0.5, 0.9], [0.7, 1]);
-  const pathLength = useTransform(scrollYProgress, [0.2, 0.9], [0, 1]);
+  const imageScale = useTransform(scrollYProgress, [0.1, 0.4], [0.75, 1.2]);
+  const pathLength = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
     <motion.section className="project__showcase">
@@ -20,7 +20,7 @@ const ProjectShowcase = () => {
           strokeWidth="3"
         />
       </svg>
-      <h1 className="project__showcase--title">Showcase</h1>
+      <h1 className="project__showcase--title">Case Study</h1>
       <Image
         text="I evaluated stuff for many years"
         containerStyle={{ scale: imageScale }}

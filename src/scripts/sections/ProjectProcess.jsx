@@ -27,8 +27,8 @@ const imageVariants = {
 const ProjectProcess = ({ setBgColor }) => {
   const { ref, inView } = useInView({ threshold: 0.3 });
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.5]);
-  const x = useTransform(scrollYProgress, [0, 0.3], [0, 600]);
+  const scale = useTransform(scrollYProgress, [0.35, 0.5], [1, 0.5]);
+  const x = useTransform(scrollYProgress, [0.35, 0.5], [0, 600]);
   const scaleSpring = useSpring(scale, { stiffness: 200, bounce: 0 });
   const xSpring = useSpring(x, { stiffness: 200, bounce: 0 });
 

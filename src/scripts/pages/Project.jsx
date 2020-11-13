@@ -14,9 +14,9 @@ const Project = ({ setBgColor, bgColor }) => {
     <div className="project">
       <ProjectHeader />
       <ProjectInfo bgColor={bgColor} />
+      <ProjectShowcase />
       <ProjectProcess setBgColor={setBgColor} />
       <ProjectDetails bgColor={bgColor} />
-      <ProjectShowcase />
       <Ending title="02. To the next Project" />
     </div>
   );
