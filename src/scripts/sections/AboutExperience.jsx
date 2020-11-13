@@ -1,5 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { useWindowSize } from "react-use";
 import {
   motion,
   useViewportScroll,
@@ -7,7 +8,7 @@ import {
   useSpring,
 } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
-import { useWindowSize } from "react-use";
+
 const AboutExperience = () => {
   const { width } = useWindowSize();
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });

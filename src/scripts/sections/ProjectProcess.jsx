@@ -5,6 +5,7 @@ import {
   useSpring,
   useViewportScroll,
 } from "framer-motion";
+import { useWindowSize } from "react-use";
 import { useInView } from "react-intersection-observer";
 import { white, black, grey, ease } from "../utils/config";
 import Image from "../components/Image";
@@ -25,7 +26,8 @@ const imageVariants = {
 };
 
 const ProjectProcess = ({ setBgColor }) => {
-  const { ref, inView } = useInView({ threshold: 0.3 });
+  const { width } = useWindowSize();
+  const { ref, inView } = useInView({ threshold: width > 768 ? 0.3 : 0 });
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0.35, 0.5], [1, 0.5]);
   const x = useTransform(scrollYProgress, [0.35, 0.5], [0, 600]);
@@ -37,7 +39,7 @@ const ProjectProcess = ({ setBgColor }) => {
   }, [inView]);
 
   return (
-    <div ref={ref} className="project__process">
+    <div className="project__process">
       <motion.div
         transition={{ ease: ease }}
         variants={circleVariants}
@@ -55,7 +57,7 @@ const ProjectProcess = ({ setBgColor }) => {
       >
         DESIGN PROCESS
       </motion.h2>
-      <div className="project__process__images">
+      <div ref={ref} className="project__process__images">
         <Image
           containerVariants={imageVariants}
           initial="initial"
@@ -77,7 +79,7 @@ const ProjectProcess = ({ setBgColor }) => {
           main="./capstone/3.jpg"
           containerClass="project__process__images--image"
         />
-        <Image
+        {/* <Image
           containerVariants={imageVariants}
           initial="initial"
           animate={inView ? "animate" : "initial"}
@@ -97,7 +99,7 @@ const ProjectProcess = ({ setBgColor }) => {
           animate={inView ? "animate" : "initial"}
           main="./capstone/6.jpg"
           containerClass="project__process__images--image"
-        />
+        /> */}
       </div>
     </div>
   );

@@ -5,14 +5,18 @@ import {
   useTransform,
   useSpring,
 } from "framer-motion";
-import { grey, black, ease } from "../utils/config";
+import { grey, black, ease, white } from "../utils/config";
 import Image from "../components/Image";
 
-const colorVariants = {
+const shapeVariants = {
   grey: { backgroundColor: grey },
   black: { backgroundColor: black },
 };
 
+const textVariants = {
+  white: { color: white },
+  black: { color: black },
+};
 const ProjectDetails = ({ bgColor }) => {
   const { scrollYProgress } = useViewportScroll();
   const triangleY = useTransform(scrollYProgress, [0.2, 0.6], [400, -400]);
@@ -28,13 +32,18 @@ const ProjectDetails = ({ bgColor }) => {
       <div className="project__details">
         <motion.div
           transition={{ ease: ease }}
-          variants={colorVariants}
+          variants={shapeVariants}
           style={{ y: triangleY }}
           initial="grey"
           animate={bgColor === "white" ? "black" : "grey"}
           className="project__shape project__shape--triangle"
         />
-        <motion.div className="project__details__text">
+        <motion.div
+          initial="white"
+          animate={bgColor === "white" ? "black" : "white"}
+          variants={textVariants}
+          className="project__details__text"
+        >
           <h1 className="project__details--title">More details</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
@@ -68,8 +77,13 @@ const ProjectDetails = ({ bgColor }) => {
           containerClass="project__details--image"
           main="/capstone/topView.jpg"
         />
-        <motion.div className="project__shape project__shape--octagon" />
-        <motion.div className="project__details__text">
+        <div className="project__shape project__shape--octagon" />
+        <motion.div
+          initial="white"
+          animate={bgColor === "white" ? "black" : "white"}
+          variants={textVariants}
+          className="project__details__text"
+        >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
             autem tenetur quisquam accusamus vero vitae enim, modi at quo

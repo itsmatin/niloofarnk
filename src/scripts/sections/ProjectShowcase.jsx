@@ -1,9 +1,11 @@
 import React from "react";
+import { useWindowSize } from "react-use";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { white, transparent } from "../utils/config";
 import Image from "../components/Image";
 
 const ProjectShowcase = () => {
+  const { width } = useWindowSize();
   const { scrollYProgress } = useViewportScroll();
   const imageScale = useTransform(scrollYProgress, [0.1, 0.4], [0.75, 1.2]);
   const pathLength = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
@@ -23,7 +25,7 @@ const ProjectShowcase = () => {
       <h1 className="project__showcase--title">Case Study</h1>
       <Image
         text="I evaluated stuff for many years"
-        containerStyle={{ scale: imageScale }}
+        containerStyle={{ scale: width > 700 ? imageScale : 1.1 }}
         containerClass="project__showcase--image"
         main="/capstone/Details2.png"
       />
