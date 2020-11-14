@@ -2,11 +2,6 @@ import React, { createRef, useEffect, useState } from "react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { Route, Switch, useHistory } from "react-router-dom";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
 import Scrollbar from "./components/Scrollbar";
@@ -16,6 +11,7 @@ import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Project from "./pages/Project";
+import ScrollToTop from "./utils/ScrollToTop";
 import { black, ease, whiteWhite } from "./utils/config";
 
 const bgVariants = {
@@ -34,41 +30,43 @@ function App() {
     history.listen(() => {
       setTransition(true);
       setMenuOpen(false);
-      setTimeout(() => setTransition(false), 1000);
+      setTimeout(() => setTransition(false), 1150);
     });
   }, [history]);
 
   return (
-    <motion.div
-      animate={bgColor}
-      variants={bgVariants}
-      transition={{ ease: ease, duration: 0.3 }}
-      ref={ref}
-      className={clsx(["app", menuOpen && "no-scroll"])}
-    >
-      <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
-      {/* <Scrollbar pageRef={ref} /> */}
-      <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
-      <Route
-        render={({ location }) => (
-          <AnimatePresence exitBeforeEnter>
-            <Switch location={location} key={location.pathname}>
-              <Route exact path="/" render={() => <Home />} />
-              <Route path="/contact" render={() => <Contact />} />
-              <Route path="/about" render={() => <About />} />
-              <Route
-                path="/project/"
-                render={() => (
-                  <Project bgColor={bgColor} setBgColor={setBgColor} />
-                )}
-              />
-            </Switch>
-          </AnimatePresence>
-        )}
-      />
-      <Cursor />
-      <Curtain transition={transition} />
-    </motion.div>
+    <ScrollToTop>
+      <motion.div
+        animate={bgColor}
+        variants={bgVariants}
+        transition={{ ease: ease, duration: 0.3 }}
+        ref={ref}
+        className={clsx(["app", menuOpen && "no-scroll"])}
+      >
+        <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
+        {/* <Scrollbar pageRef={ref} /> */}
+        <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
+        <Route
+          render={({ location }) => (
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route exact path="/" render={() => <Home />} />
+                <Route path="/contact" render={() => <Contact />} />
+                <Route path="/about" render={() => <About />} />
+                <Route
+                  path="/project/"
+                  render={() => (
+                    <Project bgColor={bgColor} setBgColor={setBgColor} />
+                  )}
+                />
+              </Switch>
+            </AnimatePresence>
+          )}
+        />
+        <Cursor />
+        <Curtain transition={transition} />
+      </motion.div>
+    </ScrollToTop>
   );
 }
 

@@ -6,12 +6,13 @@ import ProgressBar from "../components/ProgressBar";
 import HomeDesigns from "../sections/HomeDesigns";
 import HomeResearches from "../sections/HomeResearches";
 import Ending from "../sections/Ending";
+import { ease } from "../utils/config";
 
 const Home = () => {
   const [initialLoading, setInitialLoading] = useState(false);
 
   return (
-    <motion.div exit={{ opacity: 0 }} className="home">
+    <motion.div transition={{ ease }} exit={{ opacity: 0 }} className="home">
       <AnimatePresence initial>
         {initialLoading && (
           <Loading handleInitialLoading={() => setInitialLoading(false)} />
