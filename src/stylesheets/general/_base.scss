@@ -34,8 +34,8 @@ a {
 }
 
 .no-scroll {
+  height: 100%;
   overflow: hidden;
-  height: 100vh;
 }
 
 .word-wrapper {
@@ -68,7 +68,7 @@ html {
     font-size: 120%;
   }
   @include respond(depth-charge-with-sugar) {
-    font-size: 170%;
+    font-size: 125%;
   }
   @include respond(trenta) {
     font-size: 90%;

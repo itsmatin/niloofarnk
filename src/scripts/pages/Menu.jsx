@@ -8,7 +8,7 @@ import Image from "../components/Image";
 
 const { researches, designs } = database;
 
-const transition = { duration: 1, ease, delay: 0.3 };
+const transition = { duration: 1, ease };
 const imageTransition = { duration: 0.4, ease };
 const imageVariants = {
   initial: { opacity: 0 },
@@ -18,21 +18,22 @@ const imageVariants = {
 
 const containerVariants = {
   initial: {
-    background: white,
     height: 0,
     opacity: 0,
   },
   animate: {
     background: black,
     height: "100vh",
-    opacity: 1,
-    overflowY: "initial",
+    opacity: [0, 1],
   },
   exit: {
-    background: black,
     height: 0,
     opacity: 0,
-    overflowY: "hidden",
+    transition: {
+      delay: 1,
+      duration: 1,
+      ease,
+    },
   },
 };
 

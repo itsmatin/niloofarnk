@@ -5,12 +5,12 @@
 }
 
 .triangle-menu {
+  z-index: 1000;
   position: fixed;
   top: 1rem;
   right: 2rem;
   width: 4.27rem;
   height: 3.85rem;
-  z-index: 100;
   cursor: pointer;
 
   & > svg {

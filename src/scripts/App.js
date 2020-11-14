@@ -2,6 +2,11 @@ import React, { createRef, useEffect, useState } from "react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { Route, Switch, useHistory } from "react-router-dom";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
 import Scrollbar from "./components/Scrollbar";
