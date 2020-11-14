@@ -5,10 +5,11 @@ import AboutIntroduction from "../sections/AboutIntroduction";
 import AboutAcademics from "../sections/AboutAcademics";
 import AboutExperience from "../sections/AboutExperience";
 import Ending from "../sections/Ending";
+import { ease } from "../utils/config";
 
 const About = () => {
   return (
-    <motion.div className="about">
+    <motion.div exit={{ opacity: 0 }} transition={{ ease }} className="about">
       <AboutHeader />
       <AboutIntroduction />
       <AboutAcademics />

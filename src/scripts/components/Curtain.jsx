@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ease } from "../utils/config";
 
-const transitionOptions = { ease, duration: 1.2 };
+const transitionOptions = { ease, duration: 1 };
 const curtainVariants = {
   initial: {
     y: "100%",
