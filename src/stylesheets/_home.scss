@@ -88,7 +88,7 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    margin-top: 6rem;
+    margin-top: 9rem;
 
     &--title {
       width: 100%;
@@ -99,6 +99,15 @@
         padding-left: 2.5rem;
         font-size: 6rem;
       }
+    }
+
+    &--shape {
+      z-index: -1;
+      position: absolute;
+      right: 0rem;
+      top: -10rem;
+      transform: rotate(140deg);
+      opacity: 0.2;
     }
 
     &__container {
@@ -235,14 +244,15 @@
     &--shape {
       position: absolute;
       z-index: 101;
-      left: 50%;
+      left: 40%;
       top: 40%;
-      width: 7rem;
-      height: 7rem;
+      width: 15rem;
+      height: 15rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 4rem;
+      font-weight: 100;
       font-family: $font;
       background-color: $black;
       color: $white;
@@ -289,6 +299,15 @@
       & > li {
         margin: 1.5rem 0;
         padding-right: 1rem;
+
+        & > a {
+          color: $white;
+          mix-blend-mode: difference;
+          &:visited {
+            color: $white;
+            mix-blend-mode: difference;
+          }
+        }
 
         @include respond(short-with-sugar) {
           padding-left: 0.75rem;

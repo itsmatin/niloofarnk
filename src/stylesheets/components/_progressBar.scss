@@ -8,6 +8,7 @@
   transform-origin: top;
   transform: translate(0, -50%);
   border: 1px solid $white;
+  mix-blend-mode: difference;
 
   @include respond(short-with-sugar) {
     left: 1rem;

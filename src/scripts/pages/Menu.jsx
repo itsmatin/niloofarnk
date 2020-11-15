@@ -27,11 +27,11 @@ const containerVariants = {
     opacity: [0, 1],
   },
   exit: {
-    height: 0,
+    // height: 0,
     opacity: 0,
     transition: {
-      delay: 1,
-      duration: 1,
+      delay: 0.2,
+      duration: 0.5,
       ease,
     },
   },
@@ -55,7 +55,6 @@ const Menu = () => {
     return (
       <motion.li
         animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
-        // initial={{ borderBottom: `1px solid ${black}` }}
         exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
         whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
         onHoverStart={() => handleHoverStart(type, image)}

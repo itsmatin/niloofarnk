@@ -26,10 +26,12 @@
 
 a {
   text-decoration: none;
-  color: $white;
+  color: $black;
+  mix-blend-mode: difference;
 
   &:visited {
-    color: inherit;
+    color: $black;
+    mix-blend-mode: difference;
   }
 }
 

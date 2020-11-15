@@ -12,10 +12,10 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import ScrollToTop from "./utils/ScrollToTop";
-import { black, ease, whiteWhite } from "./utils/config";
+import { black, ease, transparent, whiteWhite } from "./utils/config";
 
 const bgVariants = {
-  black: { backgroundColor: black },
+  black: { backgroundColor: transparent },
   white: { backgroundColor: whiteWhite },
 };
 

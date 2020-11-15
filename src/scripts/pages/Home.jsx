@@ -9,7 +9,7 @@ import Ending from "../sections/Ending";
 import { ease } from "../utils/config";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
 
   return (
     <motion.div transition={{ ease }} exit={{ opacity: 0 }} className="home">
@@ -24,7 +24,7 @@ const Home = () => {
           <HomeHeader />
           <HomeDesigns />
           <HomeResearches />
-          <Ending title="About Niloofar" to="/about" />
+          <Ending title="About Me" to="/about" />
         </>
       )}
     </motion.div>

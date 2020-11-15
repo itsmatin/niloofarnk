@@ -70,6 +70,7 @@ const HomeDesigns = () => {
   const containerY = useTransform(scrollYProgress, [0, 1], [0, -400]);
   const rotate = useTransform(scrollYProgress, [0, 1], [30, 90]);
   const linePath = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const mazePath = useTransform(scrollYProgress, [0.05, 0.3], [0.1, 1]);
   const springRotate = useSpring(rotate, {
     bounce: 0,
     velocity: 0.1,
@@ -94,6 +95,17 @@ const HomeDesigns = () => {
         ref={ref}
         className="home__designs"
       >
+        <motion.svg width="950" height="950" className="home__designs--shape">
+          <motion.path
+            style={{ pathLength: mazePath }}
+            d="M 50 100 L 650 100 A 50 50 0 1 1 650 100 L 650 450 L 350 450 L 350 150 L 600 150 L 600 400 L 400 400 L 400 200 L 550 200 L 550 350 L 450 350 L 450 250 L 500 250 L 500 300"
+            // d="M 0 100 L 650 100 A 50 50 0 1 1 650 100 A 50 50 0 1 1 650 450 A 50 50 0 1 1 350 450 A 50 50 0 1 1 350 150 A 50 50 0 1 1 600 150 A 50 50 0 1 1 600 400 A 50 50 0 1 1 400 400 A 50 50 0 1 1 400 200 A 50 50 0 1 1 550 200 A 50 50 0 1 1 550 350 A 50 50 0 1 1 450 350 A 50 50 0 1 1 450 250 A 50 50 0 1 1 500 250 A 50 50 0 1 1 500 300 "
+            stroke={white}
+            fill="transparent"
+            transition={transition}
+            strokeWidth="1"
+          />
+        </motion.svg>
         <h1 ref={titleRef} className="home__designs--title">
           <AnimatedText isVisible={titleInView}>DESIGNS</AnimatedText>
         </h1>

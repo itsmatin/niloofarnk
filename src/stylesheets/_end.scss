@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  // mix-blend-mode: difference;
 
   &--noise-bg {
     position: fixed;
@@ -21,6 +22,7 @@
     font-weight: 100;
     font-size: 5rem;
     text-transform: uppercase;
+    mix-blend-mode: difference;
 
     @include respond(short) {
       margin: 0 0.5rem;
@@ -32,11 +34,16 @@
     position: absolute;
     left: 2rem;
     bottom: 1rem;
-    font: $font;
     font-weight: 100;
 
     & > a {
       font-weight: bold;
+      color: $white;
+      mix-blend-mode: difference;
+      & :visited {
+        color: $white;
+        mix-blend-mode: difference;
+      }
     }
   }
 }

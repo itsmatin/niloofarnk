@@ -12,8 +12,15 @@
   justify-content: center;
   background-color: $black;
 
+  @include respond(short-with-sugar) {
+    flex-flow: column wrap;
+  }
+
   &--title {
     font-size: 3rem;
     font-weight: 100;
+    @include respond(short-with-sugar) {
+      margin: 0.5rem;
+    }
   }
 }

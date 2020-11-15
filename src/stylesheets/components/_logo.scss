@@ -1,9 +1,10 @@
 .logo {
+  z-index: 2000;
   position: fixed;
-  z-index: 1000;
   top: 1rem;
   left: 2rem;
   padding: 0.5rem;
+  mix-blend-mode: difference;
   font-size: 3rem;
   font-weight: 100;
   cursor: pointer;

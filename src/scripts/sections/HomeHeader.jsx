@@ -37,7 +37,8 @@ const imageVariants = {
 const HomeHeader = ({ props }) => {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const { scrollYProgress } = useViewportScroll();
-  const titleY = useTransform(scrollYProgress, [0, 0.9], [0, -200]);
+  const titleY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
+  const imageY = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
 
@@ -64,6 +65,7 @@ const HomeHeader = ({ props }) => {
         main="main.jpg"
         alt="Niloofar Nikookar Portfolio"
         text="Spring 2020"
+        containerStyle={{ y: imageY }}
         captionVariants={imageCaptionVariants}
         imageVariants={imageVariants}
         viewOptions={{ triggerOnce: true }}

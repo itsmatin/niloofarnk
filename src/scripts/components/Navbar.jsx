@@ -11,12 +11,11 @@ const Navbar = ({ menuOpen, handleMenu }) => {
     <>
       <MenuTriangle menuOpen={menuOpen} handleMenu={handleMenu} />
       {pathname !== "/" ? (
-        <Link to="/">
+        <Link className="logo" to="/">
           <motion.span
             transition={{ delay: 0.05, ease }}
             whileHover={{ color: pink }}
             initial={{ color: white }}
-            className="logo"
           >
             ن
           </motion.span>
