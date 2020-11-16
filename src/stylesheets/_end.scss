@@ -18,11 +18,10 @@
 
   &--title {
     padding-bottom: 0.25rem;
-    color: $white;
     font-weight: 100;
     font-size: 5rem;
     text-transform: uppercase;
-    mix-blend-mode: difference;
+    color: $black;
 
     @include respond(short) {
       margin: 0 0.5rem;
@@ -38,11 +37,10 @@
 
     & > a {
       font-weight: bold;
-      color: $white;
-      mix-blend-mode: difference;
+      color: $black;
+
       & :visited {
-        color: $white;
-        mix-blend-mode: difference;
+        color: $black;
       }
     }
   }

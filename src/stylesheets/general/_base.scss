@@ -26,13 +26,13 @@
 
 a {
   text-decoration: none;
-  color: $black;
-  mix-blend-mode: difference;
+  color: $white;
+  // mix-blend-mode: difference;
 
-  &:visited {
-    color: $black;
-    mix-blend-mode: difference;
-  }
+  // &:visited {
+  //   color: $black;
+  //   mix-blend-mode: difference;
+  // }
 }
 
 .no-scroll {

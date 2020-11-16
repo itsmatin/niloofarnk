@@ -1,8 +1,8 @@
 .progress-bar {
+  z-index: 1000;
   position: fixed;
   left: 2rem;
   top: 50%;
-  z-index: 50;
   width: 0.35rem;
   height: 12rem;
   transform-origin: top;
