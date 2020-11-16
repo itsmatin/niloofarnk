@@ -9,18 +9,25 @@
   position: fixed;
   top: 1rem;
   right: 2rem;
-  width: 4.27rem;
-  height: 3.85rem;
+  width: 68.3px;
+  height: 61.6px;
   cursor: pointer;
   mix-blend-mode: difference;
+
+  // @include respond(grande) {
+  //   transform: scale(0.6);
+  // }
 
   & > svg {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 4.27rem;
-    height: 3.85rem;
+    width: 68.3px;
+    height: 61.6px;
     mix-blend-mode: difference;
     transform: scale(0.8) translate(-50%, -50%);
+    @include respond(grande) {
+      transform: scale(0.6) translate(-50%, -50%);
+    }
   }
 }

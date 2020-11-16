@@ -5,8 +5,8 @@ import { ease, transparent, white } from "../utils/config";
 
 const AboutIntroduction = () => {
   const { scrollYProgress } = useViewportScroll();
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const textY = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const imageY = useTransform(scrollYProgress, [0.1, 0.6], [0, -100]);
+  const textY = useTransform(scrollYProgress, [0.1, 0.6], [0, 200]);
   const pathLength = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   return (
