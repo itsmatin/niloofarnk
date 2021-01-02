@@ -67,10 +67,10 @@ html {
   }
 
   @include respond(depth-charge) {
-    font-size: 120%;
+    font-size: 125%;
   }
   @include respond(depth-charge-with-sugar) {
-    font-size: 125%;
+    font-size: 130%;
   }
   @include respond(trenta) {
     font-size: 90%;

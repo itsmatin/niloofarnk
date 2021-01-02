@@ -11,40 +11,50 @@
   }
 
   &__header {
-    height: 100vh;
+    position: relative;
+    // height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 2rem;
-    background: url(./beard.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 45%;
+    // background: url(./beard.png);
+    // background-repeat: no-repeat;
+    // background-position: right;
+    // background-size: 45%;
+
     @include respond(trenta) {
       min-height: 51rem;
     }
-    @include respond(venti-with-sugar) {
-      background-size: 60%;
+
+    &__drawing {
+      position: absolute;
+      right: 0;
+      bottom: -5rem;
     }
 
-    @include respond(venti) {
-      background-size: 75%;
-      background-position: 50% 85%;
-    }
+    // @include respond(venti-with-sugar) {
+    //   background-size: 60%;
+    // }
 
-    @include respond(short-with-sugar) {
-      background-size: 120%;
-    }
+    // @include respond(venti) {
+    // background-size: 75%;
+    //   background-position: 50% 85%;
+    // }
+
+    // @include respond(short-with-sugar) {
+    //   background-size: 120%;
+    // }
 
     &--title {
-      margin-left: 3rem;
+      margin-left: 5rem;
       font-weight: 100;
       text-align: left;
-      font-size: 3.5rem;
+      font-size: 4rem;
       text-transform: uppercase;
-
+      line-height: 10rem;
       @include respond(venti-with-sugar) {
         font-size: 3rem;
+        line-height: 7rem;
       }
 
       @include respond(short-with-sugar) {
@@ -52,30 +62,31 @@
         margin-left: initial;
         font-size: 2.5rem;
         text-align: center;
+        line-height: initial;
       }
 
-      & > span {
-        &:first-child {
-          margin-left: 1rem;
-        }
-        &:nth-child(8) {
-          margin-left: 2rem;
-        }
-        &:nth-child(14) {
-          margin-left: 3rem;
-        }
-        &:nth-child(22) {
-          margin-left: 4rem;
-        }
-        @include respond(venti) {
-          &:first-child,
-          &:nth-child(8),
-          &:nth-child(14),
-          &:nth-child(22) {
-            margin-left: initial;
-          }
-        }
-      }
+      // & > span {
+      //   &:first-child {
+      //     margin-left: 1rem;
+      //   }
+      //   &:nth-child(8) {
+      //     margin-left: 2rem;
+      //   }
+      //   &:nth-child(14) {
+      //     margin-left: 3rem;
+      //   }
+      //   &:nth-child(22) {
+      //     margin-left: 4rem;
+      //   }
+      //   @include respond(venti) {
+      //     &:first-child,
+      //     &:nth-child(8),
+      //     &:nth-child(14),
+      //     &:nth-child(22) {
+      //       margin-left: initial;
+      //     }
+      //   }
+      // }
     }
   }
 
