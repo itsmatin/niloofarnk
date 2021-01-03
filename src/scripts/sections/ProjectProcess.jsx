@@ -25,7 +25,7 @@ const imageVariants = {
   animate: { opacity: 1, transition: { opacity: { ease, delay: 0.2 } } },
 };
 
-const ProjectProcess = ({ setBgColor, images }) => {
+const ProjectProcess = ({ setBgColor, project }) => {
   const { width } = useWindowSize();
   const { ref, inView } = useInView({ threshold: width > 768 ? 0.3 : 0 });
   const { scrollYProgress } = useViewportScroll();
@@ -58,48 +58,20 @@ const ProjectProcess = ({ setBgColor, images }) => {
         DESIGN PROCESS
       </motion.h2>
       <div ref={ref} className="project__process__images">
-        <Image
-          containerVariants={imageVariants}
-          initial="initial"
-          animate={inView ? "animate" : "initial"}
-          main="./capstone/1.jpg"
-          containerClass="project__process__images--image"
-        />
-        <Image
-          containerVariants={imageVariants}
-          initial="initial"
-          animate={inView ? "animate" : "initial"}
-          main="./capstone/2.jpg"
-          containerClass="project__process__images--image"
-        />
-        <Image
-          containerVariants={imageVariants}
-          initial="initial"
-          animate={inView ? "animate" : "initial"}
-          main="./capstone/3.jpg"
-          containerClass="project__process__images--image"
-        />
-        {/* <Image
-          containerVariants={imageVariants}
-          initial="initial"
-          animate={inView ? "animate" : "initial"}
-          main="./capstone/4.jpg"
-          containerClass="project__process__images--image"
-        />
-        <Image
-          containerVariants={imageVariants}
-          initial="initial"
-          animate={inView ? "animate" : "initial"}
-          main="./capstone/5.jpg"
-          containerClass="project__process__images--image"
-        />
-        <Image
-          containerVariants={imageVariants}
-          initial="initial"
-          animate={inView ? "animate" : "initial"}
-          main="./capstone/6.jpg"
-          containerClass="project__process__images--image"
-        /> */}
+        {project.images.process.map((imageLink, index) => {
+          return (
+            <Image
+              containerVariants={imageVariants}
+              initial="initial"
+              animate={inView ? "animate" : "initial"}
+              alt={project.title}
+              main={imageLink}
+              compressed={project.images.process[index]}
+              containerClass="project__process__images--image"
+              key={index}
+            />
+          );
+        })}
       </div>
     </div>
   );

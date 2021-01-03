@@ -17,7 +17,7 @@ const textVariants = {
   white: { color: white },
   black: { color: black },
 };
-const ProjectDetails = ({ bgColor }) => {
+const ProjectDetails = ({ bgColor, project }) => {
   const { scrollYProgress } = useViewportScroll();
   const triangleY = useTransform(scrollYProgress, [0.2, 0.6], [400, -400]);
   const scale = useTransform(scrollYProgress, [0.4, 0.8], [0.9, 1.1]);
@@ -67,7 +67,7 @@ const ProjectDetails = ({ bgColor }) => {
         <Image
           containerStyle={{ scale: scaleSpring }}
           containerClass="project__details--image"
-          main="/capstone/void.jpg"
+          main={"/capstone/void.jpg"}
         />
       </div>
       <div className="project__details" style={{ alignItems: "center" }}>

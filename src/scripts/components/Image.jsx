@@ -50,7 +50,7 @@ const Image = ({
       initial="initial"
       exit="exit"
       className={clsx(["image--container", containerClass])}
-      key={key}
+      {...props}
     >
       {text && (
         <motion.small

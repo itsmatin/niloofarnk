@@ -4,7 +4,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { white, transparent } from "../utils/config";
 import Image from "../components/Image";
 
-const ProjectShowcase = () => {
+const ProjectShowcase = ({ project }) => {
   const { width } = useWindowSize();
   const { scrollYProgress } = useViewportScroll();
   const imageScale = useTransform(scrollYProgress, [0.1, 0.4], [0.75, 1.2]);
@@ -24,10 +24,12 @@ const ProjectShowcase = () => {
       </svg>
       <h1 className="project__showcase--title">Case Study</h1>
       <Image
-        text="I evaluated stuff for many years"
+        text={`${project.title} - ${project.time} ${project.year}`}
         containerStyle={{ scale: width > 700 ? imageScale : 1.1 }}
         containerClass="project__showcase--image"
-        main="/woven/woven-case.png"
+        alt={project.title}
+        main={project.images.showcase}
+        compressed={project.compressedImages.showcase}
       />
     </motion.section>
   );
