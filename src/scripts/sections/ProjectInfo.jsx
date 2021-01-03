@@ -7,7 +7,7 @@ const colorVariants = {
   black: { color: black, borderColor: black },
 };
 
-const ProjectInfo = ({ bgColor }) => {
+const ProjectInfo = ({ bgColor, project }) => {
   return (
     <motion.div
       transition={{ ease: ease }}
@@ -16,17 +16,16 @@ const ProjectInfo = ({ bgColor }) => {
       animate={bgColor === "white" ? "black" : "white"}
       className="project__info"
     >
-      <p className="project__info--description">
-        A super short description goes right here, almost exactly as long as
-        this sample text
-      </p>
+      <p className="project__info--description">{project.infoDescription}</p>
       <div className="project__info__box">
         <span>Type</span>
-        <h5>Commercial</h5>
+        <h5> {project.type}</h5>
       </div>
       <div className="project__info__box">
-        <span>Duration</span>
-        <h5>6 Months</h5>
+        <span>Date</span>
+        <h5>
+          {project.time} {project.year}
+        </h5>
       </div>
       <div className="project__info__box">
         <span>Type</span>

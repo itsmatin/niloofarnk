@@ -34,9 +34,9 @@ const imageVariants = {
   },
 };
 
-const ProjectHeader = () => {
+const ProjectHeader = ({ project }) => {
   const { scrollYProgress } = useViewportScroll();
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref } = useInView({ threshold: 0.2, triggerOnce: true });
   const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
 
@@ -48,24 +48,19 @@ const ProjectHeader = () => {
       <Image
         imageClass="project__header--image"
         containerClass="project__header--image-container"
-        compressed="/woven/woven-header.png"
         animate="animate"
-        main="/woven/woven-header.png"
-        alt="Niloofar Nikookar Portfolio"
-        text="Spring 2020"
+        compressed={project.compressedImages.header}
+        main={project.images.header}
+        alt={project.title}
+        text={`${project?.time} ${project?.year}`}
         captionVariants={imageCaptionVariants}
         imageVariants={imageVariants}
         viewOptions={{ triggerOnce: true }}
       />
       <h1 ref={ref} className="project__header__title">
-        <AnimatedText>
-          Consolidated Correctional Treatment Facility
-        </AnimatedText>
+        <AnimatedText>{project.title}</AnimatedText>
         <br />
-        <small>
-          A super short description goes right here, almost exactly as long as
-          this sample text
-        </small>
+        <small>{project.headerDescription}</small>
       </h1>
     </motion.header>
   );

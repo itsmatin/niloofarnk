@@ -10,10 +10,21 @@ export default {
     {
       id: 2,
       title: "Woven Wall Panels",
+      headerDescription:
+        "The project is on bending active systems and torsion as a form driver in plate geometries.",
+      infoDescription: "",
       type: "Independent Study",
-      image: "./capture-2.jpg",
-      headerImage: "./woven/woven-header.png",
-      showcaseImage: "./woven/woven/case.png",
+      images: {
+        header: "/woven/woven-header.png",
+        showcase: "./woven/woven/case.png",
+      },
+      infoDescription:
+        "The study builds on principles from previous research on plate-bending-active tensile structures. ",
+      compressedImages: {
+        header: "/woven/woven-header.png",
+        showcase: "./woven/woven/compressed/case-compressed.png",
+      },
+      time: "Fall",
       year: "2019",
     },
     { id: 3, title: "Al-Bahr Towers", image: "./main.jpg", year: "1953" },

@@ -15,14 +15,10 @@ const Project = ({ setBgColor, bgColor }) => {
   useEffect(() => {
     const { pathname } = window.location;
     const itemToSearch = pathname.replace(/\D/g, "");
-    var foundProject = database.designs.find(
+    const projectList = database.researches.concat(database.designs);
+    var foundProject = projectList.find(
       (element) => element.id == itemToSearch
     );
-    if (!foundProject) {
-      foundProject = database.researches.find(
-        (element) => element.id == itemToSearch
-      );
-    }
 
     if (!foundProject) window.location.replace("/404");
     else setProject(foundProject);
@@ -35,11 +31,11 @@ const Project = ({ setBgColor, bgColor }) => {
         transition={{ ease: ease }}
         className="project"
       >
-        <ProjectHeader />
-        <ProjectInfo bgColor={bgColor} />
-        <ProjectShowcase />
-        <ProjectProcess setBgColor={setBgColor} />
-        <ProjectDetails bgColor={bgColor} />
+        <ProjectHeader project={project} />
+        <ProjectInfo project={project} bgColor={bgColor} />
+        <ProjectShowcase project={project} />
+        <ProjectProcess project={project} setBgColor={setBgColor} />
+        <ProjectDetails project={project} bgColor={bgColor} />
         <Ending title="02. To the next Project" />
       </motion.div>
     )
