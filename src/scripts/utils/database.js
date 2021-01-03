@@ -26,21 +26,21 @@ export default {
   ],
   designs: [
     {
-      id: 0,
+      id: 5,
       title: "Augmented Reality with Fologram",
       image: "./capture.jpg",
       year: "2013",
     },
     { id: 1, title: "Terrace Apartment", image: "./main.jpg", year: "2021" },
     {
-      id: 2,
+      id: 6,
       title: "Woven Wall Panels",
       image: "./capture-2.jpg",
       year: "20",
     },
     { id: 3, title: "Al-Bahr Towers", image: "./main.jpg", year: "2018" },
     {
-      id: 4,
+      id: 7,
       title: "The Infinite Line Pavilion",
       image: "./capture.jpg",
       year: "2019",

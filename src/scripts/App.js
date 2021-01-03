@@ -52,15 +52,19 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Switch location={location} key={location.pathname}>
                 <Route exact path="/" render={() => <Home />} />
-                <Route path="/contact" render={() => <Contact />} />
-                <Route path="/about" render={() => <About />} />
+                <Route exact path="/contact" render={() => <Contact />} />
+                <Route exact path="/about" render={() => <About />} />
                 <Route
                   path="/project/:id"
-                  render={() => (
-                    <Project bgColor={bgColor} setBgColor={setBgColor} />
+                  render={(props) => (
+                    <Project
+                      bgColor={bgColor}
+                      setBgColor={setBgColor}
+                      {...props}
+                    />
                   )}
                 />
-                <Route component={NotFound} />
+                <Route exact component={NotFound} />
               </Switch>
             </AnimatePresence>
           )}

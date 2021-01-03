@@ -1,33 +1,48 @@
 import React, { useEffect, useState } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import { ease } from "../utils/config";
 import ProjectHeader from "../sections/ProjectHeader";
-import Image from "../components/Image";
-import { white, transparent, ease } from "../utils/config";
 import ProjectDetails from "../sections/ProjectDetails";
 import ProjectShowcase from "../sections/ProjectShowcase";
 import Ending from "../sections/Ending";
 import ProjectProcess from "../sections/ProjectProcess";
 import ProjectInfo from "../sections/ProjectInfo";
+import database from "../utils/database";
 
 const Project = ({ setBgColor, bgColor }) => {
   const [project, setProject] = useState(false);
 
   useEffect(() => {
-    console.log(window.location.pathname);
-  }, [window.location.pathname]);
+    const { pathname } = window.location;
+    const itemToSearch = pathname.replace(/\D/g, "");
+    var foundProject = database.designs.find(
+      (element) => element.id == itemToSearch
+    );
+    if (!foundProject) {
+      foundProject = database.researches.find(
+        (element) => element.id == itemToSearch
+      );
+    }
+
+    if (!foundProject) window.location.replace("/404");
+    else setProject(foundProject);
+  }, []);
+
   return (
-    <motion.div
-      exit={{ opacity: 0 }}
-      transition={{ ease: ease }}
-      className="project"
-    >
-      <ProjectHeader />
-      <ProjectInfo bgColor={bgColor} />
-      <ProjectShowcase />
-      <ProjectProcess setBgColor={setBgColor} />
-      <ProjectDetails bgColor={bgColor} />
-      <Ending title="02. To the next Project" />
-    </motion.div>
+    project && (
+      <motion.div
+        exit={{ opacity: 0 }}
+        transition={{ ease: ease }}
+        className="project"
+      >
+        <ProjectHeader />
+        <ProjectInfo bgColor={bgColor} />
+        <ProjectShowcase />
+        <ProjectProcess setBgColor={setBgColor} />
+        <ProjectDetails bgColor={bgColor} />
+        <Ending title="02. To the next Project" />
+      </motion.div>
+    )
   );
 };
 
