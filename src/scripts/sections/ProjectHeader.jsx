@@ -48,9 +48,9 @@ const ProjectHeader = () => {
       <Image
         imageClass="project__header--image"
         containerClass="project__header--image-container"
-        compressed="main-compressed.jpg"
+        compressed="/woven/woven-header.png"
         animate="animate"
-        main="main.jpg"
+        main="/woven/woven-header.png"
         alt="Niloofar Nikookar Portfolio"
         text="Spring 2020"
         captionVariants={imageCaptionVariants}

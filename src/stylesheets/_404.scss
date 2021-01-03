@@ -1,0 +1,24 @@
+.not-found {
+  //   min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  & > svg {
+    // transform: scale(0.25);
+    width: 30rem;
+    height: 30rem;
+  }
+  & > h1 {
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+  }
+  &--button {
+    margin: 2rem;
+    font-size: 1.2rem;
+  }
+}

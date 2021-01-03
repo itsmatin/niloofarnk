@@ -10,7 +10,10 @@ export default {
     {
       id: 2,
       title: "Woven Wall Panels",
+      type: "Independent Study",
       image: "./capture-2.jpg",
+      headerImage: "./woven/woven-header.png",
+      showcaseImage: "./woven/woven/case.png",
       year: "2019",
     },
     { id: 3, title: "Al-Bahr Towers", image: "./main.jpg", year: "1953" },
@@ -33,7 +36,7 @@ export default {
       id: 2,
       title: "Woven Wall Panels",
       image: "./capture-2.jpg",
-      year: "2020",
+      year: "20",
     },
     { id: 3, title: "Al-Bahr Towers", image: "./main.jpg", year: "2018" },
     {

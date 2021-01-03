@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import ProjectHeader from "../sections/ProjectHeader";
 import Image from "../components/Image";
@@ -10,6 +10,11 @@ import ProjectProcess from "../sections/ProjectProcess";
 import ProjectInfo from "../sections/ProjectInfo";
 
 const Project = ({ setBgColor, bgColor }) => {
+  const [project, setProject] = useState(false);
+
+  useEffect(() => {
+    console.log(window.location.pathname);
+  }, [window.location.pathname]);
   return (
     <motion.div
       exit={{ opacity: 0 }}

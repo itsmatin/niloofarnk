@@ -27,7 +27,7 @@ const ProjectShowcase = () => {
         text="I evaluated stuff for many years"
         containerStyle={{ scale: width > 700 ? imageScale : 1.1 }}
         containerClass="project__showcase--image"
-        main="/capstone/Details2.png"
+        main="/woven/woven-case.png"
       />
     </motion.section>
   );

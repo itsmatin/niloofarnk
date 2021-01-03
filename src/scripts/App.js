@@ -11,6 +11,7 @@ import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Project from "./pages/Project";
+import NotFound from "./pages/404";
 import ScrollToTop from "./utils/ScrollToTop";
 import { black, ease, transparent, whiteWhite } from "./utils/config";
 
@@ -54,11 +55,12 @@ function App() {
                 <Route path="/contact" render={() => <Contact />} />
                 <Route path="/about" render={() => <About />} />
                 <Route
-                  path="/project/"
+                  path="/project/:id"
                   render={() => (
                     <Project bgColor={bgColor} setBgColor={setBgColor} />
                   )}
                 />
+                <Route component={NotFound} />
               </Switch>
             </AnimatePresence>
           )}
