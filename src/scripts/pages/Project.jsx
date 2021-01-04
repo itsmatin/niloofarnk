@@ -33,8 +33,17 @@ const Project = ({ setBgColor, bgColor }) => {
       >
         <ProjectHeader project={project} />
         <ProjectInfo project={project} bgColor={bgColor} />
-        <ProjectShowcase project={project} />
-        <ProjectProcess project={project} setBgColor={setBgColor} />
+        <ProjectShowcase
+          project={project}
+          bgColor={bgColor}
+          setBgColor={setBgColor}
+          shouldChangeColor={project.shouldChangeColor}
+        />
+        <ProjectProcess
+          shouldChangeColor={project.shouldChangeColor}
+          project={project}
+          setBgColor={setBgColor}
+        />
         <ProjectDetails project={project} bgColor={bgColor} />
         <Ending title="02. To the next Project" />
       </motion.div>

@@ -101,7 +101,7 @@ const HomeResearches = () => {
           imageVariants={imageVariants}
           containerClass="home__researches__image-container"
           imageClass="home__researches__image"
-          src={currentImage[0]}
+          src={currentImage}
         />
         <motion.ul style={{ y: listPos }} className="home__researches__list">
           {researches.map((item, index) => (

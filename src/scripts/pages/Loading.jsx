@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Triangle from "../components/Triangle";
 import { white, ease, black } from "../utils/config";
@@ -66,6 +66,13 @@ const triangleVariants = {
 };
 
 const Loading = ({ handleInitialLoading }) => {
+  useEffect(() => {
+    if (!localStorage.getItem("introShown"))
+      setTimeout(() => {
+        localStorage.setItem("introShown", true);
+      }, 3000);
+  }, []);
+
   return (
     <motion.div
       variants={containerVariants}

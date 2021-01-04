@@ -25,7 +25,7 @@ const imageVariants = {
   animate: { opacity: 1, transition: { opacity: { ease, delay: 0.2 } } },
 };
 
-const ProjectProcess = ({ setBgColor, project }) => {
+const ProjectProcess = ({ setBgColor, project, shouldChangeColor }) => {
   const { width } = useWindowSize();
   const { ref, inView } = useInView({ threshold: width > 768 ? 0.3 : 0 });
   const { scrollYProgress } = useViewportScroll();

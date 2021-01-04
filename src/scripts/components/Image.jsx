@@ -10,6 +10,7 @@ const Image = ({
   title = false,
   viewActive = true,
   viewOptions = {},
+  textStyle = {},
   captionVariants,
   imageVariants,
   containerVariants,
@@ -24,7 +25,6 @@ const Image = ({
   src,
   props,
   alt,
-  key,
   imageStyle,
   imageClass,
   captionClass,
@@ -51,6 +51,7 @@ const Image = ({
     >
       {text && (
         <motion.small
+          style={textStyle}
           variants={captionVariants}
           className={clsx(["image--caption", captionClass])}
         >

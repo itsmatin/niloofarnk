@@ -6,7 +6,7 @@ export default {
       type: "Advanced Productions",
       time: "Fall",
       year: "2019",
-
+      shouldChangeColor: true, //Goes for the ones with white images in their case study section
       headerDescription:
         "Team Project with Shantanu Kushalappa and Daniel Oddo.",
       infoDescription:
@@ -56,7 +56,7 @@ the Fologram app for both our phones and the Hololens. `,
       type: "Team Study",
       time: "Spring",
       year: "2019",
-
+      shouldChangeColor: true, //Goes for the ones with white images in their case study section
       headerDescription: "Team Project with Mehmet Sinan Bermek.",
       infoDescription:
         "The project focuses on the feasibility of automated fabrication and assembly of complex geometries using computer vision and a KUKA robotic arm. ",

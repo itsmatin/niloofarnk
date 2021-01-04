@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";
@@ -9,8 +9,14 @@ import Ending from "../sections/Ending";
 import { ease } from "../utils/config";
 
 const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(
+    !localStorage.getItem("introShown")
+  );
 
+  useEffect(() => {
+    const introShown = localStorage.getItem("introShown");
+    if (introShown) setInitialLoading(false);
+  }, [localStorage]);
   return (
     <motion.div transition={{ ease }} exit={{ opacity: 0 }} className="home">
       <AnimatePresence initial>
