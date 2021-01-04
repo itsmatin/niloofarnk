@@ -7,14 +7,13 @@ import {
 } from "framer-motion";
 import { ease } from "../utils/config";
 
-const transition = { delay: 1.2, ease, duration: 1 };
-
-const ProgressBar = () => {
+const ProgressBar = ({ intro }) => {
   const { scrollYProgress } = useViewportScroll();
   const y = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
   const textMotion = useMotionValue(y);
   const [text, setText] = useState("Scroll Down");
   const [animate, setAnimate] = useState(true);
+  const transition = { delay: intro ? 1.2 : 0, ease, duration: 1 };
 
   useEffect(() => {
     function updateText(yValue) {

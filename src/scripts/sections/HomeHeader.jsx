@@ -12,16 +12,6 @@ import Image from "../components/Image";
 
 const transition = { ease, duration: 1 };
 
-const imageCaptionVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: { delay: 1, duration: 0.5 },
-  },
-};
-
 const imageVariants = {
   initial: {
     scaleY: 0,
@@ -34,13 +24,22 @@ const imageVariants = {
   },
 };
 
-const HomeHeader = ({ props }) => {
+const HomeHeader = ({ props, intro }) => {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const { scrollYProgress } = useViewportScroll();
   const titleY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
   const imageY = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
+  const imageCaptionVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: { delay: intro ? 1 : 0, duration: 0.5 },
+    },
+  };
 
   return (
     <motion.header

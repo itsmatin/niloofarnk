@@ -14,15 +14,12 @@ const Home = ({ intro, setIntro }) => {
       <AnimatePresence initial>
         {intro && <Loading handleInitialLoading={() => setIntro(false)} />}
       </AnimatePresence>
-      {/* {!initialLoading && ( */}
-      <>
-        <ProgressBar />
-        <HomeHeader />
-        <HomeDesigns />
-        <HomeResearches />
-        <Ending title="About Me" to="/about" />
-      </>
-      {/* )} */}
+
+      <ProgressBar intro={intro} />
+      <HomeHeader intro={intro} />
+      <HomeDesigns />
+      <HomeResearches />
+      <Ending title="About Me" to="/about" />
     </motion.div>
   );
 };
