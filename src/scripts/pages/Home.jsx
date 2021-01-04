@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";

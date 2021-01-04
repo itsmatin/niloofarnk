@@ -49,7 +49,7 @@ function App() {
         ref={ref}
         className="app"
       >
-        <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
+        {!intro && <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />}
         {/* <Scrollbar pageRef={ref} /> */}
         <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
         <Route

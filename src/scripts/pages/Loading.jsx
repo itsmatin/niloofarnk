@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Triangle from "../components/Triangle";
 import { white, ease, black } from "../utils/config";
 
-const transition = { duration: 3, ease };
+const transition = { duration: 2.4, ease };
 const name = [
   "N",
   "I",
@@ -61,7 +61,7 @@ const triangleVariants = {
     scale: [4, 1, 0.3],
     background: black,
     rotate: 0,
-    transition: { ...transition, duration: 2.5, delay: 0.3 },
+    transition: { ...transition, duration: 1.9, delay: 0.3 },
   },
 };
 
@@ -70,7 +70,7 @@ const Loading = ({ handleInitialLoading }) => {
     if (!localStorage.getItem("introShown"))
       setTimeout(() => {
         localStorage.setItem("introShown", true);
-      }, 3000);
+      }, 2400);
   }, []);
 
   return (

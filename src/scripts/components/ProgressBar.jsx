@@ -13,7 +13,11 @@ const ProgressBar = ({ intro }) => {
   const textMotion = useMotionValue(y);
   const [text, setText] = useState("Scroll Down");
   const [animate, setAnimate] = useState(true);
-  const transition = { delay: intro ? 1.2 : 0, ease, duration: 1 };
+  const transition = {
+    delay: intro ? 4.7 : 0.2,
+    ease,
+    duration: 1,
+  };
 
   useEffect(() => {
     function updateText(yValue) {

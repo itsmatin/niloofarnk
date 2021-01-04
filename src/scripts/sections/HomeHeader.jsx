@@ -10,20 +10,6 @@ import AnimatedText from "../utils/AnimatedText";
 import { ease } from "../utils/config";
 import Image from "../components/Image";
 
-const transition = { ease, duration: 1 };
-
-const imageVariants = {
-  initial: {
-    scaleY: 0,
-    opacity: 0,
-  },
-  animate: {
-    scaleY: 1,
-    opacity: [0, 1],
-    transition: transition,
-  },
-};
-
 const HomeHeader = ({ props, intro }) => {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const { scrollYProgress } = useViewportScroll();
@@ -31,13 +17,26 @@ const HomeHeader = ({ props, intro }) => {
   const imageY = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
+  const transition = { ease, duration: 1 };
+  const imageVariants = {
+    initial: {
+      scaleY: 0,
+      opacity: 0,
+    },
+    animate: {
+      scaleY: 1,
+      opacity: [0, 1],
+      transition: { ...transition, delay: intro ? 4.5 : 0 },
+    },
+  };
+
   const imageCaptionVariants = {
     initial: {
       opacity: 0,
     },
     animate: {
       opacity: 1,
-      transition: { delay: intro ? 1 : 0, duration: 0.5 },
+      transition: { delay: intro ? 4.7 : 0.2, duration: 0.5 },
     },
   };
 
