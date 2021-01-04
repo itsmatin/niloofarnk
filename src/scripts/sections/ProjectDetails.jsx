@@ -45,29 +45,15 @@ const ProjectDetails = ({ bgColor, project }) => {
           className="project__details__text"
         >
           <h1 className="project__details--title">More details</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-            autem tenetur quisquam accusamus vero vitae enim, modi at quo
-            consequuntur optio eum. Culpa repellendus sapiente odio asperiores
-            excepturi quo, cumque quia necessitatibus cum expedita deleniti eos
-            velit ipsum libero, quasi ducimus neque nam tenetur iste
-            voluptatibus temporibus tempore! Ut, quidem libero.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-            corrupti ab ea provident officia culpa fuga quae obcaecati quo,
-            omnis at repellat laborum nemo eius voluptas voluptate quasi fugiat
-            cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis cum nemo fuga, minus voluptates sequi? Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Harum corrupti ab ea
-            provident officia culpa fuga quae obcaecati quo, omnis at repellat
-            laborum nemo eius voluptas voluptate quasi fugiat cupiditate.
-          </p>
+          <p>{project.detailsDescription1}</p>
+          <br />
+          <p>{project.detailsDescription2}</p>
         </motion.div>
         <Image
           containerStyle={{ scale: scaleSpring }}
           containerClass="project__details--image"
-          main={"/capstone/void.jpg"}
+          alt={`${project.title} - ${project.type} Niloofar Nikookar`}
+          src={project.images.details1}
         />
       </div>
       <div className="project__details" style={{ alignItems: "center" }}>
@@ -75,7 +61,8 @@ const ProjectDetails = ({ bgColor, project }) => {
           containerStyle={{ scale: scaleSecondSpring }}
           transition={{ delay: 2 }}
           containerClass="project__details--image"
-          main="/capstone/topView.jpg"
+          alt={`${project.title} - ${project.type} Niloofar Nikookar`}
+          src={project.images.details2}
         />
         <div className="project__shape project__shape--octagon" />
         <motion.div
@@ -84,24 +71,9 @@ const ProjectDetails = ({ bgColor, project }) => {
           variants={textVariants}
           className="project__details__text"
         >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-            autem tenetur quisquam accusamus vero vitae enim, modi at quo
-            consequuntur optio eum. Culpa repellendus sapiente odio asperiores
-            excepturi quo, cumque quia necessitatibus cum expedita deleniti eos
-            velit ipsum libero, quasi ducimus neque nam tenetur iste
-            voluptatibus temporibus tempore! Ut, quidem libero.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-            corrupti ab ea provident officia culpa fuga quae obcaecati quo,
-            omnis at repellat laborum nemo eius voluptas voluptate quasi fugiat
-            cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis cum nemo fuga, minus voluptates sequi? Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Harum corrupti ab ea
-            provident officia culpa fuga quae obcaecati quo, omnis at repellat
-            laborum nemo eius voluptas voluptate quasi fugiat cupiditate.
-          </p>
+          <p>{project.detailsDescription3}</p>
+          <br />
+          <p>{project.detailsDescription4}</p>
         </motion.div>
       </div>
     </>

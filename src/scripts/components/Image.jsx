@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import ProgressiveImage from "react-progressive-image";
+
 import clsx from "clsx";
 
 const Image = ({
@@ -21,8 +21,7 @@ const Image = ({
   whileHover,
   animate,
   initial,
-  main,
-  compressed,
+  src,
   props,
   alt,
   key,
@@ -32,8 +31,6 @@ const Image = ({
   containerClass,
 }) => {
   const { ref, inView } = useInView(viewOptions);
-
-  useEffect(() => {}, [main, compressed]);
 
   return (
     <motion.div
@@ -60,20 +57,15 @@ const Image = ({
           {text}
         </motion.small>
       )}
-      <ProgressiveImage placeholder={compressed} src={main}>
-        {(src) => (
-          <motion.img
-            {...props}
-            drag={drag}
-            draggable={drag}
-            style={imageStyle}
-            variants={imageVariants}
-            src={src}
-            alt={alt}
-            className={clsx(["image", imageClass])}
-          />
-        )}
-      </ProgressiveImage>
+      <motion.img
+        drag={drag}
+        draggable={drag}
+        style={imageStyle}
+        variants={imageVariants}
+        src={src}
+        alt={alt}
+        className={clsx(["image", imageClass])}
+      />
       {title && <motion.h2 className="image--title">{title}</motion.h2>}
     </motion.div>
   );

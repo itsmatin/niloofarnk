@@ -101,8 +101,7 @@ const HomeResearches = () => {
           imageVariants={imageVariants}
           containerClass="home__researches__image-container"
           imageClass="home__researches__image"
-          main={currentImage[0]}
-          compressed={currentImage[1]}
+          src={currentImage[0]}
         />
         <motion.ul style={{ y: listPos }} className="home__researches__list">
           {researches.map((item, index) => (
@@ -111,7 +110,7 @@ const HomeResearches = () => {
                 cycleShape();
                 cycleShapeAngle();
                 setCurrentYear(item.year);
-                setCurrentImage([item.image, item.image]);
+                setCurrentImage(item.image);
               }}
               title={item.title}
               id={item.id}

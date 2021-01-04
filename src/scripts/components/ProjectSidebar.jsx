@@ -36,12 +36,7 @@ const ProjectSidebar = ({ data, isVisible }) => {
           This is a Project, Cool One
         </AnimatedText>
       </h2>
-      <Image
-        containerClass="sidebar--image"
-        image
-        main="capture.jpg"
-        compressed="capture.jpg"
-      />
+      <Image containerClass="sidebar--image" image src="capture.jpg" />
       <h5 className="sidebar--subtitle">
         <AnimatedText isVisible={isVisible}>Spring 2015 </AnimatedText>
       </h5>

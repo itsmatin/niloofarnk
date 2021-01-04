@@ -65,8 +65,7 @@ const ProjectProcess = ({ setBgColor, project }) => {
               initial="initial"
               animate={inView ? "animate" : "initial"}
               alt={project.title}
-              main={imageLink}
-              compressed={project.images.process[index]}
+              src={imageLink}
               containerClass="project__process__images--image"
               key={index}
             />

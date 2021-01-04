@@ -98,8 +98,8 @@ const AboutAcademics = () => {
         transition={{ ease }}
         containerStyle={{ rotate: rotateSpring }}
         containerClass="about__academics--logo-container"
-        main={currentImage}
-        compressed={currentImage}
+        src={currentImage}
+        alt="Niloofar Nikookar - Academics"
       />
       <motion.span className="about__academics--year">
         {currentYear}

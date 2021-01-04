@@ -103,8 +103,7 @@ const Menu = () => {
                 containerVariants={imageVariants}
                 initial="initial"
                 animate="animate"
-                main={currentResearch}
-                compressed={currentResearch}
+                src={currentResearch}
                 transition={imageTransition}
               />
             )}
@@ -173,8 +172,7 @@ const Menu = () => {
                 containerVariants={imageVariants}
                 initial="initial"
                 animate="animate"
-                main={currentDesign}
-                compressed={currentDesign}
+                src={currentDesign}
                 transition={imageTransition}
               />
             )}

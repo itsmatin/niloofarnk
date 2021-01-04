@@ -60,9 +60,8 @@ const HomeHeader = ({ props }) => {
       <Image
         imageClass="home__header--image"
         containerClass="home__header--image-container"
-        compressed="main-compressed.jpg"
         animate="animate"
-        main="main.jpg"
+        src="main.jpg"
         alt="Niloofar Nikookar Portfolio"
         text="Spring 2020"
         containerStyle={{ y: imageY }}

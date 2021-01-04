@@ -49,8 +49,7 @@ const ProjectHeader = ({ project }) => {
         imageClass="project__header--image"
         containerClass="project__header--image-container"
         animate="animate"
-        compressed={project.compressedImages.header}
-        main={project.images.header}
+        src={project.images.header}
         alt={project.title}
         text={`${project?.time} ${project?.year}`}
         captionVariants={imageCaptionVariants}

@@ -28,8 +28,7 @@ const ProjectShowcase = ({ project }) => {
         containerStyle={{ scale: width > 700 ? imageScale : 1.1 }}
         containerClass="project__showcase--image"
         alt={project.title}
-        main={project.images.showcase}
-        compressed={project.compressedImages.showcase}
+        src={project.images.showcase}
       />
     </motion.section>
   );
