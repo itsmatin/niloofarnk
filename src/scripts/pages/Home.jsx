@@ -8,31 +8,21 @@ import HomeResearches from "../sections/HomeResearches";
 import Ending from "../sections/Ending";
 import { ease } from "../utils/config";
 
-const Home = () => {
-  const [initialLoading, setInitialLoading] = useState(
-    !localStorage.getItem("introShown")
-  );
-
-  useEffect(() => {
-    const introShown = localStorage.getItem("introShown");
-    if (introShown) setInitialLoading(false);
-  }, [localStorage]);
+const Home = ({ intro, setIntro }) => {
   return (
     <motion.div transition={{ ease }} exit={{ opacity: 0 }} className="home">
       <AnimatePresence initial>
-        {initialLoading && (
-          <Loading handleInitialLoading={() => setInitialLoading(false)} />
-        )}
+        {intro && <Loading handleInitialLoading={() => setIntro(false)} />}
       </AnimatePresence>
-      {!initialLoading && (
-        <>
-          <ProgressBar />
-          <HomeHeader />
-          <HomeDesigns />
-          <HomeResearches />
-          <Ending title="About Me" to="/about" />
-        </>
-      )}
+      {/* {!initialLoading && ( */}
+      <>
+        <ProgressBar />
+        <HomeHeader />
+        <HomeDesigns />
+        <HomeResearches />
+        <Ending title="About Me" to="/about" />
+      </>
+      {/* )} */}
     </motion.div>
   );
 };

@@ -93,6 +93,7 @@ const Menu = () => {
               title={item.title}
               id={item.id}
               index={index}
+              key={index}
             />
           ))}
           <AnimatePresence>
@@ -150,6 +151,7 @@ const Menu = () => {
               image={item.image}
               id={item.id}
               index={index}
+              key={index}
             />
           ))}
 
@@ -173,6 +175,7 @@ const Menu = () => {
                 initial="initial"
                 animate="animate"
                 src={currentDesign}
+                alt={"Menu Item"}
                 transition={imageTransition}
               />
             )}

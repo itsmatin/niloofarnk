@@ -1,5 +1,4 @@
 import React, { createRef, useEffect, useState } from "react";
-import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { Route, Switch, useHistory } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -26,6 +25,12 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [transition, setTransition] = useState(false);
   const [bgColor, setBgColor] = useState("black");
+  const [intro, setIntro] = useState(!localStorage.getItem("introShown"));
+
+  useEffect(() => {
+    if (intro || menuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+  }, [intro, menuOpen]);
 
   useEffect(() => {
     history.listen(() => {
@@ -42,7 +47,7 @@ function App() {
         variants={bgVariants}
         transition={{ ease: ease, duration: 0.3 }}
         ref={ref}
-        className={clsx(["app", menuOpen && "no-scroll"])}
+        className="app"
       >
         <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />
         {/* <Scrollbar pageRef={ref} /> */}
@@ -51,7 +56,11 @@ function App() {
           render={({ location }) => (
             <AnimatePresence exitBeforeEnter>
               <Switch location={location} key={location.pathname}>
-                <Route exact path="/" render={() => <Home />} />
+                <Route
+                  exact
+                  path="/"
+                  render={() => <Home intro={intro} setIntro={setIntro} />}
+                />
                 <Route exact path="/contact" render={() => <Contact />} />
                 <Route exact path="/about" render={() => <About />} />
                 <Route
