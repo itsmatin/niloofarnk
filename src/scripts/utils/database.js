@@ -100,11 +100,52 @@ export default {
     {
       id: 4,
       title: "The Infinite Line Pavilion",
-      image: "./capture.jpg",
-      year: "2015",
+      type: "IASS 2019 Competition, Barcelona",
+      time: "Fall",
+      year: "2019",
+      location: "Bracelona, Spain",
+      headerDescription:
+        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+      infoDescription:
+        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+
+      images: {
+        header: "/pavilion/pavilion-header.jpg",
+        showcase: "/pavilion/pavilion-case.jpg",
+        process: ["/pavilion/pavilion-process.jpg"],
+      },
+
+      details: [
+        {
+          image: "/pavilion/pavilion-details1.jpg",
+          text: [
+            `The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed
+            in Trinidad & Tobago. Wire-bending is a traditional craft that employs wire, fiberglass rods, and other materials to create sculptural
+            forms and structures.`,
+          ],
+        },
+        {
+          image: "/pavilion/pavilion-details2.jpg",
+          text: [
+            `The initial design and fabrication explorations were done as a part of course work for a Computational Making class taught by
+            Professor Vernelle A. A. Noel. In that course, our class developed the “The Dawn and the Dusk” Pavilion design. “The Infinite Line”
+            is a second iteration on the “The Dawn and the Dusk” pavilion, using different structural geometries.`,
+          ],
+        },
+        {
+          image: "/pavilion/pavilion-details3.jpg",
+          text: [
+            `“The Infinite Line” design follows a closed modular geometry and incorporates a fiberglass structure and a fabric skin. The
+            module is a single “pringle”, which is an Enneper surface. To form a Pringle, 10’ fiberglass rods are taped into 80’ bundles by
+            overlapping pairs of rods at their midpoints. These pairs are doubled and taped together, to form 80’ bundles with a 4-rod
+            thickness. Fiberglass tape is used for bundling, These 80’ bundles are joined end-to-end to form 80’ perimeter circles.
+            Opposite points of the loop are joined in the middle to form a flat figure-8. Then, the ends are joined to complete the pringle.
+            The final structure is composed of 3 of these Pringles, interlocked at 120 degrees.
+            `,
+          ],
+        },
+      ],
     },
-  ],
-  designs: [
     {
       id: 5,
       title: "Urban Female Heterotopia",
@@ -178,6 +219,8 @@ export default {
         },
       ],
     },
+  ],
+  designs: [
     { id: 1, title: "Terrace Apartment", image: "./main.jpg", year: "2021" },
     {
       id: 6,

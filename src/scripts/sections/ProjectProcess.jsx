@@ -9,6 +9,7 @@ import { useWindowSize } from "react-use";
 import { useInView } from "react-intersection-observer";
 import { white, black, grey, ease } from "../utils/config";
 import Image from "../components/Image";
+import clsx from "clsx";
 
 const textVariants = {
   white: { color: white },
@@ -66,7 +67,11 @@ const ProjectProcess = ({ setBgColor, project, shouldChangeColor }) => {
               animate={inView ? "animate" : "initial"}
               alt={project.title}
               src={imageLink}
-              containerClass="project__process__images--image"
+              containerClass={clsx(
+                "project__process__images--image",
+                project.images.process.length === 1 &&
+                  "project__process__images--image-single"
+              )}
               key={index}
             />
           );

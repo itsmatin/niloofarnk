@@ -124,6 +124,18 @@
         min-height: 15rem;
         height: 60vh;
       }
+
+      &--image-single {
+        // width: 80%;
+        width: 50%;
+        // max-hei5ght: 100vh;
+        justify-content: center;
+        height: initial;
+        min-height: initial;
+        & > img {
+          width: 100%;
+        }
+      }
     }
 
     &--title {

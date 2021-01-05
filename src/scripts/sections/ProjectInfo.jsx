@@ -28,8 +28,8 @@ const ProjectInfo = ({ bgColor, project }) => {
         </h5>
       </div>
       <div className="project__info__box">
-        <span>Type</span>
-        <h5>Commercial</h5>
+        <span>Location</span>
+        <h5>{project.location}</h5>
       </div>
     </motion.div>
   );
