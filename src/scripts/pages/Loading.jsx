@@ -46,7 +46,7 @@ const containerVariants = {
   initial: { background: white },
   animate: {
     background: [white, black],
-    transition,
+    transition: { ...transition, delay: 0.4 },
   },
   exit: { opacity: 0 },
 };

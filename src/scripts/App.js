@@ -25,10 +25,12 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   // const [transition, setTransition] = useState(false);
   const [bgColor, setBgColor] = useState("black");
-  const [intro, setIntro] = useState(!localStorage.getItem("introShown"));
+  const [intro, setIntro] = useState(false);
 
   useEffect(() => {
-    console.log();
+    setIntro(!localStorage.getItem("introShown"));
+  }, []);
+  useEffect(() => {
     if ((window.location.pathname === "/" && intro) || menuOpen)
       document.body.style.overflow = "hidden";
     else document.body.style.overflow = "unset";
