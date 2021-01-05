@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ease } from "../utils/config";
 
-const transitionOptions = { ease, duration: 1.1 };
+const transitionOptions = { duration: 3 };
 const curtainVariants = {
   initial: {
     y: "100%",
   },
   animate: {
-    y: ["-100%", "0%", "100%"],
+    y: ["-100%", "0%", "0%", "0%", "100%"],
   },
 };
 

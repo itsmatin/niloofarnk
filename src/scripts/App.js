@@ -4,7 +4,7 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
 import Scrollbar from "./components/Scrollbar";
-import Curtain from "./components/Curtain";
+// import Curtain from "./components/Curtain";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
@@ -23,7 +23,7 @@ function App() {
   const ref = createRef();
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [transition, setTransition] = useState(false);
+  // const [transition, setTransition] = useState(false);
   const [bgColor, setBgColor] = useState("black");
   const [intro, setIntro] = useState(!localStorage.getItem("introShown"));
 
@@ -34,9 +34,9 @@ function App() {
 
   useEffect(() => {
     history.listen(() => {
-      setTransition(true);
+      // setTransition(true);
       setMenuOpen(false);
-      setTimeout(() => setTransition(false), 1150);
+      // setTimeout(() => setTransition(false), 1150);
     });
   }, [history]);
 
@@ -79,7 +79,7 @@ function App() {
           )}
         />
         <Cursor />
-        <Curtain transition={transition} />
+        {/* <Curtain transition={transition} /> */}
       </motion.div>
     </ScrollToTop>
   );
