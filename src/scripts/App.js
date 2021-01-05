@@ -28,7 +28,9 @@ function App() {
   const [intro, setIntro] = useState(!localStorage.getItem("introShown"));
 
   useEffect(() => {
-    if (intro || menuOpen) document.body.style.overflow = "hidden";
+    console.log();
+    if ((window.location.pathname === "/" && intro) || menuOpen)
+      document.body.style.overflow = "hidden";
     else document.body.style.overflow = "unset";
   }, [intro, menuOpen]);
 
