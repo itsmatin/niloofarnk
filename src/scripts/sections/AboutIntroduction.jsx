@@ -15,7 +15,7 @@ const AboutIntroduction = () => {
         containerStyle={{ y: imageY }}
         transition={{ ease }}
         containerClass="about__introduction--image"
-        src="/niloofar.png"
+        src="/niloofar-nikookar.png"
         alt="Niloofar Nikookar - Architectural Designer"
       />
       <motion.div className="about__introduction--triangle" />
