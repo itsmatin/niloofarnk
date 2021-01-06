@@ -11,14 +11,18 @@ import database from "../utils/database";
 
 const Project = ({ setBgColor, bgColor }) => {
   const [project, setProject] = useState(false);
+  const [nextProject, setNextProject] = useState({});
 
   useEffect(() => {
     const { pathname } = window.location;
     const itemToSearch = pathname.replace(/\D/g, "");
     const projectList = database.researches.concat(database.designs);
-    var foundProject = projectList.find(
-      (element) => element.id == itemToSearch
-    );
+    var foundProject = projectList.find((element, index) => {
+      if (projectList[index + 1] !== undefined)
+        setNextProject(projectList[index + 1]);
+      else setNextProject(projectList[0]);
+      return element.id == itemToSearch;
+    });
 
     if (!foundProject) window.location.replace("/404");
     else setProject(foundProject);
@@ -45,7 +49,10 @@ const Project = ({ setBgColor, bgColor }) => {
           setBgColor={setBgColor}
         />
         <ProjectDetails project={project} bgColor={bgColor} />
-        <Ending title="02. To the next Project" />
+        <Ending
+          to={`/project/${nextProject.id}`}
+          title={`0${nextProject.id}. ${nextProject.title}`}
+        />
       </motion.div>
     )
   );
