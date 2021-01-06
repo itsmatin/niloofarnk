@@ -145,7 +145,8 @@ const HomeDesigns = () => {
                 }
                 containerClass="home__designs--image-container"
                 title={design.title}
-                main={design.image}
+                src={design.images.header}
+                alt={design.title}
                 text="2019 - 2020"
                 key={index}
               />

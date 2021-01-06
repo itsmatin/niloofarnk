@@ -110,7 +110,7 @@ const HomeResearches = () => {
                 cycleShape();
                 cycleShapeAngle();
                 setCurrentYear(item.year);
-                setCurrentImage(item.image);
+                setCurrentImage(item.images.header);
               }}
               title={item.title}
               id={item.id}

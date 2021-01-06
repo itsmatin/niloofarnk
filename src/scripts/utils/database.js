@@ -220,22 +220,40 @@ export default {
       ],
     },
   ],
+
   designs: [
-    { id: 1, title: "Terrace Apartment", image: "./main.jpg", year: "2021" },
+    {
+      id: 1,
+      title: "Terrace Apartment",
+      images: { header: "./main.jpg" },
+      year: "2021",
+      type: "Some type",
+      location: "Some location",
+    },
     {
       id: 6,
       title: "Woven Wall Panels",
-      image: "./capture-2.jpg",
+      images: { header: "./main.jpg" },
       year: "20",
+      type: "Some type",
+      location: "Some location",
     },
-    { id: 3, title: "Al-Bahr Towers", image: "./main.jpg", year: "2018" },
+    {
+      id: 3,
+      title: "Al-Bahr Towers",
+      images: { header: "./main.jpg" },
+      year: "2018",
+      type: "Some type",
+      location: "Some location",
+    },
     {
       id: 7,
       title: "The Infinite Line Pavilion",
-      image: "./capture.jpg",
+      images: { header: "./main.jpg" },
       year: "2019",
     },
   ],
+
   academics: [
     {
       id: "I",
