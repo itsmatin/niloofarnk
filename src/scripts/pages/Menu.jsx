@@ -89,7 +89,7 @@ const Menu = () => {
           {designs.map((item, index) => (
             <ListItem
               type="design"
-              image={item.image}
+              image={item.images.header}
               title={item.title}
               id={item.id}
               index={index}
@@ -148,7 +148,7 @@ const Menu = () => {
             <ListItem
               type="researches"
               title={item.title}
-              image={item.image}
+              image={item.images.header}
               id={item.id}
               index={index}
               key={index}

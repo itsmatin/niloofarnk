@@ -65,7 +65,7 @@ export default {
 
     {
       id: 3,
-      title: "Remote Sensing + Complex Geometry Foam Cutting",
+      title: "Complex Geometry Foam Cutting",
       type: "Team Study",
       time: "Spring",
       year: "2019",
@@ -227,7 +227,13 @@ export default {
       title: "Terrace Apartment",
       images: { header: "./main.jpg" },
       year: "2021",
+      time: "sth",
       type: "Some type",
+      headerDescription:
+        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+      infoDescription:
+        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+
       location: "Some location",
     },
     {
@@ -236,6 +242,12 @@ export default {
       images: { header: "./main.jpg" },
       year: "20",
       type: "Some type",
+      time: "sth",
+      headerDescription:
+        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+      infoDescription:
+        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+
       location: "Some location",
     },
     {
@@ -244,6 +256,12 @@ export default {
       images: { header: "./main.jpg" },
       year: "2018",
       type: "Some type",
+      time: "sth",
+      headerDescription:
+        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+      infoDescription:
+        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+
       location: "Some location",
     },
     {
@@ -251,6 +269,11 @@ export default {
       title: "The Infinite Line Pavilion",
       images: { header: "./main.jpg" },
       year: "2019",
+      time: "sth",
+      headerDescription:
+        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+      infoDescription:
+        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
     },
   ],
 

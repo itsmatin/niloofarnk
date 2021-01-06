@@ -55,8 +55,9 @@ function ListItem({ ...props }) {
       onHoverEnd={props.onHoverEnd}
       className="menu__list--item"
       style={{ fontSize: "2.1rem" }}
+      key={props.index}
     >
-      <Link to={props.id} key={props.index}>
+      <Link to={`/project/${props.id}`}>
         {`0${props.index + 1}. ${props.title}`}
       </Link>
     </motion.li>

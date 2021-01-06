@@ -61,6 +61,15 @@ const imageContainerVariants = {
 const HomeDesigns = () => {
   const [hovered, setHovered] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarData, setSidebarData] = useState({
+    id: 100,
+    title: "",
+    images: { header: "" },
+    year: "",
+    time: "",
+    headerDescription: "",
+    infoDescription: "",
+  });
   const { ref, inView } = useInView({ threshold: 0.5 });
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
@@ -87,7 +96,7 @@ const HomeDesigns = () => {
       <ClickAwayListener
         onClickAway={() => sidebarOpen && setSidebarOpen(false)}
       >
-        <ProjectSidebar isVisible={sidebarOpen} />
+        <ProjectSidebar data={sidebarData} isVisible={sidebarOpen} />
       </ClickAwayListener>
       <motion.section
         transition={transition}
@@ -129,7 +138,10 @@ const HomeDesigns = () => {
                 onClick={() => setSidebarOpen(true)}
                 containerVariants={imageContainerVariants}
                 imageClass="home__designs--image"
-                onHoverStart={() => setHovered(index)}
+                onHoverStart={() => {
+                  setSidebarData(design);
+                  setHovered(index);
+                }}
                 onHoverEnd={() => setHovered(false)}
                 viewOptions={{ triggerOnce: true, threshold: 0.5 }}
                 initial="initial"

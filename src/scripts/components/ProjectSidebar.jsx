@@ -32,27 +32,26 @@ const ProjectSidebar = ({ data, isVisible }) => {
         <AnimatedText isVisible={isVisible}>DESIGNS</AnimatedText>
       </h1>
       <h2>
-        <AnimatedText isVisible={isVisible}>
-          This is a Project, Cool One
-        </AnimatedText>
+        <AnimatedText isVisible={isVisible}>{data.title}</AnimatedText>
       </h2>
-      <Image containerClass="sidebar--image" image src="capture.jpg" />
+      <Image
+        containerClass="sidebar--image"
+        alt={data.title}
+        src={data.images.header}
+      />
       <h5 className="sidebar--subtitle">
-        <AnimatedText isVisible={isVisible}>Spring 2015 </AnimatedText>
+        <AnimatedText isVisible={isVisible}>{data.time}</AnimatedText>
+        <AnimatedText isVisible={isVisible}>{data.year}</AnimatedText>
       </h5>
       <p className="sidebar--text">
-        <AnimatedText isVisible={isVisible}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
-          laboriosam in saepe? Consequuntur autem fugiat impedit voluptatum
-          aliquam fuga perspiciatis iste quo vitae, sequi neque porro sit
-          tempora enim fugit maxime non soluta necessitatibus commodi
-          praesentium harum natus!
-        </AnimatedText>
+        {data?.infoDescription}
+        <br />
+        {data?.headerDescription}
       </p>
       <LinkButton
         title="Visit Full Project"
         className="sidebar--button"
-        to="/designs/12"
+        to={`/project/${data.id}`}
       />
     </motion.div>
   );
