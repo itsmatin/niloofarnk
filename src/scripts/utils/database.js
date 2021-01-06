@@ -225,7 +225,7 @@ export default {
     {
       id: 1,
       title: "Terrace Apartment",
-      images: { header: "./main.jpg" },
+      images: { header: "/main.jpg" },
       year: "2021",
       time: "sth",
       type: "Some type",
@@ -239,7 +239,7 @@ export default {
     {
       id: 6,
       title: "Woven Wall Panels",
-      images: { header: "./main.jpg" },
+      images: { header: "/main.jpg" },
       year: "20",
       type: "Some type",
       time: "sth",
@@ -253,7 +253,7 @@ export default {
     {
       id: 3,
       title: "Al-Bahr Towers",
-      images: { header: "./main.jpg" },
+      images: { header: "/main.jpg" },
       year: "2018",
       type: "Some type",
       time: "sth",
@@ -267,7 +267,7 @@ export default {
     {
       id: 7,
       title: "The Infinite Line Pavilion",
-      images: { header: "./main.jpg" },
+      images: { header: "/main.jpg" },
       year: "2019",
       time: "sth",
       headerDescription:
