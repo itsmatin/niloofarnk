@@ -61,7 +61,7 @@ const Menu = () => {
         onHoverEnd={handleHoverEnd}
         className="menu__list--item"
       >
-        <Link to={props.id} key={props.index}>
+        <Link to={`/project/${props.id}`} key={props.index}>
           {`0${props.index + 1}. ${props.title}`}
         </Link>
       </motion.li>
