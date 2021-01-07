@@ -123,14 +123,14 @@ const HomeDesigns = () => {
           ref={titleRef}
           className="home__designs--title"
         >
-          <AnimatedText sVisible={titleInView}>ARCHITECTURAL</AnimatedText>
+          ARCHITECTURAL
         </motion.h1>
         <motion.h1
           ref={titleRef}
           style={{ textAlign: "right", x: secondTitlePos }}
           className="home__designs--title"
         >
-          <AnimatedText sVisible={titleInView}>DESIGN</AnimatedText>
+          DESIGN
         </motion.h1>
         <svg>
           <motion.path

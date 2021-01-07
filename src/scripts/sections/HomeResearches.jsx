@@ -100,14 +100,14 @@ const HomeResearches = () => {
         ref={ref}
         className="home__researches--title"
       >
-        <AnimatedText isVisible={inView}>COMPUTATIONAL</AnimatedText>
+        COMPUTATIONAL
       </motion.h1>
       <motion.h1
         style={{ textAlign: "left", x: secondTitlePos }}
         ref={ref}
         className="home__researches--title"
       >
-        <AnimatedText isVisible={inView}>DESIGN</AnimatedText>
+        DESIGN
       </motion.h1>
 
       <div className="home__researches--container">
