@@ -44,9 +44,7 @@ const ProjectSidebar = ({ data, isVisible }) => {
         <AnimatedText isVisible={isVisible}>{data.year}</AnimatedText>
       </h5>
       <p className="sidebar--text">
-        {data?.infoDescription}
-        <br />
-        {data?.headerDescription}
+        {data?.infoDescription} {data?.headerDescription}
       </p>
       <LinkButton
         title="Visit Full Project"

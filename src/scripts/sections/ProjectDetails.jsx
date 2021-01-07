@@ -30,6 +30,7 @@ const ProjectDetails = ({ bgColor, project }) => {
   return (
     <>
       {project.details?.map((item, index) => {
+        console.log(item);
         return index % 2 === 0 ? (
           <div key={index} className="project__details">
             <motion.div

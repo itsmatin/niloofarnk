@@ -223,18 +223,49 @@ export default {
 
   designs: [
     {
-      id: 1,
-      title: "Terrace Apartment",
+      id: 7,
+      title: "Tehran Media Centre",
       images: { header: "/main.jpg" },
-      year: "2021",
-      time: "sth",
-      type: "Some type",
+      year: "2013",
+      time: "Spring",
+      type: "Architectural Design III",
+      location: "Iran, Tehran",
       headerDescription:
-        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+        "I designed a Media Center for Tehran as the project for my Architectural Design Studio III.",
       infoDescription:
-        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+        "The building is designed to represent the five continents of the world by dividing it into five cubes.",
 
-      location: "Some location",
+      images: {
+        header: "/mediaCentre/media-header.jpg",
+        showcase: "/mediaCentre/media-case.jpg",
+        process: ["/mediaCentre/media-process.jpg"],
+      },
+      details: [
+        {
+          image: "/mediaCentre/media-details1.jpg",
+          text: [
+            `I designed a Media Center for Tehran as the project for my Architectural
+          Design Studio III.
+          The building is designed to represent the five continents of the world by
+          dividing it into five cubes. The cubes are all joined together symbolizing
+          media joining the globe. The building is integrated with the site topography
+          to reduce intervention into nature. `,
+          ],
+        },
+        {
+          image: "/mediaCentre/media-details2.jpg",
+          text: [
+            `The structure is divided into three
+          parts. Diagrid structure is used to
+          suspend the northern end of the
+          building, while conventional frame
+          structure is used in the middle part.
+          Moreover, in the southern part the
+          load bearer cylinder conveys the load
+          of the building to the foundation.`,
+          ],
+        },
+      ],
     },
     {
       id: 6,
