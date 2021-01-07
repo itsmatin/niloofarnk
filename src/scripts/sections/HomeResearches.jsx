@@ -84,7 +84,9 @@ const HomeResearches = () => {
   const listPos = useTransform(scrollYProgress, [0.7, 0.9], [50, 0]);
   const shapePos = useTransform(scrollYProgress, [0, 1], [100, 0]);
   const imageScale = useTransform(scrollYProgress, [0.7, 1], [0.95, 1.1]);
-  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-250, 0]);
+  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-350, 0]);
+  const firstTitlePos = useTransform(scrollYProgress, [0.6, 1], [-200, 0]);
+  const secondTitlePos = useTransform(scrollYProgress, [0.6, 1], [200, 0]);
 
   return (
     <motion.section
@@ -93,9 +95,21 @@ const HomeResearches = () => {
       initial="intial"
       className="home__researches"
     >
-      <h2 ref={ref} className="home__researches--title">
-        <AnimatedText isVisible={inView}>RESEARCHES</AnimatedText>
-      </h2>
+      <motion.h1
+        style={{ x: firstTitlePos }}
+        ref={ref}
+        className="home__researches--title"
+      >
+        <AnimatedText isVisible={inView}>COMPUTATIONAL</AnimatedText>
+      </motion.h1>
+      <motion.h1
+        style={{ textAlign: "left", x: secondTitlePos }}
+        ref={ref}
+        className="home__researches--title"
+      >
+        <AnimatedText isVisible={inView}>DESIGN</AnimatedText>
+      </motion.h1>
+
       <div className="home__researches--container">
         <Image
           containerStyle={{ scale: imageScale, y: imagePos }}
