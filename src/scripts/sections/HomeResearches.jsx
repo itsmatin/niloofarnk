@@ -44,33 +44,32 @@ const imageVariants = {
   },
 };
 
-function ListItem({ ...props }) {
+function ListItem({ currentImage, ...props }) {
   return (
-    <motion.li
-      animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
-      initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
-      exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
-      whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
-      onHoverStart={props.onHoverStart}
-      onHoverEnd={props.onHoverEnd}
-      className="menu__list--item"
-      style={{ fontSize: "2.1rem" }}
-      key={props.index}
-    >
-      <Link to={`/project/${props.id}`}>
+    <Link to={`/project/${props.id}`}>
+      <motion.li
+        animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
+        initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
+        exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
+        whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
+        onHoverStart={props.onHoverStart}
+        onHoverEnd={props.onHoverEnd}
+        className="menu__list--item"
+        style={{
+          fontSize: "2.1rem",
+          opacity: props.image === currentImage ? 0.25 : 0,
+        }}
+        key={props.index}
+      >
         {`0${props.index + 1}. ${props.title}`}
-      </Link>
-    </motion.li>
+      </motion.li>
+    </Link>
   );
 }
 
 const HomeResearches = () => {
   const { scrollYProgress } = useViewportScroll();
   const { ref, inView } = useInView({ triggerOnce: true });
-  const [currentImage, setCurrentImage] = useState([
-    "capture.jpg",
-    "capture.jpg",
-  ]);
   const [shape, cycleShape] = useCycle(
     rhombus,
     pentagon,
@@ -79,7 +78,7 @@ const HomeResearches = () => {
     octagon
   );
   const [shapeRotate, cycleShapeAngle] = useCycle(0, 90, 180, 270, 360);
-  const [currentYear, setCurrentYear] = useState(2017);
+  const [currentResearch, setCurrentResearch] = useState(researches[2]);
   const rectPath = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
   const listPos = useTransform(scrollYProgress, [0.7, 0.9], [50, 0]);
   const shapePos = useTransform(scrollYProgress, [0, 1], [100, 0]);
@@ -116,7 +115,7 @@ const HomeResearches = () => {
           imageVariants={imageVariants}
           containerClass="home__researches__image-container"
           imageClass="home__researches__image"
-          src={currentImage}
+          src={currentResearch.images.header}
         />
         <motion.ul style={{ y: listPos }} className="home__researches__list">
           {researches.map((item, index) => (
@@ -124,12 +123,13 @@ const HomeResearches = () => {
               onHoverStart={() => {
                 cycleShape();
                 cycleShapeAngle();
-                setCurrentYear(item.year);
-                setCurrentImage(item.images.header);
+                setCurrentResearch(item);
               }}
               title={item.title}
               id={item.id}
               index={index}
+              image={item.images.header}
+              currentImage={currentResearch.images.header}
             />
           ))}
         </motion.ul>
@@ -138,7 +138,7 @@ const HomeResearches = () => {
           style={{ clipPath: shape, rotate: shapeRotate, x: shapePos }}
           className="home__researches--shape"
         >
-          {currentYear}
+          {currentResearch.year}
         </motion.div>
         <svg className="home__researches__rect" width="600" height="600">
           <motion.path
