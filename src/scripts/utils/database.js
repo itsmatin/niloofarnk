@@ -268,18 +268,63 @@ export default {
       ],
     },
     {
-      id: 6,
-      title: "Woven Wall Panels",
-      images: { header: "/main.jpg" },
-      year: "20",
-      type: "Some type",
-      time: "sth",
+      id: 8,
+      title: "Allusion",
+      year: "2016",
+      type: "Design Studio IV",
+      time: "Spring",
+      location: "USA, California",
       headerDescription:
-        "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
+        "This building is an addition to the existing Athenaeum of Philadelphia.",
       infoDescription:
-        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+        "The building is designed around the Athenaeum and the Dilworth House. The form envelops the existing buildings and consists of a number of tubes and frames.",
+      images: {
+        header: "/athaneum/athaneum-header.jpg",
+        showcase: "/athaneum/athaneum-case.jpg",
+        process: ["/athaneum/athaneum-process.jpg"],
+      },
 
-      location: "Some location",
+      details: [
+        {
+          image: "/athaneum/athaneum-details1.jpg",
+          text: [
+            `his building is an addition to the existing Athenaeum of Philadelphia.
+            The design creates a dialogue between the old and the new. It reflects on the
+            existing architectural language of the Athenaeum and the neighborhood by
+            incorporating the horizontal lines used in their facades and decorations while
+            abstracting their heights and proportions. The building is designed around
+            the Athenaeum and the Dilworth House. The form envelops the existing
+            buildings and consists of a number of tubes and frames, which create a
+            straightforward circulation within the building and frame different views: To
+            Washington Square, to the interior, Existing Garden, to the Dilworth House.`,
+            `The Dilworth House is integrated into the program.
+            On the first level, there is a gift shop and Café at the
+            Dilworth House which create a variety of event spaces
+            focused on the auditorium and the lobby. Other levels
+            of the house are exhibit areas.
+            The program is designed in two different zones. The
+            eastern side accomamodates administration, reading
+            areas, and more private spaces, while the western
+            side contains the more public and active spaces.
+            The gallery space in the main building is designed
+            around a ramp, and thrusts forward to a view to the
+            city and the Washington square.
+            The roof structure mimics the structure of the ramp.
+            The façade material is Brass, which stands out from
+            the materials used in adjacent buildings. `,
+          ],
+        },
+        {
+          image: "/athaneum/athaneum-details2.jpg",
+          text: [
+            `The prevailing wind during the summer is from the south-west. During the hot season he operable
+            windows will allow the wind in, and when the air is exiting the builing
+            through the operable openings on the ceiling, the interior spaces
+            will be cooled by natural cross ventilation. The warm interior air which rises and collects around the ceiling will exit the operable windows provided at the ceiling and will result a cooling effect. The sloped roof will direct the rain water to the pipes which eventually lead to the tank located at the basement. The rainwater will be collected at the Tank. The glazings allow sunlight in, which will reduce the need to electrical lighting during the day. This will help with heating up the building during the cold seasons. Geothermal system will work with the HVAC system by preheating the supply air before it’s heated again to the desired indoor temperature.`,
+            `The HVAC system is used for providing fresh air within the building when natural ventilation is not an option, as well as heating and cooling the building. The operable windows provided at the administration zone will allow for natural ventilation. The windows also will let natural light in during the working hours and will help with cutting down the need for electrical lighting. The sloped roof will help collect water, which will be gathered in a tank located at the basement. The water then will be filtered and used for flushing the toilets, cleaning purposes, and watering the gardens. `,
+          ],
+        },
+      ],
     },
     {
       id: 3,
