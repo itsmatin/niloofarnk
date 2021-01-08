@@ -75,7 +75,14 @@ export default {
       images: {
         header: "/foamcutting/foamcutting-header.jpg",
         showcase: "/foamcutting/foamcutting-case.jpg",
-        process: ["/foamcutting/foamcutting-process.jpg"],
+        process: [
+          "/foamcutting/foamcutting-process-1.jpg",
+          "/foamcutting/foamcutting-process-2.jpg",
+          "/foamcutting/foamcutting-process-3.jpg",
+          "/foamcutting/foamcutting-process-4.jpg",
+          "/foamcutting/foamcutting-process-5.jpg",
+          "/foamcutting/foamcutting-process-6.jpg",
+        ],
       },
       details: [
         {
@@ -238,7 +245,11 @@ export default {
       images: {
         header: "/mediaCentre/media-header.jpg",
         showcase: "/mediaCentre/media-case.jpg",
-        process: ["/mediaCentre/media-process.jpg"],
+        process: [
+          "/mediaCentre/media-process-1.jpg",
+          "/mediaCentre/media-process-2.jpg",
+          "/mediaCentre/media-process-3.jpg",
+        ],
       },
       details: [
         {
@@ -281,7 +292,11 @@ export default {
       images: {
         header: "/athaneum/athaneum-header.jpg",
         showcase: "/athaneum/athaneum-case.jpg",
-        process: ["/athaneum/athaneum-process.jpg"],
+        process: [
+          "/athaneum/athaneum-process-1.jpg",
+          "/athaneum/athaneum-process-2.jpg",
+          "/athaneum/athaneum-process-3.jpg",
+        ],
       },
 
       details: [
