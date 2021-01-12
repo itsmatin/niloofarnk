@@ -36,22 +36,27 @@ const AboutIntroduction = () => {
         </svg>
         <h1>Hey there,</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto autem
-          tenetur quisquam accusamus vero vitae enim, modi at quo consequuntur
-          optio eum. Culpa repellendus sapiente odio asperiores excepturi quo,
-          cumque quia necessitatibus cum expedita deleniti eos velit ipsum
-          libero, quasi ducimus neque nam tenetur iste voluptatibus temporibus
-          tempore! Ut, quidem libero.
+          I am a computational and architectural designer and PhD student
+          researcher working on human perception, interaction, and human and
+          system agency. I currently work on emerging technologies in
+          architecture to transform humans’ interaction, connection and dialogue
+          with their built environment. In this area I have worked on projects
+          addressing episodic experiences and narrative in space, human and
+          system’s agency in architectural design and making, and emerging
+          design and making paradigms as a result of new technologies.
         </p>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-          corrupti ab ea provident officia culpa fuga quae obcaecati quo, omnis
-          at repellat laborum nemo eius voluptas voluptate quasi fugiat
-          cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Perspiciatis cum nemo fuga, minus voluptates sequi? Lorem, ipsum dolor
-          sit amet consectetur adipisicing elit. Harum corrupti ab ea provident
-          officia culpa fuga quae obcaecati quo, omnis at repellat laborum nemo
-          eius voluptas voluptate quasi fugiat cupiditate.
+          Additionally, I have contributed in research related to light-weight
+          structures, craft inspired bending active structures in particular. I
+          received my bachelor of Architectural Engineering from Azad University
+          of Tehran, then I moved to the United States to pursue my graduate
+          education. I hold a professional master of Architecture from the
+          Pennsylvania State University and a master of science with a
+          concentration on Advanced Production from Georgia Institute of
+          Technology. I am currently pursuing a PhD at Carnegie Mellon
+          University. My professional experience includes working with
+          international firms in the US and Iran on K-12, Justice + Civic and
+          residential projects.
         </p>
       </motion.div>
     </motion.section>
