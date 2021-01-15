@@ -45,7 +45,7 @@ const ProjectShowcase = ({
         // animate={inView ? "black" : "white"}
         className="project__showcase--title"
       >
-        Case Study
+        {project.firstSubtitle}
       </motion.h1>
       <Image
         // textStyle={{ color: bgColor === "white" ? black : white }}

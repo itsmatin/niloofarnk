@@ -46,9 +46,6 @@ const ProjectDetails = ({ bgColor, project }) => {
               variants={textVariants}
               className="project__details__text"
             >
-              {index === 0 && item.text && (
-                <h1 className="project__details--title">More details</h1>
-              )}
               {item.text?.map((text, index) => {
                 return (
                   <React.Fragment key={index}>

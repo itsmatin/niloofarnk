@@ -56,7 +56,7 @@ const ProjectProcess = ({ setBgColor, project, shouldChangeColor }) => {
         animate={inView ? "black" : "white"}
         className="project__process--title"
       >
-        DESIGN PROCESS
+        {project.secondSubtitle}
       </motion.h2>
       <div ref={ref} className="project__process__images">
         {project.images.process.map((imageLink, index) => {
