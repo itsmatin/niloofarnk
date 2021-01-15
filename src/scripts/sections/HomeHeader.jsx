@@ -5,12 +5,14 @@ import {
   motion,
   useSpring,
 } from "framer-motion";
+import { useHistory } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import AnimatedText from "../utils/AnimatedText";
 import { ease } from "../utils/config";
 import Image from "../components/Image";
-
+import database from "../utils/database";
 const HomeHeader = ({ props, intro }) => {
+  const { push } = useHistory();
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const { scrollYProgress } = useViewportScroll();
   const titleY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
@@ -56,12 +58,13 @@ const HomeHeader = ({ props, intro }) => {
       </motion.h1>
 
       <Image
+        onClick={() => push("/project/5")}
         imageClass="home__header--image"
         containerClass="home__header--image-container"
         animate="animate"
         src="main.jpg"
         alt="Niloofar Nikookar Portfolio"
-        text="Spring 2020"
+        text={database.designs.find((element) => element.id === 5).title}
         containerStyle={{ y: imageY }}
         captionVariants={imageCaptionVariants}
         imageVariants={imageVariants}

@@ -300,8 +300,8 @@ export default {
         "I designed a Media Center for Tehran as the project for my Architectural Design Studio III.",
       infoDescription:
         "The building is designed to represent the five continents of the world by dividing it into five cubes.",
-      firstSubtitle: "",
-      secondSubtitle: "",
+      firstSubtitle: "Site Plan",
+      secondSubtitle: "Components",
       images: {
         header: "/mediaCentre/media-header.jpg",
         showcase: "/mediaCentre/media-case.jpg",

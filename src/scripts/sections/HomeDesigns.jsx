@@ -7,7 +7,7 @@ import {
   useSpring,
   useViewportScroll,
 } from "framer-motion";
-import AnimatedText from "../utils/AnimatedText";
+// import AnimatedText from "../utils/AnimatedText";
 import Image from "../components/Image";
 import database from "../utils/database";
 import { ease, white } from "../utils/config";
@@ -111,7 +111,6 @@ const HomeDesigns = () => {
           <motion.path
             style={{ pathLength: mazePath }}
             d="M 50 100 L 650 100 A 50 50 0 1 1 650 100 L 650 450 L 350 450 L 350 150 L 600 150 L 600 400 L 400 400 L 400 200 L 550 200 L 550 350 L 450 350 L 450 250 L 500 250 L 500 300"
-            // d="M 0 100 L 650 100 A 50 50 0 1 1 650 100 A 50 50 0 1 1 650 450 A 50 50 0 1 1 350 450 A 50 50 0 1 1 350 150 A 50 50 0 1 1 600 150 A 50 50 0 1 1 600 400 A 50 50 0 1 1 400 400 A 50 50 0 1 1 400 200 A 50 50 0 1 1 550 200 A 50 50 0 1 1 550 350 A 50 50 0 1 1 450 350 A 50 50 0 1 1 450 250 A 50 50 0 1 1 500 250 A 50 50 0 1 1 500 300 "
             stroke={white}
             fill="transparent"
             transition={transition}
@@ -173,7 +172,7 @@ const HomeDesigns = () => {
                 title={design.title}
                 src={design.images.header}
                 alt={design.title}
-                text="2019 - 2020"
+                text={design.time + " " + design.year}
                 key={index}
               />
             );
