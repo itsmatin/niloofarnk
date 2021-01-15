@@ -39,7 +39,7 @@ const ProgressBar = ({ intro }) => {
       unsubscribeY();
       unSubscribeTextMotion();
     };
-  }, []);
+  }, [textMotion, y]);
 
   return (
     <motion.div

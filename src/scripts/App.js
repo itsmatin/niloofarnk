@@ -3,8 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Route, Switch, useHistory } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
-import Scrollbar from "./components/Scrollbar";
-// import Curtain from "./components/Curtain";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
@@ -12,7 +10,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import NotFound from "./pages/404";
 import ScrollToTop from "./utils/ScrollToTop";
-import { black, ease, transparent, whiteWhite } from "./utils/config";
+import { ease, transparent, whiteWhite } from "./utils/config";
 
 const bgVariants = {
   black: { backgroundColor: transparent },
@@ -23,7 +21,6 @@ function App() {
   const ref = createRef();
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [transition, setTransition] = useState(false);
   const [bgColor, setBgColor] = useState("black");
   const [intro, setIntro] = useState(false);
 

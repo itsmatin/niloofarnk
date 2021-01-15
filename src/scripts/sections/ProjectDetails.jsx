@@ -63,7 +63,11 @@ const ProjectDetails = ({ bgColor, project }) => {
             />
           </div>
         ) : index <= 3 ? (
-          <div className="project__details" style={{ alignItems: "center" }}>
+          <div
+            key={index}
+            className="project__details"
+            style={{ alignItems: "center" }}
+          >
             <Image
               containerStyle={{ scale: scaleSecondSpring }}
               transition={{ delay: 2 }}

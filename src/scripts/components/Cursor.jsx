@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import React, { useEffect, createRef } from "react";
-import { ease, pink, transparent } from "../utils/config";
+import { pink, transparent } from "../utils/config";
 
 function isMobile() {
   return /Android|Mobi/i.test(navigator.userAgent);
@@ -74,7 +74,7 @@ const Cursor = () => {
       document.removeEventListener("mousedown", handleMouseDown);
       document.removeEventListener("mouseup", handleMouseUp);
     };
-  }, []);
+  });
 
   return typeof navigator !== "undefined" && isMobile() ? null : (
     <motion.div

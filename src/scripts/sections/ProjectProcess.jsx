@@ -37,7 +37,7 @@ const ProjectProcess = ({ setBgColor, project, shouldChangeColor }) => {
 
   useEffect(() => {
     setBgColor(inView ? "white" : "black");
-  }, [inView]);
+  }, [inView, setBgColor]);
 
   return (
     <div className="project__process">

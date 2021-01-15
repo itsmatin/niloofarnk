@@ -6,8 +6,6 @@ import {
   useTransform,
   useViewportScroll,
 } from "framer-motion";
-import AnimatedText from "../utils/AnimatedText";
-import { useInView } from "react-intersection-observer";
 import Image from "../components/Image";
 import database from "../utils/database";
 import { ease, white, black } from "../utils/config";
@@ -69,7 +67,6 @@ function ListItem({ currentImage, ...props }) {
 
 const HomeResearches = () => {
   const { scrollYProgress } = useViewportScroll();
-  const { ref, inView } = useInView({ triggerOnce: true });
   const [shape, cycleShape] = useCycle(
     rhombus,
     pentagon,
@@ -96,14 +93,12 @@ const HomeResearches = () => {
     >
       <motion.h1
         style={{ x: firstTitlePos }}
-        ref={ref}
         className="home__researches--title"
       >
         COMPUTATIONAL
       </motion.h1>
       <motion.h1
         style={{ textAlign: "left", x: secondTitlePos }}
-        ref={ref}
         className="home__researches--title"
       >
         DESIGN

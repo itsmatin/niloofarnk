@@ -7,7 +7,6 @@ import {
   useSpring,
   useViewportScroll,
 } from "framer-motion";
-// import AnimatedText from "../utils/AnimatedText";
 import Image from "../components/Image";
 import database from "../utils/database";
 import { ease, white } from "../utils/config";
@@ -71,9 +70,6 @@ const HomeDesigns = () => {
     infoDescription: "",
   });
   const { ref, inView } = useInView({ threshold: 0.5 });
-  const { ref: titleRef, inView: titleInView } = useInView({
-    triggerOnce: true,
-  });
   const { scrollYProgress } = useViewportScroll();
   const y = useTransform(scrollYProgress, [0, 1], [1200, 200]);
   const containerY = useTransform(scrollYProgress, [0, 1], [0, -400]);
@@ -119,13 +115,11 @@ const HomeDesigns = () => {
         </motion.svg>
         <motion.h1
           style={{ x: firstTitlePos }}
-          ref={titleRef}
           className="home__designs--title"
         >
           ARCHITECTURAL
         </motion.h1>
         <motion.h1
-          ref={titleRef}
           style={{ textAlign: "right", x: secondTitlePos }}
           className="home__designs--title"
         >

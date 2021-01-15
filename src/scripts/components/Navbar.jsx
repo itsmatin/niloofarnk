@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import MenuTriangle from "./MenuTriangle";
-import { pink, black, white, ease } from "../utils/config";
+import { pink, white, ease } from "../utils/config";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ menuOpen, handleMenu }) => {
