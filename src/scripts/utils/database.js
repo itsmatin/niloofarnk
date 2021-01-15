@@ -175,10 +175,10 @@ export default {
     {
       id: 5,
       title: "Urban Female Heterotopia",
-      type: "M.Arch. Capstone Project",
+      type: "Design Studio",
       time: "Spring",
       year: "2017",
-
+      location: "Tehran, Iran",
       headerDescription:
         "This project addresses the experiences of women in public space in Tehran, Iran",
       infoDescription:
@@ -237,7 +237,7 @@ export default {
       id: 6,
       title: "Allusion",
       year: "2016",
-      type: "Design Studio IV",
+      type: "Design Studio",
       time: "Spring",
       location: "Philadelphia, USA",
       headerDescription:
@@ -260,7 +260,7 @@ export default {
         {
           image: "/athaneum/athaneum-details1.jpg",
           text: [
-            `his building is an addition to the existing Athenaeum of Philadelphia.
+            `This building is an addition to the existing Athenaeum of Philadelphia.
             The design creates a dialogue between the old and the new. It reflects on the
             existing architectural language of the Athenaeum and the neighborhood by
             incorporating the horizontal lines used in their facades and decorations while
@@ -301,12 +301,76 @@ export default {
       ],
     },
     {
+      id: 8,
+      title: "Terrace Apartment",
+      year: "2011",
+      time: "Fall",
+      type: "Design Studio",
+      location: "Tehran, Iran",
+      headerDescription:
+        "Space limitations in urban Tehran have led to an emphasis on maximizing indoor space.",
+      infoDescription:
+        "The objective in this project was to design a luxurious apartment with adequate indoor and outdoor spaces for both private and communal gathering in each of the three units.",
+      firstSubtitle: "Site Plan",
+      secondSubtitle: "Design Process",
+      images: {
+        header: "/apartment/apartment-header.jpg",
+        showcase: "/apartment/apartment-case.jpg",
+        process: ["/apartment/apartment-process.jpg"],
+      },
+      details: [
+        {
+          image: "/apartment/apartment-details1.jpg",
+          text: [
+            `Space limitations in urban Tehran have led to an emphasis on maximizing indoor
+            space when designing residential buildings. Because of this, most residences
+            lack sufficient green space and, in turn, lack potential for outdoor activities.
+            The objective in this project was to design a luxurious apartment with adequate
+            indoor and outdoor spaces for both private and communal gathering in each of
+            the three units. This was achieved by providing large terraces and balconies.`,
+          ],
+        },
+        {
+          image: "/apartment/apartment-header.jpg",
+          text: [
+            `Special attention was paid to create a variety of
+            indoor spaces suitable for different activities.
+            In the first floor apartment the entire building
+            footprint is dedicated to indoor space. In the
+            second floor apartment the shift in volume
+            provides balconies. The third apartment takes
+            up the third and fourth floors and provides five
+            bedroom apartment. All 3 apartments have
+            an office room located on the north-west of
+            the building for client meetings. A staircase
+            provides access to these office spaces from
+            the ground level which removes the necessity
+            of crossing clients through residential
+            spaces. This aids the resident’s safety and
+            professionalism.`,
+            `Wood and concrete were chosen as
+            the materials to adorn the façade. They
+            are chosen based on their availability in
+            Tehran as well as their harmony with each
+            other, matching with adjacent buildings
+            (which are mostly grey stone) and the
+            landscape close to the site. In order to
+            moderate thermal condition and light
+            penetration, shades are integrated into
+            the facade and installed on southern and
+            western windows.`,
+          ],
+        },
+      ],
+    },
+
+    {
       id: 7,
       title: "Tehran Media Centre",
       year: "2013",
       time: "Spring",
-      type: "Architectural Design III",
-      location: "Iran, Tehran",
+      type: "Design Studio",
+      location: "Tehran, Iran",
       headerDescription:
         "I designed a Media Center for Tehran as the project for my Architectural Design Studio III.",
       infoDescription:
