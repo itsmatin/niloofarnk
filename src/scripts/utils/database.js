@@ -216,6 +216,9 @@ export default {
             ` Similarly, the gallery divides spaces into those dedicated to male and female artists. Cafes and game cafes unify or divide users, and other uses, like the socializing and lobby spaces, make use of sight and vantage to create power dynamics in the space. The space stretches out to the rooftop, where only pieces of the line remain`,
           ],
         },
+        {
+          image: "/capstone/heterotopia-details5.jpg",
+        },
       ],
     },
     {

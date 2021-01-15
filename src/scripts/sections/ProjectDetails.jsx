@@ -30,7 +30,7 @@ const ProjectDetails = ({ bgColor, project }) => {
   return (
     <>
       {project.details?.map((item, index) => {
-        return index % 2 === 0 ? (
+        return index % 2 === 0 && index <= 3 ? (
           <div key={index} className="project__details">
             <motion.div
               transition={{ ease: ease }}
@@ -62,7 +62,7 @@ const ProjectDetails = ({ bgColor, project }) => {
               src={item.image}
             />
           </div>
-        ) : (
+        ) : index <= 3 ? (
           <div className="project__details" style={{ alignItems: "center" }}>
             <Image
               containerStyle={{ scale: scaleSecondSpring }}
@@ -72,6 +72,39 @@ const ProjectDetails = ({ bgColor, project }) => {
               src={item.image}
             />
             <div className="project__shape project__shape--octagon" />
+            <motion.div
+              initial="white"
+              animate={bgColor === "white" ? "black" : "white"}
+              variants={textVariants}
+              className="project__details__text"
+            >
+              {item.text?.map((text, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <p>{text}</p>
+                    <br />
+                  </React.Fragment>
+                );
+              })}
+            </motion.div>
+          </div>
+        ) : (
+          <div
+            className="project__details"
+            style={{
+              flexFlow: "column nowrap",
+              alignItems: "center",
+              marginTop: "5rem",
+            }}
+          >
+            <div className="project__shape project__shape--pentagon" />
+            <Image
+              containerStyle={{ scale: scaleSecondSpring }}
+              transition={{ delay: 2 }}
+              containerClass="project__details--image"
+              alt={`${project.title} - ${project.type} Niloofar Nikookar`}
+              src={item.image}
+            />
             <motion.div
               initial="white"
               animate={bgColor === "white" ? "black" : "white"}
