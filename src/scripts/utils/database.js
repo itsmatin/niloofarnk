@@ -11,8 +11,8 @@ export default {
         "Team Project with Vernelle A.A Noel(Advisor), Karen Tran and Jamieson Pye.",
       infoDescription:
         "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
-      firstSubtitle: "",
-      secondSubtitle: "",
+      firstSubtitle: "Prototype",
+      secondSubtitle: "Making the Pringle",
       images: {
         header: "/pavilion/pavilion-header.jpg",
         showcase: "/pavilion/pavilion-case.jpg",
@@ -60,14 +60,14 @@ export default {
         "Team Project with Shantanu Kushalappa and Daniel Oddo.",
       infoDescription:
         "The project was an interactive design and fabrication experiment with Fologram, a plugin for Rhino and Grasshopper.",
-      firstSubtitle: "",
-      secondSubtitle: "",
+      firstSubtitle: "Case Study",
+      secondSubtitle: "Fabrication",
       images: {
         header: "/fologram/fologram-header.jpg",
         showcase: "/fologram/fologram-case.jpg",
         process: [
           "/fologram/fologram-process-1.jpg",
-          "/fologram/fologram-process-2.jpg",
+          // "/fologram/fologram-process-2.jpg",
           "/fologram/fologram-process-3.jpg",
         ],
       },
@@ -100,8 +100,8 @@ export default {
         "The project is on bending active systems and torsion as a form driver in plate geometries.",
       infoDescription:
         "The study builds on principles from previous research on plate-bending-active tensile structures. ",
-      firstSubtitle: "",
-      secondSubtitle: "",
+      firstSubtitle: "Case Study",
+      secondSubtitle: "Design Process",
       details: [
         { image: "/woven/woven-details-1.png" },
         { image: "/woven/woven-details-2.png" },
@@ -116,15 +116,15 @@ export default {
     },
     {
       id: 4,
-      title: "Complex Geometry Foam Cutting",
+      title: "Robotic Hotwire Cutting",
       type: "Team Study",
       time: "Spring",
       year: "2019",
       headerDescription: "Team Project with Mehmet Sinan Bermek.",
       infoDescription:
         "The project focuses on the feasibility of automated fabrication and assembly of complex geometries using computer vision and a KUKA robotic arm. ",
-      firstSubtitle: "",
-      secondSubtitle: "",
+      firstSubtitle: "Fabrication Workflow",
+      secondSubtitle: "Geometry Design",
       images: {
         header: "/foamcutting/foamcutting-header.jpg",
         showcase: "/foamcutting/foamcutting-case.jpg",
