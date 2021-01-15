@@ -97,34 +97,34 @@ export default {
       type: "Independent Study",
       time: "Fall",
       year: "2019",
+      location: "Atlanta, USA",
       headerDescription:
         "This project examines the structural and architectural potential of bending active plate materials when torsion is introduced.",
       infoDescription:
         " This study builds on research done by Slabbinck, Knippers and Körner on torsion as a form giver in plate-bending active tensile structures.",
-      firstSubtitle: "Case Study",
+      firstSubtitle: "Panel Type I",
       secondSubtitle: "Design Process",
+      images: {
+        header: "/woven/woven-header.jpg",
+        showcase: "/woven/woven-case.jpg",
+        process: ["/woven/woven-process.jpg"],
+      },
       details: [
         {
-          image: "/woven/woven-details-1.png",
+          image: "/woven/woven-details1.png",
           text: [
             `The study is carried out in three parts: 1) the types of plate bends are defined as both open and closed geometries 2) multiple bends are applied to each plate to create a modular unit 3) modules are combined to propose two patterns for architectural panels. Paper strips and hand-bending were selected as material and method because of its flexibility and affordability. `,
             `The experiment utilizes single and stacked strips. The forms are achieved by alternating between the A and B sides of the strips to create arch-like forms. In the second step, the geometries are closed by bringing and taping the ends together and make self-supporting forms. The results of the first part of the study are a prototype of a self-supporting bending-active module. `,
           ],
         },
         {
-          image: "/woven/woven-details-2.png",
+          image: "/woven/woven-details2.png",
           text: [
             `Two types of bend are defined through applying torsion to a plate. Those types are categorized as an A-A Bend and an A-B Bend. These bends are classified based on the orientation of the plate’s faces at the ends of the plate. The use of plates in a bending active system allows different bent plates to be stacked. After classifying A-A and A-B bends, bent plates were stacked to explore the aesthetic and structural implications of the different combinations. The classified bends were combined to create a bending-active unit. These units are formed by applying six total bends in two paper strips. The resulting geometry is symmetrical and self-supporting.`,
             `Two different modular wall panels were created by arranging the bending-active units. The wall panels are constructed with a repeating modular unit created through the application of a series of bends in paper strips, which demonstrates a way torsion can be used to develop complex forms.`,
           ],
         },
       ],
-
-      images: {
-        header: "/woven/woven-header.jpg",
-        showcase: "/woven/woven-case.png",
-        process: ["/woven/woven-process.jpg"],
-      },
     },
     {
       id: 4,
