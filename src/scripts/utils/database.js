@@ -311,7 +311,7 @@ export default {
         "Space limitations in urban Tehran have led to an emphasis on maximizing indoor space.",
       infoDescription:
         "The objective in this project was to design a luxurious apartment with adequate indoor and outdoor spaces for both private and communal gathering in each of the three units.",
-      firstSubtitle: "Site Plan",
+      firstSubtitle: "Floor Plans",
       secondSubtitle: "Design Process",
       images: {
         header: "/apartment/apartment-header.jpg",
