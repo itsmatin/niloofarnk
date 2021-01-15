@@ -123,7 +123,7 @@ export default {
       images: {
         header: "/woven/woven-header.jpg",
         showcase: "/woven/woven-case.png",
-        process: ["/woven/woven-process.png"],
+        process: ["/woven/woven-process.jpg"],
       },
     },
     {
