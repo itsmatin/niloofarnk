@@ -103,7 +103,7 @@ export default {
       infoDescription:
         " This study builds on research done by Slabbinck, Knippers and Körner on torsion as a form giver in plate-bending active tensile structures.",
       firstSubtitle: "Panel Type I",
-      secondSubtitle: "Design Process",
+      secondSubtitle: "Making a Unit",
       images: {
         header: "/woven/woven-header.jpg",
         showcase: "/woven/woven-case.jpg",
@@ -120,7 +120,12 @@ export default {
         {
           image: "/woven/woven-details2.png",
           text: [
-            `Two types of bend are defined through applying torsion to a plate. Those types are categorized as an A-A Bend and an A-B Bend. These bends are classified based on the orientation of the plate’s faces at the ends of the plate. The use of plates in a bending active system allows different bent plates to be stacked. After classifying A-A and A-B bends, bent plates were stacked to explore the aesthetic and structural implications of the different combinations. The classified bends were combined to create a bending-active unit. These units are formed by applying six total bends in two paper strips. The resulting geometry is symmetrical and self-supporting.`,
+            `Two types of bend are defined through applying torsion to a plate. Those types are categorized as an A-A Bend and an A-B Bend. These bends are classified based on the orientation of the plate’s faces at the ends of the plate. The use of plates in a bending active system allows different bent plates to be stacked. After classifying A-A and A-B bends, bent plates were stacked to explore the aesthetic and structural implications of the different combinations.`,
+          ],
+        },
+        {
+          image: "/woven/woven-details3.png",
+          text: [
             `Two different modular wall panels were created by arranging the bending-active units. The wall panels are constructed with a repeating modular unit created through the application of a series of bends in paper strips, which demonstrates a way torsion can be used to develop complex forms.`,
           ],
         },
