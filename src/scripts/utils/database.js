@@ -451,4 +451,38 @@ export default {
       image: "azad.png",
     },
   ],
+  work: [
+    {
+      id: 1,
+      title: "Somaesthetic Architecture - Carnegie Mellon University",
+      position: "PhD Researcher",
+      time: "Fall 2020 - Present",
+      description:
+        "Somaesthetic Architecture is a collaborative research project under the supervision of Dr. Azadeh Omidfar Sawyer and Dr. Daragh Byrne. Somaesthetic Architecture is a responsive educational installation is focused on collective interactive experiences, dialogue between humans and their built environment and ambient information in the context of a children museum. I have been a part of the team since the project initiation and have worked on literature research, story and concept development and design of the installation. ",
+    },
+    {
+      id: 2,
+      title: "The Infinite Line - Georgia Institute of Technology  ",
+      position: "Researcher/Team member",
+      time: "Summer 2019 - Summer2020",
+      description:
+        "I worked on the Infinite Line Pavilion under the supervision of Dr. Vernelle A. A. Noel in summer and fall 2019 at Georgia Tech. The Infinite Line Pavilion is a light weight freestanding bending active structure inspired by Wire-bending techniques native to Trinidad and Tobago. In this project I was involved in different areas from literature research, design, documentation and fabrication all the way to the presentation of the Pavilion in Barcelona in October 2019.",
+    },
+    {
+      id: 3,
+      title: "DLR Group - Los Angeles",
+      position: "Architectural Designer",
+      time: "May 2017 - December 2018",
+      description:
+        "I worked at DLR Group, Los Angeles with the Justice+ Civic and the K-12 sectors. At Justice+ Civic I was a part of the competition team for the 1.2-billion-dollar project of the Consolidated Correctional Treatment Facility (CCTF) in Los Angeles County where I worked on realizing site design, floor plan layouts, physical and digital modeling. Also, I worked on the Nebraska DCS Reception and Treatment Center project where I was involved in marketing, program development, spatial configuration, and digital modeling all the way through the end of schematic phase. In K-12 I was involved in a variety of projects ranging from marketing to design development. Also, in K-12, I created a library of educational spaces with a focus on flexibility, improving productivity and learning of students based on former projects within the firm. The purpose of the library was to facilitate design decision making and digital model making.",
+    },
+    {
+      id: 4,
+      title: "The Pennsylvania State University",
+      position: "Graduate Research and Teaching Assistant",
+      time: "Fall 2014- Spring 2017",
+      description:
+        "Between 2014-2017 I was involved on multiple research projects under the supervision of faculty members including Dr. Felecia Davis (the Felt and Woven Light), Professor Shadi Nazarian (Seamless Architecture) and professor Daniel Willis (The Green Metropolis of Tomorrow). I assisted Dr. Felecia Davis on her research projects on Felt, a set of 4 responsive textile panels that communicate and convey emotions through movement. I also assisted Dr. Davis with the Woven light pavilion, a light solar collecting tensile structure. In these projects I worked on background research, fabrication, prototyping and program realization. Also, at Penn State I assisted faculty members including professor James Cooper (Visual Communication I) and professor Peter Aeschbacher (Design Thinking and Creativity) on their courses where I assisted the class …",
+    },
+  ],
 };

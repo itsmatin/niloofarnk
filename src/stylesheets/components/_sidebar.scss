@@ -14,7 +14,7 @@
   padding: 1.3rem;
   background: $black;
   box-shadow: -1px 0px 5px $black;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
   @include respond(venti-with-sugar) {

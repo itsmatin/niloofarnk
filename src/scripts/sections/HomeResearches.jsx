@@ -120,6 +120,7 @@ const HomeResearches = () => {
                 cycleShapeAngle();
                 setCurrentResearch(item);
               }}
+              key={index}
               title={item.title}
               id={item.id}
               index={index}

@@ -8,9 +8,11 @@ import {
   useSpring,
 } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
+import database from "../utils/database";
 
 const AboutExperience = () => {
   const { width } = useWindowSize();
+  const { work } = database;
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
   const { scrollYProgress } = useViewportScroll();
   const boxOneX = useTransform(scrollYProgress, [0.7, 0.75], [-30, 0]);
@@ -23,6 +25,7 @@ const AboutExperience = () => {
     bounce: 0,
     damping: 20,
   });
+
   return (
     <section className="about__work">
       <motion.h1
@@ -33,52 +36,42 @@ const AboutExperience = () => {
         <AnimatedText isVisible={inView}>WORK EXPERIENCE</AnimatedText>
       </motion.h1>
       <div className="about__work__boxes">
-        <motion.div style={{ x: boxOneX }} className="about__work__boxes__box">
-          <h1>I) SOME COMPANY LTD.</h1>
-          <h3>Assistant something role</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            dicta rem voluptas doloremque numquam deleniti pariatur.
-            Perspiciatis deserunt voluptatem aspernatur. Exercitationem quo
-            aperiam repellat quae laboriosam assumenda iure, voluptatibus
-            quaerat sint at! Eius ipsum voluptas unde saepe tempora odit? Nemo.
-          </p>
-        </motion.div>
-        <motion.div style={{ y: boxTwoY }} className="about__work__boxes__box">
-          <h1>I) SOME COMPANY LTD.</h1>
-          <h3>Assistant something role</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            dicta rem voluptas doloremque numquam deleniti pariatur.
-            Perspiciatis deserunt voluptatem aspernatur. Exercitationem quo
-            aperiam repellat quae laboriosam assumenda iure, voluptatibus
-            quaerat sint at! Eius ipsum voluptas unde saepe tempora odit? Nemo.
-          </p>
-        </motion.div>
         <motion.div
-          style={{ y: boxThreeY }}
+          style={{ x: width > 725 ? boxOneX : "initial" }}
           className="about__work__boxes__box"
         >
-          <h1>I) SOME COMPANY LTD.</h1>
-          <h3>Assistant something role</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            dicta rem voluptas doloremque numquam deleniti pariatur.
-            Perspiciatis deserunt voluptatem aspernatur. Exercitationem quo
-            aperiam repellat quae laboriosam assumenda iure, voluptatibus
-            quaerat sint at! Eius ipsum voluptas unde saepe tempora odit? Nemo.
-          </p>
+          <h1>{work[0].title}</h1>
+          <h3>
+            {work[0].position} - {work[0].time}
+          </h3>
+          <p>{work[0].description}</p>
+        </motion.div>
+        <motion.div
+          style={{ x: width > 725 ? boxTwoY : "initial" }}
+          className="about__work__boxes__box"
+        >
+          <h1>{work[1].title}</h1>
+          <h3>
+            {work[1].position} - {work[1].time}
+          </h3>
+          <p>{work[1].description}</p>
+        </motion.div>
+        <motion.div
+          style={{ x: width > 725 ? boxThreeY : "initial" }}
+          className="about__work__boxes__box"
+        >
+          <h1>{work[2].title}</h1>
+          <h3>
+            {work[2].position} - {work[2].time}
+          </h3>
+          <p>{work[2].description}</p>
         </motion.div>
         <motion.div style={{ x: boxFourX }} className="about__work__boxes__box">
-          <h1>I) SOME COMPANY LTD.</h1>
-          <h3>Assistant something role</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            dicta rem voluptas doloremque numquam deleniti pariatur.
-            Perspiciatis deserunt voluptatem aspernatur. Exercitationem quo
-            aperiam repellat quae laboriosam assumenda iure, voluptatibus
-            quaerat sint at! Eius ipsum voluptas unde saepe tempora odit? Nemo.
-          </p>
+          <h1>{work[3].title}</h1>
+          <h3>
+            {work[3].position} - {work[3].time}
+          </h3>
+          <p>{work[3].description}</p>
         </motion.div>
       </div>
     </section>
