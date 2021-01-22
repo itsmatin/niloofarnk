@@ -142,7 +142,10 @@ const HomeDesigns = () => {
           {database.designs.map((design, index) => {
             return (
               <Image
-                onClick={() => setSidebarOpen(true)}
+                onClick={() => {
+                  setSidebarData(design);
+                  setSidebarOpen(true);
+                }}
                 containerVariants={imageContainerVariants}
                 imageClass="home__designs--image"
                 onHoverStart={() => {
