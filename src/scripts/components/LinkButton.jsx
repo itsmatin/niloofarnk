@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import { black, ease, white } from "../utils/config";
 
@@ -58,6 +58,7 @@ function Content({ title }) {
 }
 
 const LinkButton = ({ to, className, title, external = false }) => {
+  const { push } = useHistory();
   return external ? (
     <a
       className={className}
@@ -68,9 +69,9 @@ const LinkButton = ({ to, className, title, external = false }) => {
       <Content title={title} />
     </a>
   ) : (
-    <Link to={to} className={className}>
+    <span onClick={() => push(to)} className={className}>
       <Content title={title} />
-    </Link>
+    </span>
   );
 };
 
