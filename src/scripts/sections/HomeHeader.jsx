@@ -11,6 +11,7 @@ import AnimatedText from "../utils/AnimatedText";
 import { ease } from "../utils/config";
 import Image from "../components/Image";
 import database from "../utils/database";
+
 const HomeHeader = ({ props, intro }) => {
   const { push } = useHistory();
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });

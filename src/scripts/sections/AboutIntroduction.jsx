@@ -34,7 +34,7 @@ const AboutIntroduction = () => {
             strokeWidth="3"
           />
         </svg>
-        <h1>Hey there,</h1>
+        <h1>Hey!</h1>
         <p>
           I am a computational and architectural designer and PhD student
           researcher working on human perception, interaction, and human and

@@ -80,7 +80,7 @@ const Contact = () => {
           external
           title="Email"
           className="contact--button"
-          to="mailto:webmaster@example.com"
+          to="mailto:niloonikookar@gmail.com"
         />
       </motion.div>
 
