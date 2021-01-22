@@ -249,7 +249,7 @@ export default {
         "This building is an addition to the existing Athenaeum of Philadelphia.",
       infoDescription:
         "The building is designed around the Athenaeum and the Dilworth House. The form envelops the existing buildings and consists of a number of tubes and frames.",
-      firstSubtitle: "Framing The City",
+      firstSubtitle: "The Old and The New",
       secondSubtitle: "Design Process",
       images: {
         header: "/athaneum/athaneum-header.jpg",
@@ -269,8 +269,7 @@ export default {
             The design creates a dialogue between the old and the new. It reflects on the
             existing architectural language of the Athenaeum and the neighborhood by
             incorporating the horizontal lines used in their facades and decorations while
-            abstracting their heights and proportions.`,
-            `The building is designed around
+            abstracting their heights and proportions. The building is designed around
             the Athenaeum and the Dilworth House. The form envelops the existing
             buildings and consists of a number of tubes and frames, which create a
             straightforward circulation within the building and frame different views: To
@@ -377,9 +376,9 @@ export default {
       type: "Design Studio",
       location: "Tehran, Iran",
       headerDescription:
-        "I designed a Media Center for Tehran as the project for my Architectural Design Studio III.",
+        "The building is designed around the concept of a global village.",
       infoDescription:
-        "The building is designed to represent the five continents of the world by dividing it into five cubes.",
+        "The cubes are all joined together symbolizing media joining the globe.",
       firstSubtitle: "Site Plan",
       secondSubtitle: "Components",
       images: {
@@ -396,10 +395,7 @@ export default {
         {
           image: "/mediaCentre/media-details1.jpg",
           text: [
-            `I designed a Media Center for Tehran as the project for my Architectural
-          Design Studio III.
-          The building is designed to represent the five continents of the world by
-          dividing it into five cubes. The cubes are all joined together symbolizing
+            `The building is designed around the concept of a global village. The cubes are all joined together symbolizing
           media joining the globe. The building is integrated with the site topography
           to reduce intervention into nature. `,
           ],
