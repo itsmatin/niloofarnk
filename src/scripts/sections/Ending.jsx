@@ -63,7 +63,7 @@ const Ending = ({ title = "example", to = "/example" }) => {
         variants={textVariants}
         animate={inView ? "animate" : "initial"}
       >
-        <Link className="end--title" to={to}>
+        <Link component="a" className="end--title" to={to}>
           <AnimatedText style={{ fontWeight: "inherit" }}>{title}</AnimatedText>
         </Link>
       </motion.span>

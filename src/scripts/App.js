@@ -49,7 +49,7 @@ function App() {
         className="app"
       >
         {!intro && <Navbar menuOpen={menuOpen} handleMenu={setMenuOpen} />}
-        {/* <Scrollbar pageRef={ref} /> */}
+
         <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
         <Route
           render={({ location }) => (
@@ -78,7 +78,6 @@ function App() {
           )}
         />
         <Cursor />
-        {/* <Curtain transition={transition} /> */}
       </motion.div>
     </ScrollToTop>
   );
