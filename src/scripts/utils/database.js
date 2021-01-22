@@ -65,7 +65,7 @@ export default {
       secondSubtitle: "Fabrication",
       images: {
         header: "/fologram/fologram-header.jpg",
-        showcase: "/fologram/fologram-case.jpg",
+        showcase: "/fologram/fologram-case-study.jpg",
         process: [
           "/fologram/fologram-process-1.jpg",
           // "/fologram/fologram-process-2.jpg",

@@ -11,6 +11,10 @@ import Project from "./pages/Project";
 import NotFound from "./pages/404";
 import ScrollToTop from "./utils/ScrollToTop";
 import { ease, transparent, whiteWhite } from "./utils/config";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("UA-161516294-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const bgVariants = {
   black: { backgroundColor: transparent },
