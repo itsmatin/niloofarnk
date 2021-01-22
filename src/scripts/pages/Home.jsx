@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Loading from "./Loading";
+// import Loading from "./Loading";
 import HomeHeader from "../sections/HomeHeader";
 import ProgressBar from "../components/ProgressBar";
 import HomeDesigns from "../sections/HomeDesigns";
@@ -8,11 +8,11 @@ import HomeResearches from "../sections/HomeResearches";
 import Ending from "../sections/Ending";
 import { ease } from "../utils/config";
 
-const Home = ({ intro, setIntro }) => {
+const Home = ({ intro }) => {
   return (
     <motion.div transition={{ ease }} exit={{ opacity: 0 }} className="home">
       <AnimatePresence initial>
-        {intro && <Loading handleInitialLoading={() => setIntro(false)} />}
+        {/* {intro && <Loading handleInitialLoading={() => setIntro(false)} />} */}
       </AnimatePresence>
 
       <ProgressBar intro={intro} />

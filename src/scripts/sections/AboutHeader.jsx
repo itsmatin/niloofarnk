@@ -25,13 +25,13 @@ const AboutHeader = () => {
           I research and design with a focus on
         </AnimatedText>
         <strong>
-          <AnimatedText isVisible={inView}>human experience,</AnimatedText>
+          <AnimatedText isVisible={inView}>human</AnimatedText>
         </strong>
         <AnimatedText isVisible={inView}>
-          and interactive dialogue with the built
+          experience, and interactive dialogue with the
         </AnimatedText>
         <strong>
-          <AnimatedText isVisible={inView}>environment</AnimatedText>
+          <AnimatedText isVisible={inView}>built environment</AnimatedText>
         </strong>
         <AnimatedText isVisible={inView}>and</AnimatedText>
         <strong>

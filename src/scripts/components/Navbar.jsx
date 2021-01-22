@@ -10,21 +10,23 @@ const Navbar = ({ menuOpen, handleMenu }) => {
   return (
     <>
       <MenuTriangle menuOpen={menuOpen} handleMenu={handleMenu} />
-      {pathname !== "/" ? (
-        <Link className="logo" to="/">
-          <motion.span
-            transition={{ delay: 0.05, ease }}
-            whileHover={{ color: pink }}
-            initial={{ color: white }}
-          >
+      {!menuOpen ? (
+        pathname !== "/" ? (
+          <Link className="logo" to="/">
+            <motion.span
+              transition={{ delay: 0.05, ease }}
+              whileHover={{ color: pink }}
+              initial={{ color: white }}
+            >
+              ن
+            </motion.span>
+          </Link>
+        ) : (
+          <motion.span style={{ cursor: "initial" }} className="logo">
             ن
           </motion.span>
-        </Link>
-      ) : (
-        <motion.span style={{ cursor: "initial" }} className="logo">
-          ن
-        </motion.span>
-      )}
+        )
+      ) : null}
     </>
   );
 };

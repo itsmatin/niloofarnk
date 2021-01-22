@@ -160,7 +160,7 @@ const Menu = () => {
             className="menu__title menu__title--contact"
             to="/contact"
           >
-            <Link to="/">
+            <Link style={{ width: "100%" }} to="/contact">
               <AnimatedText transition={{ delay: 0.85 }} addSpace={false}>
                 CONTACT
               </AnimatedText>

@@ -181,6 +181,7 @@ const HomeDesigns = () => {
         >
           <motion.img
             variants={circularImageVariants}
+            alt="click to view more"
             animate={hovered !== false && !sidebarOpen ? "animate" : "initial"}
             className="home__designs__triangle--title"
             src="no-circle.png"

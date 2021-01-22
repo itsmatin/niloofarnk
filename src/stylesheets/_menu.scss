@@ -46,7 +46,7 @@
     }
 
     @include respond(short) {
-      font-size: 8rem;
+      font-size: 6rem;
     }
 
     @supports (-webkit-text-stroke: 1px $white) {
@@ -91,6 +91,10 @@
       opacity: 0.75;
       font-size: 2rem;
       border-top: 1px solid $white;
+      text-align: right;
+      @include respond(short) {
+        text-align: left;
+      }
     }
   }
 
