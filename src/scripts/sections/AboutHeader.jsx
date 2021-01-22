@@ -28,7 +28,7 @@ const AboutHeader = () => {
           <AnimatedText isVisible={inView}>human experience,</AnimatedText>
         </strong>
         <AnimatedText isVisible={inView}>
-          and interaction dialogue with the built
+          and interactive dialogue with the built
         </AnimatedText>
         <strong>
           <AnimatedText isVisible={inView}>environment</AnimatedText>
