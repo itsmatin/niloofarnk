@@ -63,7 +63,7 @@ const HomeHeader = ({ props, intro }) => {
         imageClass="home__header--image"
         containerClass="home__header--image-container"
         animate="animate"
-        src="main.jpg"
+        src="/capstone/heterotopia-header.jpg"
         alt="Niloofar Nikookar Portfolio"
         text={database.designs.find((element) => element.id === 5).title}
         containerStyle={{ y: imageY }}
