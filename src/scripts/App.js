@@ -22,7 +22,7 @@ function App() {
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [bgColor, setBgColor] = useState("black");
-  const [intro, setIntro] = useState(true);
+  const [intro, setIntro] = useState(false);
 
   useEffect(() => {
     setIntro(!localStorage.getItem("introShown"));
@@ -35,9 +35,7 @@ function App() {
 
   useEffect(() => {
     history.listen(() => {
-      // setTransition(true);
       setMenuOpen(false);
-      // setTimeout(() => setTransition(false), 1150);
     });
   }, [history]);
 
