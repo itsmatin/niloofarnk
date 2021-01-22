@@ -22,7 +22,7 @@ function App() {
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [bgColor, setBgColor] = useState("black");
-  const [intro, setIntro] = useState(false);
+  const [intro, setIntro] = useState(true);
 
   useEffect(() => {
     setIntro(!localStorage.getItem("introShown"));
