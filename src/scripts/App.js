@@ -25,7 +25,7 @@ function App() {
   const [intro, setIntro] = useState(false);
 
   useEffect(() => {
-    setIntro(!localStorage.getItem("introShown"));
+    // setIntro(!localStorage.getItem("introShown"));
   }, []);
   useEffect(() => {
     if ((window.location.pathname === "/" && intro) || menuOpen)
