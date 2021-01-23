@@ -61,7 +61,7 @@ export default {
         "Team Project with Shantanu Kushalappa, Daniel Oddo and Zach Brown.",
       infoDescription:
         "The project was an interactive design and fabrication experiment with Fologram, a plugin for Rhino and Grasshopper.",
-      firstSubtitle: "Case Study",
+      firstSubtitle: "Design Loop",
       secondSubtitle: "Fabrication",
       images: {
         header: "/fologram/fologram-header.jpg",

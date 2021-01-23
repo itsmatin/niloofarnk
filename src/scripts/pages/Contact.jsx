@@ -58,16 +58,16 @@ const Contact = () => {
       className="contact"
     >
       <h1 className="contact__title">
-        <AnimatedText>WANT TO</AnimatedText>
-        <motion.span
+        <AnimatedText>INTERESTED IN WORKING TOGETHER?</AnimatedText>
+        {/* <motion.span
           variants={buttonVariants}
           className="contact__title--underlined"
         >
-          <AnimatedText>COLLABORATE?</AnimatedText>
-        </motion.span>
+          <AnimatedText>Working</AnimatedText>
+        </motion.span> */}
       </h1>
       <h1 className="contact__title contact__title--second-line">
-        <AnimatedText>GO AHEAD AND CONTACT ME!</AnimatedText>
+        <AnimatedText>HERE ARE THE WAYS TO CONTACT ME!</AnimatedText>
       </h1>
       <motion.div variants={buttonVariants} className="contact--button-group">
         <LinkButton

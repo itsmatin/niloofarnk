@@ -13,7 +13,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import { ease, transparent, whiteWhite } from "./utils/config";
 import ReactGA from "react-ga";
 
-ReactGA.initialize("UA-161516294-1");
+ReactGA.initialize("UA-161516294-2");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const bgVariants = {
