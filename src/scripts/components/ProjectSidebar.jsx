@@ -39,10 +39,10 @@ const ProjectSidebar = ({ data, isVisible }) => {
         alt={data.title}
         src={data.images.header}
       />
-      <h5 className="sidebar--subtitle">
+      <span className="sidebar--subtitle">
         <AnimatedText isVisible={isVisible}>{data.time}</AnimatedText>
         <AnimatedText isVisible={isVisible}>{data.year}</AnimatedText>
-      </h5>
+      </span>
       <p className="sidebar--text">
         {data?.infoDescription} {data?.headerDescription}
       </p>

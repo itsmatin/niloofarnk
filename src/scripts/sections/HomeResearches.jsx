@@ -45,8 +45,8 @@ const imageVariants = {
 function ListItem({ currentImage, ...props }) {
   return (
     <Link to={`/project/${props.id}`}>
-      <motion.li
-        animate={{ opacity: 0.25, transition: { delay: 0.85 } }}
+      <motion.span
+        animate={{ opacity: 0.55, transition: { delay: 0.85 } }}
         initial={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
         exit={{ borderBottom: `1px solid ${black}`, opacity: 0 }}
         whileHover={{ opacity: 1, borderBottom: `1px solid ${white}` }}
@@ -55,12 +55,12 @@ function ListItem({ currentImage, ...props }) {
         className="menu__list--item"
         style={{
           fontSize: "2.1rem",
-          opacity: props.image === currentImage ? 0.25 : 0,
+          opacity: props.image === currentImage ? 0.55 : 0,
         }}
         key={props.index}
       >
         {`0${props.index + 1}. ${props.title}`}
-      </motion.li>
+      </motion.span>
     </Link>
   );
 }
@@ -111,8 +111,9 @@ const HomeResearches = () => {
           containerClass="home__researches__image-container"
           imageClass="home__researches__image"
           src={currentResearch.images.header}
+          alt={currentResearch.title}
         />
-        <motion.ul style={{ y: listPos }} className="home__researches__list">
+        <motion.div style={{ y: listPos }} className="home__researches__list">
           {researches.map((item, index) => (
             <ListItem
               onHoverStart={() => {
@@ -128,7 +129,7 @@ const HomeResearches = () => {
               currentImage={currentResearch.images.header}
             />
           ))}
-        </motion.ul>
+        </motion.div>
         <motion.div
           transition={transition}
           style={{ clipPath: shape, rotate: shapeRotate, x: shapePos }}

@@ -58,7 +58,9 @@
       max-height: 40rem;
     }
   }
-
+  &--subtitle {
+    font-weight: bold;
+  }
   &--text {
     font-family: $font;
     text-align: justify;

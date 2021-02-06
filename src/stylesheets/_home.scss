@@ -231,6 +231,7 @@
     &--container {
       width: 100%;
       display: flex;
+      height: 45rem;
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
@@ -238,6 +239,7 @@
       padding-right: 0;
 
       @include respond(venti) {
+        height: 65rem;
         flex-flow: column wrap;
       }
     }
@@ -289,6 +291,8 @@
     }
 
     &__list {
+      display: flex;
+      flex-flow: column nowrap;
       z-index: 10;
       list-style: none;
       align-self: flex-start;
@@ -301,11 +305,11 @@
         margin-top: -9rem;
       }
 
-      & > li {
+      & > a {
         margin: 1.5rem 0;
         padding-right: 1rem;
 
-        & > a {
+        & > span {
           color: $white;
           mix-blend-mode: difference;
           &:visited {
