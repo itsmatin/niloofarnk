@@ -335,8 +335,10 @@
         & h1 {
           text-transform: uppercase;
         }
-        & h3 {
+        & > span {
           margin-left: 1rem;
+          font-size: 1.17rem;
+          font-weight: bold;
         }
         p {
           font-family: $font;

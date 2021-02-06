@@ -41,9 +41,9 @@ const AboutExperience = () => {
           className="about__work__boxes__box"
         >
           <h1>{work[0].title}</h1>
-          <h3>
+          <span>
             {work[0].position} - {work[0].time}
-          </h3>
+          </span>
           <p>{work[0].description}</p>
         </motion.div>
         <motion.div
@@ -51,9 +51,9 @@ const AboutExperience = () => {
           className="about__work__boxes__box"
         >
           <h1>{work[1].title}</h1>
-          <h3>
+          <span>
             {work[1].position} - {work[1].time}
-          </h3>
+          </span>
           <p>{work[1].description}</p>
         </motion.div>
         <motion.div
@@ -61,16 +61,16 @@ const AboutExperience = () => {
           className="about__work__boxes__box"
         >
           <h1>{work[2].title}</h1>
-          <h3>
+          <span>
             {work[2].position} - {work[2].time}
-          </h3>
+          </span>
           <p>{work[2].description}</p>
         </motion.div>
         <motion.div style={{ x: boxFourX }} className="about__work__boxes__box">
           <h1>{work[3].title}</h1>
-          <h3>
+          <span>
             {work[3].position} - {work[3].time}
-          </h3>
+          </span>
           <p>{work[3].description}</p>
         </motion.div>
       </div>
