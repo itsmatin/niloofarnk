@@ -240,7 +240,7 @@
 
       @include respond(venti) {
         height: 65rem;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
       }
     }
 
