@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Helmet from "react-helmet";
 import { motion } from "framer-motion";
 import { ease } from "../utils/config";
 import ProjectHeader from "../sections/ProjectHeader";
@@ -35,6 +36,13 @@ const Project = ({ setBgColor, bgColor }) => {
         transition={{ ease: ease }}
         className="project"
       >
+        <Helmet>
+          <title>{project.title} - Niloofar Nikookar</title>
+          <meta
+            name="description"
+            content={project.headerDescription + project.infoDescription}
+          />
+        </Helmet>
         <ProjectHeader project={project} />
         <ProjectInfo project={project} bgColor={bgColor} />
         <ProjectShowcase

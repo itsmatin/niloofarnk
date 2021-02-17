@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import AnimatedText from "../utils/AnimatedText";
 import LinkButton from "../components/LinkButton";
 import { ease } from "../utils/config";
+import { Helmet } from "react-helmet";
 
 const buttonVariants = {
   initial: { opacity: 0, transition: { delay: 0.2, ease } },
@@ -57,6 +58,13 @@ const Contact = () => {
       initial="initial"
       className="contact"
     >
+      <Helmet>
+        <title>Contact Info - Niloofar Nikookar</title>
+        <meta
+          name="description"
+          content="I'm Niloofar Nikookar, an architectural designer and researcher. Here are my contact details for collaboration and projects."
+        />
+      </Helmet>
       <h1 className="contact__title">
         <AnimatedText>INTERESTED IN WORKING TOGETHER?</AnimatedText>
         {/* <motion.span
