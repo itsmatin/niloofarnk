@@ -84,12 +84,12 @@ const Contact = () => {
           className="contact--button"
           to="https://www.linkedin.com/in/niloofar-nikookar-658ab9109/"
         />
-        <LinkButton
+        {/* <LinkButton
           external
           title="Email"
           className="contact--button"
           to="mailto:niloonikookar@gmail.com"
-        />
+        /> */}
       </motion.div>
 
       <motion.div
