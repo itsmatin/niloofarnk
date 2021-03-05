@@ -22,8 +22,10 @@ const ProgressBar = ({ intro }) => {
   useEffect(() => {
     function updateText(yValue) {
       if (0.2 > yValue) textMotion.set("Scroll Down");
-      else if (0.2 < yValue && yValue < 0.7) textMotion.set("Designs");
-      else if (0.7 < yValue && yValue < 0.9) textMotion.set("Projects");
+      else if (0.2 < yValue && yValue < 0.7)
+        textMotion.set("Architectural Design");
+      else if (0.7 < yValue && yValue < 0.9)
+        textMotion.set("Computational Design");
       else textMotion.set("About Me");
     }
 

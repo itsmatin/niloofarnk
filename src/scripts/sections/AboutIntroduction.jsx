@@ -44,14 +44,14 @@ const AboutIntroduction = () => {
           addressing episodic experiences and narrative in space, human and
           system’s agency in architectural design and making, and emerging
           design and making paradigms as a result of new technologies.
+          Additionally, I have contributed in research related to light-weight
+          structures, craft inspired bending active structures in particular.
         </p>
         <p>
-          Additionally, I have contributed in research related to light-weight
-          structures, craft inspired bending active structures in particular. I
-          received my bachelor of Architectural Engineering from Azad University
-          of Tehran, then I moved to the United States to pursue my graduate
-          education. I hold a professional master of Architecture from the
-          Pennsylvania State University and a master of science with a
+          I received my bachelor of Architectural Engineering from Azad
+          University of Tehran, then I moved to the United States to pursue my
+          graduate education. I hold a professional master of Architecture from
+          the Pennsylvania State University and a master of science with a
           concentration on Advanced Production from Georgia Institute of
           Technology. I am currently pursuing a PhD at Carnegie Mellon
           University. My professional experience includes working with
