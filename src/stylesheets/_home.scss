@@ -92,7 +92,7 @@
 
     &--title {
       width: 100%;
-      font-size: 8.5rem;
+      font-size: 7.5rem;
       padding: 0 6rem;
       text-align: left;
 
@@ -213,17 +213,17 @@
     &--title {
       z-index: 99;
       width: 100%;
-      font-size: 8.5rem;
-      padding: 0 6rem;
+      font-size: 7.5rem;
+      // padding: 0 6rem;
       text-align: right;
 
       @include respond(short-with-sugar) {
-        padding-left: 2.5rem;
+        // padding-left: 2.5rem;
         font-size: 6rem;
       }
 
       @include respond(short) {
-        padding-left: 1rem;
+        // padding-left: 1rem;
         font-size: 4.5rem;
       }
     }

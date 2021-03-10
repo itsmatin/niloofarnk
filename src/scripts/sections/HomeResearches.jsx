@@ -80,8 +80,8 @@ const HomeResearches = () => {
   const listPos = useTransform(scrollYProgress, [0.7, 0.9], [50, 0]);
   const shapePos = useTransform(scrollYProgress, [0, 1], [100, 0]);
   const imageScale = useTransform(scrollYProgress, [0.7, 1], [0.95, 1.1]);
-  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-200, 0]);
-  const firstTitlePos = useTransform(scrollYProgress, [0.6, 1], [-200, 0]);
+  const imagePos = useTransform(scrollYProgress, [0.5, 1], [-100, 0]);
+  const firstTitlePos = useTransform(scrollYProgress, [0.6, 1], [-20, 0]);
   const secondTitlePos = useTransform(scrollYProgress, [0.6, 1], [200, 0]);
 
   return (
@@ -106,7 +106,7 @@ const HomeResearches = () => {
 
       <div className="home__researches--container">
         <Image
-          containerStyle={{ scale: imageScale, y: imagePos }}
+          containerStyle={{ scale: imageScale }}
           imageVariants={imageVariants}
           containerClass="home__researches__image-container"
           imageClass="home__researches__image"
