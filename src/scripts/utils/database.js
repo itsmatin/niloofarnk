@@ -213,7 +213,7 @@ export default {
           ],
         },
         {
-          image: "3.jpg",
+          image: "/energy/visual.jpg",
           text: [
             `The visual comfort simulation is performed to understand the relationship between the physical conditions of the space 
                 (materials, glazing size, building geometry etc.) and daylight performance in space. 
