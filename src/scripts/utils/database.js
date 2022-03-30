@@ -415,6 +415,128 @@ export default {
         },
       ],
     },
+    {
+      id: 9,
+      title: "Origami Solar Shade",
+      year: "2022",
+      time: "Ongoing",
+      type: "Daylight Optimization",
+      location: "Pittsburgh, Pennsylvania",
+      headerDescription:
+        "Human quality of life and experience within buildings is significantly impacted, positively and negatively, by daylight.",
+      infoDescription:
+        "This project optimizes an interior blind to block glare and other negative aspects of light while permitting daylight and views to enter.",
+      firstSubtitle: "Sample Solar Shades",
+      secondSubtitle: "Design Process",
+      images: {
+        header: "/origami/0-cover.png",
+        showcase: "/origami/1-bar.png",
+        process: ["/origami/2-workflow.png"],
+      },
+      details: [
+        {
+          image: "/origami/4-shading-gif",
+          text: [
+            `Human quality of life and experience within buildings is 
+            significantly impacted, positively and negatively, by daylight. 
+            Studies on the design and implementation of shades have been performed, 
+            but most focus on shades on the exterior of buildings. 
+            Exterior shading removes individual preference and occupant control,
+            which limits their impact and application. Implementing interior blinds 
+            solves the problem of individual preference, but involves trade-offs – 
+            the positive aspects of daylight are lost alongside the negative. 
+            This project optimizes an interior blind to block glare and 
+            other negative aspects of light while permitting daylight and views to enter.`,
+          ],
+        },
+        {
+          image: "/origami/3-results.png",
+          text: [
+            `These goals were achieved through the design of an origami-inspired interior shade structure. 
+            The shade was designed in Grasshopper and Rhino based on the Miura origami style, 
+            and incorporates mirror-folded panels with openings to allow light. 
+            It was then optimized to maximize daylight autonomy while minimizing solar exposure 
+            and maintaining outdoor views. Simulations were created using Climate Studio and 
+            Ladybug for Grasshopper, and optimization was accomplished using Octopus for Grasshopper.`,
+          ],
+        },
+        {
+          image: "/origami/5-rendering.jpg",
+          text: [
+            `The resulting shade concepts can find application as a product or design feature, 
+                and the method developed by this study can be used by other designers studying optimization 
+                or daylighting.`,
+          ],
+        },
+      ],
+    },
+    {
+      id: 10,
+      title: "Small Office Energy Simulation",
+      year: "2020",
+      time: "Fall",
+      type: "Building Performance Analysis",
+      location: "Los Angeles, California",
+      headerDescription:
+        "This project investigates the energy and daylight performance of a small office building in Los Angeles, California",
+      infoDescription:
+        "The analysis is performed on the building's solar, lighting, and thermal performance.",
+      secondSubtitle: "Design Process",
+      images: {
+        header: "/energy/Cover-image.jpg",
+        showcase: "/energy/0-Top image.jpg",
+        process: [],
+      },
+
+      details: [
+        {
+          image: "/energy/1.jpg",
+          text: [
+            `This project investigates the energy and daylight performance of a small office building in Los Angeles, California. 
+            The analysis is performed on the building's solar, lighting, and thermal performance. Based on the analysis results of the baseline model, 
+            multiple iterations are proposed and discussed in order to improve the performance of the building in each metric. 
+            The included images are example simulation results for the baseline scenario. 
+            The software used in this project are ClimateStudio, DIVA, Archsim and LadyBug for grasshopper.`,
+          ],
+        },
+        {
+          image: "/energy/2.jpg",
+          text: [
+            `The analysis is performed for the day of the Winter Solstice, December 21st between 9 AM to 3 PM in order to identify 
+            areas suitable for planting. A suitable area needs at least 6 hours of sunlight during this day. 
+            Based on the analysis only 4.66% (392 (m2) of the selected area of 8426.88 (m2) receives less than 6 hours of direct sunlight 
+            and 95.34% of the area is suitable for planting. The unsuitable area is marked by gray and dark blue.`,
+          ],
+        },
+        {
+          image: "visual comfort.jpg",
+          text: [
+            `The visual comfort simulation is performed to understand the relationship between the physical conditions of the space 
+                (materials, glazing size, building geometry etc.) and daylight performance in space. 
+                The analysis is conducted in multiple areas: Daylight Factor (DF), Spatial Daylight Autonomy(sDA), 
+                Annual Sunlight Exposure (ASE), Unified Glare Rating (UGR) and Daylight Glare Probability (DGP). 
+                Per the simulation the conference room is over-lit while the majority of the work area does not get enough daylight. 
+                These issues were addressed by implementing multiple daylight control strategies like adding skylight, adding overhangs, 
+                changing the glazing material etc. 
+                `,
+          ],
+        },
+        {
+          image: "/energy/4.jpg",
+          text: [
+            `Thermal simulation is performed in order to determine the impact of environmental factors on the building’s thermal comfort, 
+                  zone energy load, Energy Use Intensity (EUI) etc.`,
+          ],
+        },
+        {
+          image: "/energy/5.jpg",
+          text: [
+            `A variety of design iterations like high-performance envelope, daylight harvesting strategies, mixed mode ventilation, 
+                  implementing shading devices etc are tested in order to improve the thermal performance `,
+          ],
+        },
+      ],
+    },
   ],
 
   academics: [
