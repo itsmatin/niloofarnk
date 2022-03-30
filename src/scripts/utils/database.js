@@ -189,6 +189,7 @@ export default {
       images: {
         header: "/energy/Cover-image.jpg",
         showcase: "/energy/0-Top image.jpg",
+        process: [],
       },
 
       details: [
