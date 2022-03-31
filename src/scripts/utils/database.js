@@ -16,7 +16,7 @@ export default {
       images: {
         header: "/origami/0-cover.png",
         showcase: "/origami/1-bar.png",
-        process: ["/origami/2-workflow.png"],
+        process: ["/origami/2-workflow.jpg"],
       },
       details: [
         {
