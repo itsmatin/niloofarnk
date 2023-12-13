@@ -174,6 +174,76 @@ export default {
         },
       ],
     },
+    {
+      id: 88,
+      title: "Smart Loading Zones X UberEats",
+      year: "2023",
+      time: "Fall",
+      type: "UX Research",
+      location: "Pittsburgh, USA",
+      headerDescription:
+        "Team project with Ting-Hsuan (Jasmine) Su, Claire Cheong and Tianyang (Tina) Chen",
+      infoDescription:
+        "This is a UX research and design proposal to optimize the Smart Loading Zones (SLZs) in Pittsburgh for efficient and trustworthy urban mobility.",
+      firstSubtitle: "Features",
+      secondSubtitle: "Research Methods",
+      images: {
+        header: "/smart/cover.png",
+        showcase: "/smart/features.png",
+        process: ["/smart/methodology.jpg"],
+      },
+      details: [
+        {
+          image: "/smart/streetview-1.jpg",
+          text: [
+            `The City of Pittsburgh and Pittsburgh Parking Authority has introduced a pilot project "Smart Loading Zones" (SLZs) to manage curb space, with the goals of  reducing emissions, improving traffic flow and enhancing delivery efficiency. 
+            The Smart Loading Zones (SLZs), distinguished by the color purple, are pay-by-the-minute short-term parking spots regulated by smart cameras. Drivers can use these zones by registering their vehicle through an app accessible by scanning a QR code on the SLZ info boards installed next to the zones.
+            This research/design project aims to assess the impact of SLZs on the residents of the City of Pittsburgh, especially contract delivery drivers working with food delivery services. It also explores alternative methods of registration and interaction with these zones for a sustainable and long-lasting project effect and success.
+            `,
+          ],
+        },
+        {
+          image: "/smart/background.png",
+          text: [
+            `To find an understanding of the current state of knowledge and public opinion about SLZs, we conducted comprehensive background and contextual research. This involved analyzing social media comments about SLZs and interviewing Pittsburgh delivery drivers recruited through social media for directed storytelling sessions conducted via Zoom. Additionally, we conducted guerrilla research sessions in Pittsburgh's Squirrel Hill neighborhood, where multiple purple zones are installed. We synthesized our findings through interpretation notes and affinity diagramming to gain insights into how the public in Pittsburgh currently perceives SLZs.`,
+          ],
+        },
+        {
+          image: "/smart/storyboards.jpg",
+          text: [
+            `From our background and contextual research we found that: `,
+            `
+            1- Ineffective information conveyance contributes to the lack of public awareness of SLZs, which results in people's distrust in the system.
+            2- Delivery drivers want more available parking dedicated to delivery. 
+            3- Delivery drivers need to ensure they are not paying an unreasonable price.
+            3- Time and financial aspects heavily influence delivery drivers' parking behaviors, with less emphasis on overarching project goals like sustainability and traffic flow.`,
+            `
+            To address these issues, we generated multiple storyboards as alterations to the current SLZ system, with the question of "How might we bring about more direct benefits to build trust and optimize user engagement with SLZ?"
+            `,
+          ],
+        },
+        {
+          image: "/smart/prototyping.png",
+          text: [
+            `We tested 12 different storyboards through speed dating with multiple participants familiar with SLZs to assess how each idea is perceived. By synthesizing the data, we found that:`,
+            `People would like to know about parking availability, have a clear estimate of how much they are paying for parking, would prefer a more user-friendly medium to learn about and register for SLZs and would be more incentivized to use a service if there are actual monetary returns.`,
+            `Based on these findings, we created first low-fidelity (screen-size paper prototype), followed by 2 high-fidelity prototypes created in Figma (onboarding vs popup) in which we embedded SLZ service and information accessible through a commonly used delivery app (UberEats). `,
+          ],
+        },
+        {
+          image: "/smart/on.gif",
+          text: [
+            `The prototypes captured the overall user flow of entering a delivery app, seeing SLZ-related information, being able to register for SLZ through their delivery app, interacting with the map to see SLZ availabilities close to their destination, as well as their SLZ-related account info such as balance, collected points, parking history, etc. After testing the low-fidelity prototype, we generated two high-fidelity prototypes (onboarding vs popup) to test the level of engagement with the app.`,
+          ],
+        },
+        {
+          image: "/smart/popup.gif",
+          text: [
+            `We tested each prototype through a think-aloud protocol in which our research participants interacted with the prototypes, gave us feedback, and shared their suggestions. We found that the popup version was more successful in conveying SLZ info to the user, and that overall, a combination of benefits, including rewards and an interactive map, incentivizes SLZ usage.`,
+          ],
+        },
+      ],
+    },
   ],
 
   designs: [
