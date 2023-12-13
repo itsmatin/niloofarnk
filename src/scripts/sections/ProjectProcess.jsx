@@ -39,7 +39,7 @@ const ProjectProcess = ({ setBgColor, project, shouldChangeColor }) => {
     setBgColor(inView ? "white" : "black");
   }, [inView, setBgColor]);
 
-  return (
+  return project.images.process.length ? (
     <div className="project__process">
       <motion.div
         transition={{ ease: ease }}
@@ -78,7 +78,7 @@ const ProjectProcess = ({ setBgColor, project, shouldChangeColor }) => {
         })}
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default ProjectProcess;

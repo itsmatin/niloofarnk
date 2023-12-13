@@ -75,7 +75,7 @@ const HomeResearches = () => {
     octagon
   );
   const [shapeRotate, cycleShapeAngle] = useCycle(0, 90, 180, 270, 360);
-  const [currentResearch, setCurrentResearch] = useState(researches[2]);
+  const [currentResearch, setCurrentResearch] = useState(researches[0]);
   const rectPath = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
   const listPos = useTransform(scrollYProgress, [0.7, 0.9], [50, 0]);
   const shapePos = useTransform(scrollYProgress, [0, 1], [100, 0]);
