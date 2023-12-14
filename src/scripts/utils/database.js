@@ -325,7 +325,7 @@ export default {
           ],
         },
         {
-          image: "/smart/background.png",
+          image: "/smart/hifi.png",
           text: [
             `To find an understanding of the current state of knowledge and public opinion about SLZs, we conducted comprehensive background and contextual research. This involved analyzing social media comments about SLZs and interviewing Pittsburgh delivery drivers recruited through social media for directed storytelling sessions conducted via Zoom. Additionally, we conducted guerrilla research sessions in Pittsburgh's Squirrel Hill neighborhood, where multiple purple zones are installed. We synthesized our findings through interpretation notes and affinity diagramming to gain insights into how the public in Pittsburgh currently perceives SLZs.`,
           ],
@@ -391,7 +391,6 @@ export default {
           "/capstone/heterotopia-process-1.jpg",
           "/capstone/heterotopia-process-2.jpg",
           "/capstone/heterotopia-process-3.jpg",
-          // "/capstone/heterotopia-process-4.jpg",
           "/capstone/heterotopia-process-5.jpg",
           "/capstone/heterotopia-process-6.jpg",
         ],
