@@ -22,10 +22,10 @@ const HomeHeader = ({ props, intro }) => {
   const opacitySpring = useSpring(opacity, { stiffness: 200, bounce: 0 });
   const transition = { ease, duration: 1 };
   const imageVariants = {
-    initial: {
-      scaleY: 0,
-      opacity: 0,
-    },
+    // initial: {
+    //   scaleY: 0,
+    //   opacity: 0,
+    // },
     animate: {
       scaleY: 1,
       opacity: [0, 1],

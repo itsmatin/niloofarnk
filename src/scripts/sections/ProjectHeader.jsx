@@ -23,10 +23,10 @@ const imageCaptionVariants = {
 };
 
 const imageVariants = {
-  initial: {
-    scaleY: 0,
-    opacity: 0,
-  },
+  // initial: {
+  //   scaleY: 0,
+  //   opacity: 0,
+  // },
   animate: {
     scaleY: 1,
     opacity: [0, 1],
