@@ -1,5 +1,236 @@
+/* eslint-disable import/no-anonymous-default-export */
+
 export default {
   researches: [
+    {
+      id: 13,
+      title: "Exploring Dynamic Lighting Perception",
+      year: "2023",
+      time: "Summer",
+      type: "User Centered Research",
+      location: "Pittsburgh, Pennsylvania",
+      headerDescription: "",
+      infoDescription:
+        "This is a research project investigating the influence of indoor lighting compositions on multiple dimensions of human perception.",
+      firstSubtitle: "Study Setup",
+      secondSubtitle: "Lighting Compositions",
+      images: {
+        header: "/lighting/forum.jpg",
+        showcase: "/lighting/setup.jpg",
+        process: ["/lighting/lighting-vars.jpg"],
+      },
+      details: [
+        {
+          image: "/lighting/room.png",
+          text: [
+            `Improving indoor lighting quality has a significant influence on the quality of human life, given that people spend a substantial amount of their time indoors. This study investigates the impact of various lighting compositions that individuals may encounter on a daily basis, affecting multiple dimensions of human perception of indoor lighting.`,
+            ` The study was conducted in an office room at Carnegie Mellon University with 25 participants in focus groups. Participants were exposed to 16 different lighting compositions, and their subjective evaluation of indoor lighting was assessed.`,
+          ],
+        },
+        {
+          image: "/lighting/lighting-setup.jpg",
+          text: [
+            `The lighting compositions in the experiment were systematically varied across a full factorial design, encompassing all possible combinations of two sky conditions (sunny and overcast), two blind positions (open and closed), two electric light conditions (on and off), and three color temperature (CCT) values (2700K, 4000K, and 6500K). This comprehensive approach allowed for a thorough exploration of the interactions and effects of these factors on the perceived indoor lighting quality.`,
+            `To make various lighting conditions, color-changing LEDs were bundled and securely attached to both the top and bottom of the room's existing lighting fixtures.`,
+          ],
+        },
+        {
+          image: "/lighting/question.jpg",
+          text: [
+            `Twenty-six participants (ages 18 to 60) evaluated the lighting conditions on dimensions of 'Coziness,' 'Liveliness,' 'Tenseness,' 'Calming,' 'Productivity,' 'Exciting,' and 'Likeability,' as well as 'Impersonality,' 'Monotonous,' and 'Vibrant' in 25-minute focus group sessions. During these sessions, researchers changed the lighting conditions, and participants individually responded to questions on an online questionnaire.`,
+            `This project has received approval from the Carnegie Mellon University Institutional Review Board (IRB) for studies involving humans. `,
+          ],
+        },
+        {
+          image: "/lighting/chart.jpeg",
+          text: [
+            `Various statistical analysis tests were employed to measure the influence of the independent variables (Sky condition, blinds position, and CCT level) on each evaluated perception. The analysis revealed significant effects of blinds (P<0.001) and CCT (P<0.001) on participants' impressions of light, with the impact of sky condition varying across different perceptions.`,
+            `Mixed interactions were identified between blinds and light CCT, blinds and sky conditions, and limited interactions between sky conditions and CCT. The findings mark an important step toward designing dynamic indoor lighting to enhance occupant perception and well-being in a given space.
+          `,
+          ],
+        },
+      ],
+    },
+    {
+      id: 12,
+      title: "Lighting Perception in VR",
+      year: "2023",
+      time: "Ongoing",
+      type: "User Centered Research",
+      location: "Pittsburgh, Pennsylvania",
+      headerDescription:
+        "This research project investigates the difference in the perception of light color temperature (CCT) in physical environments versus virtual reality environments.",
+      infoDescription:
+        "This research project investigates the difference in the perception of light color temperature (CCT) in physical environments versus virtual reality environments.",
+      firstSubtitle: "Study Setup",
+      secondSubtitle: "VR Space Creation",
+      images: {
+        header: "/vr/cover.jpg",
+        showcase: "/vr/diagram.jpg",
+        process: ["/vr/creation.jpg"],
+      },
+      details: [
+        {
+          image: "/vr/cover.jpg",
+          text: [
+            `There has been a growing interest in utilizing Virtual Reality (VR) technologies in lighting design and research to assess people's preferences for various lighting designs and compositions. However, limited research exists to determine the reliability of VR environments in lighting design and research, as individuals may perceive light differently in VR environments compared to physical spaces.
+            In this research project, the perception of indoor lighting in physical spaces is compared with identical VR environments. The project is a component of a larger research initiative on indoor lighting and human perception.
+            `,
+          ],
+        },
+        {
+          image: "/vr/beforum.jpg",
+          text: [
+            `In the physical space, 16 different lighting compositions with varying CCT levels of 2700K, 4000K, and 6500K were created. The spaces were also recreated in VR using Matterport technology, which generates VR spaces through 360-degree photography of a room captured with the Matterport 360 professional camera.`,
+          ],
+        },
+        {
+          image: "/vr/combined.png",
+          text: [
+            `The first phase of the experiment took place in the physical space, where participants were exposed to all 16 lighting compositions. They were then asked to assess their subjective evaluation of indoor lighting on multiple dimensions, including the perception of Correlated Color Temperature (CCT) and brightness, using semantic differential scales.`,
+            `Results from the first phase were analyzed, revealing variations in the perception of CCT in each composition, with CCT values of 2700K, 4000K, and 6500K. Subsequently, five different spaces exhibiting diverse perceptions of CCT were selected for testing in the VR environment.
+            Currently, we are in the process of analyzing the results from the two phases using statistical analysis tests to determine the differences in the perception of light CCT between physical and VR environments.`,
+          ],
+        },
+      ],
+    },
+    {
+      id: 11,
+      title: "Smart Loading Zones X UberEats",
+      year: "2023",
+      time: "Fall",
+      type: "UX Research",
+      location: "Pittsburgh, USA",
+      headerDescription:
+        "Team project with Ting-Hsuan (Jasmine) Su, Claire Cheong and Tianyang (Tina) Chen",
+      infoDescription:
+        "This is a UX research and design proposal to optimize the Smart Loading Zones (SLZs) in Pittsburgh for efficient and trustworthy urban mobility.",
+      firstSubtitle: "Features",
+      secondSubtitle: "Research Methods",
+      images: {
+        header: "/smart/cover.png",
+        showcase: "/smart/features.png",
+        process: ["/smart/methodology.jpg"],
+      },
+      details: [
+        {
+          image: "/smart/streetview-1.jpg",
+          text: [
+            `The City of Pittsburgh and Pittsburgh Parking Authority has introduced a pilot project "Smart Loading Zones" (SLZs) to manage curb space, with the goals of  reducing emissions, improving traffic flow and enhancing delivery efficiency. 
+            The Smart Loading Zones (SLZs), distinguished by the color purple, are pay-by-the-minute short-term parking spots regulated by smart cameras. Drivers can use these zones by registering their vehicle through an app accessible by scanning a QR code on the SLZ info boards installed next to the zones.
+            This research/design project aims to assess the impact of SLZs on the residents of the City of Pittsburgh, especially contract delivery drivers working with food delivery services. It also explores alternative methods of registration and interaction with these zones for a sustainable and long-lasting project effect and success.
+            `,
+          ],
+        },
+        {
+          image: "/smart/hifi.png",
+          text: [
+            `To find an understanding of the current state of knowledge and public opinion about SLZs, we conducted comprehensive background and contextual research. This involved analyzing social media comments about SLZs and interviewing Pittsburgh delivery drivers recruited through social media for directed storytelling sessions conducted via Zoom. Additionally, we conducted guerrilla research sessions in Pittsburgh's Squirrel Hill neighborhood, where multiple purple zones are installed. We synthesized our findings through interpretation notes and affinity diagramming to gain insights into how the public in Pittsburgh currently perceives SLZs.`,
+          ],
+        },
+        {
+          image: "/smart/storyboards.jpg",
+          text: [
+            `From our background and contextual research we found that: `,
+            `
+            1- Ineffective information conveyance contributes to the lack of public awareness of SLZs, which results in people's distrust in the system.
+            2- Delivery drivers want more available parking dedicated to delivery. 
+            3- Delivery drivers need to ensure they are not paying an unreasonable price.
+            3- Time and financial aspects heavily influence delivery drivers' parking behaviors, with less emphasis on overarching project goals like sustainability and traffic flow.`,
+            `
+            To address these issues, we generated multiple storyboards as alterations to the current SLZ system, with the question of "How might we bring about more direct benefits to build trust and optimize user engagement with SLZ?"
+            `,
+          ],
+        },
+        {
+          image: "/smart/prototyping.png",
+          text: [
+            `We tested 12 different storyboards through speed dating with multiple participants familiar with SLZs to assess how each idea is perceived. By synthesizing the data, we found that:`,
+            `People would like to know about parking availability, have a clear estimate of how much they are paying for parking, would prefer a more user-friendly medium to learn about and register for SLZs and would be more incentivized to use a service if there are actual monetary returns.`,
+            `Based on these findings, we created first low-fidelity (screen-size paper prototype), followed by 2 high-fidelity prototypes created in Figma (onboarding vs popup) in which we embedded SLZ service and information accessible through a commonly used delivery app (UberEats). `,
+          ],
+        },
+        {
+          image: "/smart/on.gif",
+          text: [
+            `The prototypes captured the overall user flow of entering a delivery app, seeing SLZ-related information, being able to register for SLZ through their delivery app, interacting with the map to see SLZ availabilities close to their destination, as well as their SLZ-related account info such as balance, collected points, parking history, etc. After testing the low-fidelity prototype, we generated two high-fidelity prototypes (onboarding vs popup) to test the level of engagement with the app.`,
+          ],
+        },
+        {
+          image: "/smart/popup.gif",
+          text: [
+            `We tested each prototype through a think-aloud protocol in which our research participants interacted with the prototypes, gave us feedback, and shared their suggestions. We found that the popup version was more successful in conveying SLZ info to the user, and that overall, a combination of benefits, including rewards and an interactive map, incentivizes SLZ usage.`,
+          ],
+        },
+      ],
+    },
+    {
+      id: 10,
+      title: "Small Office Energy Simulation",
+      year: "2020",
+      time: "Fall",
+      type: "Building Performance Analysis",
+      location: "Los Angeles, California",
+      headerDescription:
+        "This project investigates the energy and daylight performance of a small office building in Los Angeles, California",
+      infoDescription:
+        "The analysis is performed on the building's solar, lighting, and thermal performance.",
+      secondSubtitle: "Design Process",
+      images: {
+        header: "/energy/Cover-image.jpg",
+        showcase: "/energy/0-Top image.jpg",
+        process: [],
+      },
+
+      details: [
+        {
+          image: "/energy/1.jpg",
+          text: [
+            `This project investigates the energy and daylight performance of a small office building in Los Angeles, California. 
+            The analysis is performed on the building's solar, lighting, and thermal performance. Based on the analysis results of the baseline model, 
+            multiple iterations are proposed and discussed in order to improve the performance of the building in each metric. 
+            The included images are example simulation results for the baseline scenario. 
+            The software used in this project are ClimateStudio, DIVA, Archsim and LadyBug for grasshopper.`,
+          ],
+        },
+        {
+          image: "/energy/2.jpg",
+          text: [
+            `The analysis is performed for the day of the Winter Solstice, December 21st between 9 AM to 3 PM in order to identify 
+            areas suitable for planting. A suitable area needs at least 6 hours of sunlight during this day. 
+            Based on the analysis only 4.66% (392 (m2) of the selected area of 8426.88 (m2) receives less than 6 hours of direct sunlight 
+            and 95.34% of the area is suitable for planting. The unsuitable area is marked by gray and dark blue.`,
+          ],
+        },
+        {
+          image: "/energy/visual.jpg",
+          text: [
+            `The visual comfort simulation is performed to understand the relationship between the physical conditions of the space 
+                (materials, glazing size, building geometry etc.) and daylight performance in space. 
+                The analysis is conducted in multiple areas: Daylight Factor (DF), Spatial Daylight Autonomy(sDA), 
+                Annual Sunlight Exposure (ASE), Unified Glare Rating (UGR) and Daylight Glare Probability (DGP). 
+                Per the simulation the conference room is over-lit while the majority of the work area does not get enough daylight. 
+                These issues were addressed by implementing multiple daylight control strategies like adding skylight, adding overhangs, 
+                changing the glazing material etc. 
+                `,
+          ],
+        },
+        {
+          image: "/energy/4.jpg",
+          text: [
+            `Thermal simulation is performed in order to determine the impact of environmental factors on the building’s thermal comfort, 
+                  zone energy load, Energy Use Intensity (EUI) etc.`,
+          ],
+        },
+        {
+          image: "/energy/5.jpg",
+          text: [
+            `A variety of design iterations like high-performance envelope, daylight harvesting strategies, mixed mode ventilation, 
+                  implementing shading devices etc are tested in order to improve the thermal performance `,
+          ],
+        },
+      ],
+    },
     {
       id: 9,
       title: "Origami Solar Shade",
@@ -292,76 +523,6 @@ export default {
               The design goal was to achieve complex geometries by the application of simple cuts.
               The shapes were designed by generating parametric planes and trimming a cube against
               them. Each shape was generated by application of up to 3 straight and/or V cuts.`,
-          ],
-        },
-      ],
-    },
-    {
-      id: 88,
-      title: "Smart Loading Zones X UberEats",
-      year: "2023",
-      time: "Fall",
-      type: "UX Research",
-      location: "Pittsburgh, USA",
-      headerDescription:
-        "Team project with Ting-Hsuan (Jasmine) Su, Claire Cheong and Tianyang (Tina) Chen",
-      infoDescription:
-        "This is a UX research and design proposal to optimize the Smart Loading Zones (SLZs) in Pittsburgh for efficient and trustworthy urban mobility.",
-      firstSubtitle: "Features",
-      secondSubtitle: "Research Methods",
-      images: {
-        header: "/smart/cover.png",
-        showcase: "/smart/features.png",
-        process: ["/smart/methodology.jpg"],
-      },
-      details: [
-        {
-          image: "/smart/streetview-1.jpg",
-          text: [
-            `The City of Pittsburgh and Pittsburgh Parking Authority has introduced a pilot project "Smart Loading Zones" (SLZs) to manage curb space, with the goals of  reducing emissions, improving traffic flow and enhancing delivery efficiency. 
-            The Smart Loading Zones (SLZs), distinguished by the color purple, are pay-by-the-minute short-term parking spots regulated by smart cameras. Drivers can use these zones by registering their vehicle through an app accessible by scanning a QR code on the SLZ info boards installed next to the zones.
-            This research/design project aims to assess the impact of SLZs on the residents of the City of Pittsburgh, especially contract delivery drivers working with food delivery services. It also explores alternative methods of registration and interaction with these zones for a sustainable and long-lasting project effect and success.
-            `,
-          ],
-        },
-        {
-          image: "/smart/hifi.png",
-          text: [
-            `To find an understanding of the current state of knowledge and public opinion about SLZs, we conducted comprehensive background and contextual research. This involved analyzing social media comments about SLZs and interviewing Pittsburgh delivery drivers recruited through social media for directed storytelling sessions conducted via Zoom. Additionally, we conducted guerrilla research sessions in Pittsburgh's Squirrel Hill neighborhood, where multiple purple zones are installed. We synthesized our findings through interpretation notes and affinity diagramming to gain insights into how the public in Pittsburgh currently perceives SLZs.`,
-          ],
-        },
-        {
-          image: "/smart/storyboards.jpg",
-          text: [
-            `From our background and contextual research we found that: `,
-            `
-            1- Ineffective information conveyance contributes to the lack of public awareness of SLZs, which results in people's distrust in the system.
-            2- Delivery drivers want more available parking dedicated to delivery. 
-            3- Delivery drivers need to ensure they are not paying an unreasonable price.
-            3- Time and financial aspects heavily influence delivery drivers' parking behaviors, with less emphasis on overarching project goals like sustainability and traffic flow.`,
-            `
-            To address these issues, we generated multiple storyboards as alterations to the current SLZ system, with the question of "How might we bring about more direct benefits to build trust and optimize user engagement with SLZ?"
-            `,
-          ],
-        },
-        {
-          image: "/smart/prototyping.png",
-          text: [
-            `We tested 12 different storyboards through speed dating with multiple participants familiar with SLZs to assess how each idea is perceived. By synthesizing the data, we found that:`,
-            `People would like to know about parking availability, have a clear estimate of how much they are paying for parking, would prefer a more user-friendly medium to learn about and register for SLZs and would be more incentivized to use a service if there are actual monetary returns.`,
-            `Based on these findings, we created first low-fidelity (screen-size paper prototype), followed by 2 high-fidelity prototypes created in Figma (onboarding vs popup) in which we embedded SLZ service and information accessible through a commonly used delivery app (UberEats). `,
-          ],
-        },
-        {
-          image: "/smart/on.gif",
-          text: [
-            `The prototypes captured the overall user flow of entering a delivery app, seeing SLZ-related information, being able to register for SLZ through their delivery app, interacting with the map to see SLZ availabilities close to their destination, as well as their SLZ-related account info such as balance, collected points, parking history, etc. After testing the low-fidelity prototype, we generated two high-fidelity prototypes (onboarding vs popup) to test the level of engagement with the app.`,
-          ],
-        },
-        {
-          image: "/smart/popup.gif",
-          text: [
-            `We tested each prototype through a think-aloud protocol in which our research participants interacted with the prototypes, gave us feedback, and shared their suggestions. We found that the popup version was more successful in conveying SLZ info to the user, and that overall, a combination of benefits, including rewards and an interactive map, incentivizes SLZ usage.`,
           ],
         },
       ],
