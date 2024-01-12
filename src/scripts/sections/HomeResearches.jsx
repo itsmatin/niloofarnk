@@ -59,7 +59,7 @@ function ListItem({ currentImage, ...props }) {
         }}
         key={props.index}
       >
-        {`0${props.index + 1}. ${props.title}`}
+        {`${props.index + 1 < 10 ? "0" : ""}${props.index + 1}. ${props.title}`}
       </motion.span>
     </Link>
   );

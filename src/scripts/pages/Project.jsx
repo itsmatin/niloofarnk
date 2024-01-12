@@ -59,7 +59,7 @@ const Project = ({ setBgColor, bgColor }) => {
         <ProjectDetails project={project} bgColor={bgColor} />
         <Ending
           to={`/project/${nextProject.id}`}
-          title={`0${nextProject.id}. ${nextProject.title}`}
+          title={`${nextProject.id}. ${nextProject.title}`}
         />
       </motion.div>
     )

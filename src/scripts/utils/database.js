@@ -58,8 +58,7 @@ export default {
       time: "Ongoing",
       type: "User Centered Research",
       location: "Pittsburgh, Pennsylvania",
-      headerDescription:
-        "This research project investigates the difference in the perception of light color temperature (CCT) in physical environments versus virtual reality environments.",
+      headerDescription: "",
       infoDescription:
         "This research project investigates the difference in the perception of light color temperature (CCT) in physical environments versus virtual reality environments.",
       firstSubtitle: "Study Setup",

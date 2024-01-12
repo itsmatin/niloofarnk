@@ -62,7 +62,9 @@ const Menu = () => {
         className="menu__list--item"
       >
         <Link to={`/project/${props.id}`} key={props.index}>
-          {`0${props.index + 1}. ${props.title}`}
+          {`${props.index + 1 < 10 ? "0" : ""}${props.index + 1}. ${
+            props.title
+          }`}
         </Link>
       </motion.li>
     );
