@@ -65,7 +65,7 @@ const HomeHeader = ({ props, intro }) => {
         animate="animate"
         src="/capstone/heterotopia-header.jpg"
         alt="Niloofar Nikookar Portfolio"
-        text={database.designs.find((element) => element.id === 5).title}
+        text={database.researches.find((element) => element.id === 5).title}
         containerStyle={{ y: imageY }}
         captionVariants={imageCaptionVariants}
         imageVariants={imageVariants}

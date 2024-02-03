@@ -29,7 +29,7 @@ const ProjectSidebar = ({ data, isVisible }) => {
       className="sidebar"
     >
       <h1>
-        <AnimatedText isVisible={isVisible}>ARCHITECTURAL DESIGN</AnimatedText>
+        <AnimatedText isVisible={isVisible}>RESEARCH</AnimatedText>
       </h1>
       <h2>
         <AnimatedText isVisible={isVisible}>{data.title}</AnimatedText>

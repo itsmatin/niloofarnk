@@ -1,7 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 export default {
-  researches: [
+  //designs here is actually RESEARCH
+  designs: [
     {
       id: 13,
       title: "Exploring Dynamic Lighting Perception",
@@ -163,73 +164,7 @@ export default {
         },
       ],
     },
-    {
-      id: 10,
-      title: "Small Office Energy Simulation",
-      year: "2020",
-      time: "Fall",
-      type: "Building Performance Analysis",
-      location: "Los Angeles, California",
-      headerDescription:
-        "This project investigates the energy and daylight performance of a small office building in Los Angeles, California",
-      infoDescription:
-        "The analysis is performed on the building's solar, lighting, and thermal performance.",
-      secondSubtitle: "Design Process",
-      images: {
-        header: "/energy/Cover-image.jpg",
-        showcase: "/energy/0-Top image.jpg",
-        process: [],
-      },
 
-      details: [
-        {
-          image: "/energy/1.jpg",
-          text: [
-            `This project investigates the energy and daylight performance of a small office building in Los Angeles, California. 
-            The analysis is performed on the building's solar, lighting, and thermal performance. Based on the analysis results of the baseline model, 
-            multiple iterations are proposed and discussed in order to improve the performance of the building in each metric. 
-            The included images are example simulation results for the baseline scenario. 
-            The software used in this project are ClimateStudio, DIVA, Archsim and LadyBug for grasshopper.`,
-          ],
-        },
-        {
-          image: "/energy/2.jpg",
-          text: [
-            `The analysis is performed for the day of the Winter Solstice, December 21st between 9 AM to 3 PM in order to identify 
-            areas suitable for planting. A suitable area needs at least 6 hours of sunlight during this day. 
-            Based on the analysis only 4.66% (392 (m2) of the selected area of 8426.88 (m2) receives less than 6 hours of direct sunlight 
-            and 95.34% of the area is suitable for planting. The unsuitable area is marked by gray and dark blue.`,
-          ],
-        },
-        {
-          image: "/energy/visual.jpg",
-          text: [
-            `The visual comfort simulation is performed to understand the relationship between the physical conditions of the space 
-                (materials, glazing size, building geometry etc.) and daylight performance in space. 
-                The analysis is conducted in multiple areas: Daylight Factor (DF), Spatial Daylight Autonomy(sDA), 
-                Annual Sunlight Exposure (ASE), Unified Glare Rating (UGR) and Daylight Glare Probability (DGP). 
-                Per the simulation the conference room is over-lit while the majority of the work area does not get enough daylight. 
-                These issues were addressed by implementing multiple daylight control strategies like adding skylight, adding overhangs, 
-                changing the glazing material etc. 
-                `,
-          ],
-        },
-        {
-          image: "/energy/4.jpg",
-          text: [
-            `Thermal simulation is performed in order to determine the impact of environmental factors on the building’s thermal comfort, 
-                  zone energy load, Energy Use Intensity (EUI) etc.`,
-          ],
-        },
-        {
-          image: "/energy/5.jpg",
-          text: [
-            `A variety of design iterations like high-performance envelope, daylight harvesting strategies, mixed mode ventilation, 
-                  implementing shading devices etc are tested in order to improve the thermal performance `,
-          ],
-        },
-      ],
-    },
     {
       id: 9,
       title: "Origami Solar Shade",
@@ -286,6 +221,60 @@ export default {
       ],
     },
     {
+      id: 1,
+      title: "The Infinite Line Pavilion",
+      type: "IASS 2019 Competition",
+      time: "Fall",
+      year: "2019",
+      location: "Bracelona, Spain",
+      headerDescription:
+        "Team Project with Vernelle A.A Noel (Advisor), Karen Tran and Jamieson Pye.",
+      infoDescription:
+        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
+      firstSubtitle: "Prototype",
+      secondSubtitle: "Making the Pringle",
+      images: {
+        header: "/pavilion/pavilion-header.jpg",
+        showcase: "/pavilion/pavilion-case.jpg",
+        process: ["/pavilion/pavilion-process.jpg"],
+      },
+
+      details: [
+        {
+          image: "/pavilion/pavilion-details1.jpg",
+          text: [
+            `The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed
+            in Trinidad & Tobago. Wire-bending is a traditional craft that employs wire, fiberglass rods, and other materials to create sculptural
+            forms and structures.`,
+          ],
+        },
+        {
+          image: "/pavilion/pavilion-details2.jpg",
+          text: [
+            `The initial design and fabrication explorations were done as a part of course work for a Computational Making class taught by
+            Professor Vernelle A. A. Noel. In that course, our class developed the “The Dawn and the Dusk” Pavilion design. “The Infinite Line”
+            is a second iteration on the “The Dawn and the Dusk” pavilion, using different structural geometries.`,
+          ],
+        },
+        {
+          image: "/pavilion/pavilion-details3.jpg",
+          text: [
+            `“The Infinite Line” design follows a closed modular geometry and incorporates a fiberglass structure and a fabric skin. The
+            module is a single “pringle”, which is an Enneper surface. To form a Pringle, 10’ fiberglass rods are taped into 80’ bundles by
+            overlapping pairs of rods at their midpoints. These pairs are doubled and taped together, to form 80’ bundles with a 4-rod
+            thickness. Fiberglass tape is used for bundling, These 80’ bundles are joined end-to-end to form 80’ perimeter circles.
+            Opposite points of the loop are joined in the middle to form a flat figure-8. Then, the ends are joined to complete the pringle.
+            The final structure is composed of 3 of these Pringles, interlocked at 120 degrees.
+            `,
+          ],
+        },
+      ],
+    },
+  ],
+
+  // researches is actually DESIGN & COMPUTATION
+  researches: [
+    {
       id: 10,
       title: "Small Office Energy Simulation",
       year: "2020",
@@ -348,56 +337,6 @@ export default {
           text: [
             `A variety of design iterations like high-performance envelope, daylight harvesting strategies, mixed mode ventilation, 
                   implementing shading devices etc are tested in order to improve the thermal performance `,
-          ],
-        },
-      ],
-    },
-    {
-      id: 1,
-      title: "The Infinite Line Pavilion",
-      type: "IASS 2019 Competition",
-      time: "Fall",
-      year: "2019",
-      location: "Bracelona, Spain",
-      headerDescription:
-        "Team Project with Vernelle A.A Noel (Advisor), Karen Tran and Jamieson Pye.",
-      infoDescription:
-        "The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed in Trinidad & Tobago.",
-      firstSubtitle: "Prototype",
-      secondSubtitle: "Making the Pringle",
-      images: {
-        header: "/pavilion/pavilion-header.jpg",
-        showcase: "/pavilion/pavilion-case.jpg",
-        process: ["/pavilion/pavilion-process.jpg"],
-      },
-
-      details: [
-        {
-          image: "/pavilion/pavilion-details1.jpg",
-          text: [
-            `The Infinite Line pavilion is a lightweight fiberglass structure, designed and fabricated based on wire bending techniques developed
-            in Trinidad & Tobago. Wire-bending is a traditional craft that employs wire, fiberglass rods, and other materials to create sculptural
-            forms and structures.`,
-          ],
-        },
-        {
-          image: "/pavilion/pavilion-details2.jpg",
-          text: [
-            `The initial design and fabrication explorations were done as a part of course work for a Computational Making class taught by
-            Professor Vernelle A. A. Noel. In that course, our class developed the “The Dawn and the Dusk” Pavilion design. “The Infinite Line”
-            is a second iteration on the “The Dawn and the Dusk” pavilion, using different structural geometries.`,
-          ],
-        },
-        {
-          image: "/pavilion/pavilion-details3.jpg",
-          text: [
-            `“The Infinite Line” design follows a closed modular geometry and incorporates a fiberglass structure and a fabric skin. The
-            module is a single “pringle”, which is an Enneper surface. To form a Pringle, 10’ fiberglass rods are taped into 80’ bundles by
-            overlapping pairs of rods at their midpoints. These pairs are doubled and taped together, to form 80’ bundles with a 4-rod
-            thickness. Fiberglass tape is used for bundling, These 80’ bundles are joined end-to-end to form 80’ perimeter circles.
-            Opposite points of the loop are joined in the middle to form a flat figure-8. Then, the ends are joined to complete the pringle.
-            The final structure is composed of 3 of these Pringles, interlocked at 120 degrees.
-            `,
           ],
         },
       ],
@@ -526,9 +465,7 @@ export default {
         },
       ],
     },
-  ],
 
-  designs: [
     {
       id: 5,
       title: "Urban Female Heterotopia",

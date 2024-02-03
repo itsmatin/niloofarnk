@@ -86,7 +86,7 @@ const Menu = () => {
             animate={{ opacity: 1, transition: { delay: 0.85 } }}
             className="menu--subtitle"
           >
-            ARCHITECTURAL DESIGN
+            RESEARCH
           </motion.h2>
           {designs.map((item, index) => (
             <ListItem
@@ -144,7 +144,7 @@ const Menu = () => {
             animate={{ opacity: 1, transition: { delay: 0.85 } }}
             className="menu--subtitle"
           >
-            COMPUTATIONAL DESIGN
+            DESIGN & COMPUTATION
           </motion.h2>
           {researches.map((item, index) => (
             <ListItem
